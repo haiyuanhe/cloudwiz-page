@@ -8,21 +8,57 @@
       </div>
       <div class="navbar">
         <ul>
-          <router-link class="menu-item home" to="/">
-            <span>首页</span>
+          <router-link class="menu-item home" to="/home">
+            <span class="tab-link">首页</span>
           </router-link>
-          <router-link class="menu-item product" to="/products">
-            <span>产品中心</span>
-          </router-link>
+          <!-- <router-link class="menu-item product" to="/products"> -->
+          <a-dropdown class="ant-dropdown-link">
+            <span class="tab-link">产品中心</span>
+            <a-menu slot="overlay">
+              <a-menu-item>
+                <router-link to="/cloudwiz">
+                  <span>Cloudwiz</span>
+                </router-link>
+              </a-menu-item>
+              <a-menu-item>
+                <router-link to="/documents">
+                  <span>文档下载</span>
+                </router-link>
+              </a-menu-item>
+              <a-menu-item>
+                <router-link to="/FAQ">
+                  <span>常见问题</span>
+                </router-link>
+              </a-menu-item>
+            </a-menu>
+          </a-dropdown>
+          <!-- </router-link> -->
           <router-link class="menu-item user-case" to="/cases">
-            <span>客户案例</span>
+            <span class="tab-link">客户案例</span>
           </router-link>
           <router-link class="menu-item company-news" to="/news">
-            <span>公司动态</span>
+            <span class="tab-link">公司动态</span>
           </router-link>
-          <router-link class="menu-item about-us" to="/about">
-            <span>关于我们</span>
-          </router-link>
+          <a-dropdown class="ant-dropdown-link menu-item about-us">
+            <span class="tab-link">关于我们</span><a-icon type="down" style="color: #979b9b"/>
+            <a-menu slot="overlay">
+              <a-menu-item>
+                <router-link to="/about">
+                  <span>关于公司</span>
+                </router-link>
+              </a-menu-item>
+              <a-menu-item>
+                <router-link to="/contact">
+                  <span>联系我们</span>
+                </router-link>
+              </a-menu-item>
+              <a-menu-item>
+                <router-link to="/recruitment">
+                  <span>招贤纳士</span>
+                </router-link>
+              </a-menu-item>
+            </a-menu>
+          </a-dropdown>
           <li class="menu-item offline-analysis">
             <span>离线分析平台</span>
           </li>
@@ -77,6 +113,11 @@ export default {
         .menu-item {
           display: inline;
           margin: 1rem;
+          &.router-link-active {
+            .tab-link {
+              color: #fff;
+            }
+          }
         }
         .offline-analysis {
           a {

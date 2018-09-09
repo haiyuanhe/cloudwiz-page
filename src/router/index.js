@@ -15,9 +15,19 @@ export default new Router({
       component: () => import('components/Home/Home')
     },
     {
-      path: '/products',
-      name: 'Products',
-      component: () => import('components/Products/Products')
+      path: '/cloudwiz',
+      name: 'Cloudwiz',
+      component: () => import('components/Cloudwiz/Cloudwiz')
+    },
+    {
+      path: '/documents',
+      name: 'Documents',
+      component: () => import('components/Documents/Documents')
+    },
+    {
+      path: '/faq',
+      name: 'FAQ',
+      component: () => import('components/FAQ/FAQ')
     },
     {
       path: '/cases',
@@ -33,6 +43,16 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: () => import('components/About/About')
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: () => import('components/Contact/Contact')
+    },
+    {
+      path: '/recruitment',
+      name: 'Recruitment',
+      component: () => import('components/Recruitment/Recruitment')
     }
   ]
 })

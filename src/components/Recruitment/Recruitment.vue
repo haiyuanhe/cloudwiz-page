@@ -1,7 +1,7 @@
 <template>
-  <div class="products-wrapper">
+  <div class="recruitment-wrapper">
     <CloudHeader/>
-    <div class="products-container">
+    <div class="recruitment-container">
       <PageHeader :headerInfo="headerInfo" />
     </div>
     <CloudFooter />
@@ -14,13 +14,13 @@ import CloudFooter from 'base/CloudFooter/CloudFooter'
 import PageHeader from 'base/PageHeader/PageHeader'
 
 export default {
-  name: 'products',
+  name: 'recruitment',
   data () {
     return {
       headerInfo: {
-        Imgurl: require('common/images/news/news-backgroud.png'),
-        title: 'Cloudwiz',
-        description: '完善的工具化AIOps智能运维平台'
+        Imgurl: require('common/images/recruitment/recruitment-background.png'),
+        title: '在云兴工作',
+        description: '和优秀的人一起，获得不一样的成长'
       }
     }
   },

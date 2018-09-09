@@ -1,0 +1,42 @@
+// 不换行
+@mixin text-ellipsis () {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 自定义不换行行数
+@mixin no-wrap-nums($nums) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $nums;
+  -webkit-box-orient: vertical;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+@mixin b-shadow($bs, $bhs) {
+  box-shadow: 0 0 1.5rem $bs;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 1.5rem $bhs;
+  }
+}
