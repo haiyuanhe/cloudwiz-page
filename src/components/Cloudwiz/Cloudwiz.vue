@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       headerInfo: {
-        Imgurl: require('common/images/news/news-backgroud.png'),
+        Imgurl: require('common/images/products/cloudwiz-background.png'),
         title: 'Cloudwiz',
         description: '完善的工具化AIOps智能运维平台'
       }

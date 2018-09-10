@@ -11,9 +11,8 @@
           <router-link class="menu-item home" to="/home">
             <span class="tab-link">首页</span>
           </router-link>
-          <!-- <router-link class="menu-item product" to="/products"> -->
-          <a-dropdown class="ant-dropdown-link">
-            <span class="tab-link">产品中心</span>
+          <a-dropdown class="ant-dropdown-link tab-link">
+            <span class="tab-link">产品中心<a-icon type="down" style="color: #979b9b"/></span>
             <a-menu slot="overlay">
               <a-menu-item>
                 <router-link to="/cloudwiz">
@@ -32,7 +31,6 @@
               </a-menu-item>
             </a-menu>
           </a-dropdown>
-          <!-- </router-link> -->
           <router-link class="menu-item user-case" to="/cases">
             <span class="tab-link">客户案例</span>
           </router-link>
@@ -40,7 +38,7 @@
             <span class="tab-link">公司动态</span>
           </router-link>
           <a-dropdown class="ant-dropdown-link menu-item about-us">
-            <span class="tab-link">关于我们</span><a-icon type="down" style="color: #979b9b"/>
+            <span class="tab-link">关于我们<a-icon type="down" style="color: #979b9b"/></span>
             <a-menu slot="overlay">
               <a-menu-item>
                 <router-link to="/about">

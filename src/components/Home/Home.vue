@@ -14,12 +14,15 @@
       <div class="home-middle">
         <p class="middle-title">为什么选择运行？</p>
         <div class="features">
-          <a-row>
+          <a-row
+            type="flex"
+            justify="center"
+          >
             <a-col
                 v-for="(item, index) in features"
                 :key="index"
                 :xs="32"
-                :sm="24"
+                :sm="16"
                 :md="16"
                 :lg="8"
               >
@@ -41,12 +44,16 @@
       <div class="home-bottom">
         <div class="users-wrapper">
           <div class="users">
-            <a-row :gutter="16">
+            <a-row
+              :gutter="16"
+              type="flex"
+              justify="center"
+            >
               <a-col
                 v-for="(item, index) in users"
                 :key="index"
                 :xs="16"
-                :sm="8"
+                :sm="16"
                 :md="4"
                 :lg="6"
               >
@@ -62,47 +69,38 @@
             <p>他们都信赖我们！</p>
           </div>
           <div class="users-faq-wrapper">
-            <!-- <div class="prev">
-              <a-icon
-                type="left-circle"
-                theme="twoTone" />
-            </div> -->
             <div class="faq">
-              <a-carousel arrows>
-                <div
-                  slot="prevArrow" slot-scope="props"
-                  class="custom-slick-arrow"
-                  style="left: 10px;zIndex: 1"
+              <a-row
+                :gutter="16"
+                type="flex"
+                justify="center"
+              >
+                <a-col
+                  :xs="32"
+                  :sm="24"
+                  :md="20"
+                  :lg="16"
                 >
-                  <a-icon
-                    type="left-circle"
-                    theme="twoTone"/>
-                </div>
-                <div
-                  slot="nextArrow" slot-scope="props"
-                  class="custom-slick-arrow"
-                  style="right: 10px"
-                >
-                  <a-icon
-                    type="right-circle"
-                    theme="twoTone"/>
-                </div>
-                <div class="content">
-                  <p>由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。</p>
-                </div>
-                <div>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maiores eius corrupti quos aut fugit quisquam natus id cum, quo non impedit incidunt ut obcaecati cupiditate. Et explicabo deleniti eaque?</p>
-                </div>
-                <!-- <div class="content">
-                  <p>由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。</p>
-                </div> -->
-              </a-carousel>
+                  <el-carousel
+                    indicator-position="none"
+                    :autoplay="false"
+                    arrow="always">
+                    <el-carousel-item v-for="(item, index) in evaluation" :key="index">
+                      <div class="evaluation">
+                        <p class="ct">{{item.content}}</p>
+                        <div>
+                          <div class="icon">
+                            <img :src="item.icon" :alt="item.company">
+                          </div>
+                          <p class="cm">{{item.company}}</p>
+                          <p class="m">{{item.major}}</p>
+                        </div>
+                      </div>
+                    </el-carousel-item>
+                  </el-carousel>
+                </a-col>
+              </a-row>
             </div>
-            <!-- <div class="next">
-              <a-icon
-                type="right-circle"
-                theme="twoTone"/>
-            </div> -->
           </div>
         </div>
         <div class="new-features-wrapper">
@@ -110,9 +108,9 @@
             <div class="f-lists">
               <a-row :gutter="24">
                 <a-col
-                  :xs="24"
-                  :sm="16"
-                  :md="16"
+                  :xs="32"
+                  :sm="32"
+                  :md="24"
                   :lg="12"
                 >
                   <div class="f">
@@ -124,9 +122,9 @@
                   </div>
                 </a-col>
                 <a-col
-                  :xs="24"
-                  :sm="26"
-                  :md="16"
+                  :xs="32"
+                  :sm="32"
+                  :md="24"
                   :lg="12"
                 >
                   <div class="f">
@@ -235,6 +233,26 @@ export default {
           name: require('common/images/home/userslogo/huizhou.png'),
           title: '惠州水务'
         }
+      ],
+      evaluation: [
+        {
+          company: '中国电力科学院',
+          icon: require('common/images/cases/CCSG.png'),
+          major: '人工智能应用研究所平台技术室',
+          content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
+        },
+        {
+          company: '中国电力科学院',
+          icon: require('common/images/cases/CCBank.png'),
+          major: '人工智能应用研究所平台技术室2',
+          content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
+        },
+        {
+          company: '中国电力科学院',
+          icon: require('common/images/cases/CPIC.png'),
+          major: '人工智能应用研究所平台技术室3',
+          content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
+        }
       ]
     }
   },
@@ -245,7 +263,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .home-wrapper {
   width: 100%;
   background: #f7f8fb;
@@ -352,46 +370,63 @@ export default {
         .slogan {
           font-size: 1.3rem;
           text-align: center;
-          padding-bottom: 4rem;
+          padding-bottom: 12rem;
           background: #292d38;
           color: #fff;
         }
         .users-faq-wrapper {
           margin: 0 auto;
-          // display: flex;
           position: relative;
           top: -1.5rem;
-          // .prev, .next {
-          //   width: 15%;
-          //   text-align: center;
-          //   i {
-          //     font-size: 3rem;
-          //     color: #2a8ff7;
-          //     border-radius: 50%;
-          //     background-color: #fff;
-          //   }
-          // }
           .faq {
-            width: 80%;
-            margin: 0 auto;
-            border: 1px solid red;
-            background: #fff;
-            .content {
-              width: 70%;
-              height: 100%;
-              margin: 0 auto;
-              background: #fff;
-              box-shadow: 0 0 0.2rem 1px #fff;
-              border: 1px solid rgb(224, 224, 224);
+            position: relative;
+            top: -8rem;
+            .el-carousel {
+              .el-carousel__container {
+                .el-carousel__arrow {
+                  background-color: rgba(7, 127, 234, .8)!important;
+                }
+                .evaluation {
+                  background: #fff;
+                  text-align: center;
+                  padding: 2rem;
+                  box-shadow: 0 0 0.2rem 1px #fff;
+                  border: 1px solid rgb(224, 224, 224);
+                  box-shadow: 0 0 1.5rem #fff;
+                  cursor: pointer;
+                  &:hover {
+                    box-shadow: 0 0 1.5rem rgb(145, 139, 139);
+                  }
+                  .ct {
+                    font-size: 1.1rem;
+                    text-align: left;
+                    width: 80%;
+                    margin: 0 auto;
+                    line-height: 1.6rem;
+                    font-weight: bold;
+                  }
+                  img {
+                    padding: 2rem 0 1rem 0;
+                    height: 6rem;
+                  }
+                  .cm {
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                  }
+                  .m {
+                    color: #928f8f;
+                  }
+                }
+              }
             }
           }
         }
       }
       .new-features-wrapper {
+        margin-top: -6rem;
         .new-features {
           width: 90%;
-          margin:0 auto;
-          padding: 4rem 0 2rem 0;
+          margin: 0 auto;
           .f-lists {
             width: 80%;
             margin: 0 auto;
@@ -422,34 +457,6 @@ export default {
         }
       }
     }
-  }
-  .ant-carousel >>> .slick-slide {
-    text-align: center;
-    height: 160px;
-    line-height: 160px;
-    background: #ccc;
-    overflow: hidden;
-  }
-
-  .ant-carousel >>> .custom-slick-arrow {
-    width: 25px;
-    height: 25px;
-    border: 1px solid blue;
-    font-size: 25px;
-    border-radius: 50%;
-    color: #2a8ff7;
-    background-color: #fff;
-    opacity: 0.3;
-  }
-  .ant-carousel >>> .custom-slick-arrow:before {
-    display: none;
-  }
-  .ant-carousel >>> .custom-slick-arrow:hover {
-    opacity: 0.5;
-  }
-
-  .ant-carousel >>> .slick-slide  h3 {
-    color: #2a8ff7;
   }
 }
 </style>

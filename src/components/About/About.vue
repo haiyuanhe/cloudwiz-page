@@ -79,14 +79,16 @@
             </p>
           </div>
           <div class="worker-lists">
-            <a-row>
+            <a-row type="flex" justify="center">
               <a-col
                 v-for="(item, index) in team_mates"
                 :key="index"
                 :xs="32"
                 :sm="32"
-                :md="32"
-                :lg="8"
+                :md="26"
+                :lg="10"
+                :xl="8"
+                :xxl="5"
               >
                 <div class="list">
                   <div class="avatar">
@@ -97,10 +99,9 @@
                     <p class="education">{{item.education}}</p>
                     <p class="specialization">{{item.specialization}}</p>
                   </div>
-                  <a-row>
+                  <a-row type="flex" justify="center">
                     <a-col
                       v-for="(cinfo, index) in item.worked"
-                      justify="center"
                       :key="index"
                       :xs="8"
                       :sm="8"
@@ -152,11 +153,11 @@ export default {
             {
               name: 'microsoft',
               company: require('common/images/about/logo/microsoft.png')
+            },
+            {
+              name: 'ebay',
+              company: require('common/images/about/logo/ebay.png')
             }
-            // {
-            //   name: 'ebay',
-            //   company: require('common/images/about/logo/ebay.png')
-            // }
           ]
         },
         {
@@ -276,6 +277,7 @@ export default {
                 display: flex;
                 flex-direction: column;
                 margin: 0 .5rem;
+                background-size: cover;
                 .work2 {
                   height: 50%;
                   margin-bottom: .5rem;
@@ -359,6 +361,7 @@ export default {
                 height: 40%;
                 text-align: center;
                 padding: 3rem;
+                background-size: cover;
                 img {
                   width: 7rem;
                   height: 7rem;
@@ -381,9 +384,8 @@ export default {
               .company {
                 flex: 1;
                 margin: 1.5rem auto;
-                position: relative;
-                left: 50%;
                 img {
+                  background-size: cover;
                   height: 36px;
                 }
               }

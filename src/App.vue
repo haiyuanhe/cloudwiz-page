@@ -10,6 +10,8 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-
+<style lang="scss" scoped>
+  #app {
+    background: #f7f8fb;
+  }
 </style>

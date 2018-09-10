@@ -17,7 +17,7 @@ export default {
   props: {
     height: {
       type: Number,
-      default: 30
+      default: 20
     },
     headerInfo: {
       type: Object,
@@ -32,6 +32,7 @@ export default {
 <style lang="scss" scoped>
   .page-header {
     width: 100%;
+    background-size: cover!important;
     display: table;
     .header-title {
       text-align: center;
