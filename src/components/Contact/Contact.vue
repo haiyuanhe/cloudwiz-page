@@ -4,25 +4,30 @@
     <div class="contact-container">
       <PageHeader :headerInfo="headerInfo" />
       <div class="address-info">
-        <a-row>
+        <a-row
+          type="flex"
+          justify="center"
+        >
           <a-col
-            :xs="24"
-            :sm="24"
-            :md="24"
-            :lg="9"
+            style="text-align: center;"
+            :xs="{ span: 14}"
+            :sm="{ span: 14}"
+            :md="{ span: 14}"
+            :lg="{ span: 10}"
+            :xl="{ span: 6}"
           >
             <div class="map-img">
-              <!-- <a href="//f.amap.com/64cXQ_0942kf5" target="blank"> -->
               <a href="https://www.amap.com/search?query=%E5%8C%97%E4%BA%AC%E5%B8%82%E6%B5%B7%E6%B7%80%E5%8C%BA%E6%B8%85%E6%B2%B3%E6%B0%B8%E6%B3%B0%E5%9B%AD%E7%94%B21%E5%8F%B7%E5%BB%BA%E9%87%91%E4%B8%AD%E5%BF%83&city=110000&geoobj=116.221264%7C39.790989%7C116.699169%7C40.024058&zoom=12" target="blank">
                 <img src="../../common/images/contact/map.png" alt="map">
               </a>
             </div>
           </a-col>
           <a-col
-            :xs="24"
-            :sm="24"
-            :md="24"
-            :lg="14"
+            :xs="{ span: 16}"
+            :sm="{ span: 16}"
+            :md="{ span: 16}"
+            :lg="{ span: 16}"
+            :xl="{ span: 10}"
           >
             <div class="address-wrapper">
               <div class="address-content">
@@ -69,21 +74,17 @@ export default {
     background: #f7f8fb;
     .address-info {
       margin-top: 3rem;
-      border: 1px solid #1b8cb9;
       .map-img {
-        border: 1px solid #1bb923;
         img {
-          margin: 1rem;
           width: 100%;
         }
       }
       .address-wrapper {
-        height: 18rem;
-        position: relative;
+        display: flex;
         .address-content {
-          position: absolute;
-          top: 50%;
-          transform: translate(50%, -30%);
+          align-items: center;
+          justify-content: center;
+          margin: 4rem auto;
           p {
             font-size: 1.2rem;
           }

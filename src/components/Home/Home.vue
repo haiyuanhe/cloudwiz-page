@@ -202,54 +202,54 @@ export default {
       ],
       users: [
         {
-          name: require('common/images/home/userslogo/wenjuan.png'),
+          name: require('common/images/home/users/wenjuan.png'),
           title: '问卷网'
         },
         {
-          name: require('common/images/home/userslogo/CCBank.png'),
+          name: require('common/images/home/users/CCBank.png'),
           title: '中国建设银行'
         },
         {
-          name: require('common/images/home/userslogo/CPIC.png'),
-          title: '太平洋保险'
-        },
-        {
-          name: require('common/images/home/userslogo/WYNDHAMHotel.png'),
-          title: '温德姆酒店'
-        },
-        {
-          name: require('common/images/home/userslogo/SPDBank.png'),
-          title: '浦发银行'
-        },
-        {
-          name: require('common/images/home/userslogo/guangda.png'),
+          name: require('common/images/home/users/guangda.png'),
           title: '光大证券'
         },
         {
-          name: require('common/images/home/userslogo/CCSG.png'),
+          name: require('common/images/home/users/WYNDHAMHotel.png'),
+          title: '温德姆酒店'
+        },
+        {
+          name: require('common/images/home/users/SPDBank.png'),
+          title: '浦发银行'
+        },
+        {
+          name: require('common/images/home/users/benz.png'),
+          title: '奔驰'
+        },
+        {
+          name: require('common/images/home/users/CCSG.png'),
           title: '国家电网'
         },
         {
-          name: require('common/images/home/userslogo/huizhou.png'),
+          name: require('common/images/home/users/huizhou.png'),
           title: '惠州水务'
         }
       ],
       evaluation: [
         {
           company: '中国电力科学院',
-          icon: require('common/images/cases/CCSG.png'),
+          icon: require('common/images/cases/CEPRI.png'),
           major: '人工智能应用研究所平台技术室',
           content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
         },
         {
           company: '中国电力科学院',
-          icon: require('common/images/cases/CCBank.png'),
+          icon: require('common/images/cases/WYNDHAM.png'),
           major: '人工智能应用研究所平台技术室2',
           content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
         },
         {
           company: '中国电力科学院',
-          icon: require('common/images/cases/CPIC.png'),
+          icon: require('common/images/cases/benz_icon.png'),
           major: '人工智能应用研究所平台技术室3',
           content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
         }

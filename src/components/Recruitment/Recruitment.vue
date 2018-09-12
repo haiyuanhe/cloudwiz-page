@@ -4,7 +4,7 @@
     <div class="recruitment-container">
       <PageHeader :headerInfo="headerInfo" />
       <div class="acquisition-wrapper">
-        <p class="title">在这里您能</p>
+        <p class="a-title">在这里您能</p>
         <div class="acquisition">
           <a-row
             type="flex"
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="outside-work-wrapper">
-        <p class="title">工作之外</p>
+        <p class="o-title">工作之外</p>
         <div class="w-carousel">
           <a-row
             type="flex"
@@ -54,14 +54,14 @@
         </div>
       </div>
       <div class="join-us-wrapper">
-        <p class="title">加入我们</p>
+        <p class="j-title">加入我们</p>
         <div class="office-wrapper">
           <a-row
             type="flex"
             justify="center"
           >
             <a-col
-              style="border: 1px solid blue;"
+              class="type-col"
               :xs="16"
               :sm="16"
               :md="8"
@@ -74,31 +74,34 @@
                 @click="getCurrentIndex(i)"
               >
                 <div class="office-type">
-                  <div>{{office.type}}</div>
+                  <div
+                    class="type"
+                    :class='{ "type-active": currentIndex === i }'
+                  >
+                    {{office.type}}
+                  </div>
                 </div>
               </div>
             </a-col>
             <a-col
-              style="border: 1px solid green;"
               :xs="16"
               :sm="16"
               :md="16"
               :lg="16"
             >
-              <div>
+              <div class="detail">
                 <div class="office-description">
-                  <el-collapse accordion>
-                    <el-collapse-item
+                  <a-collapse accordion>
+                    <a-collapse-panel
                       class="name"
                       v-for="(item, j) in offices[currentIndex].position"
                       :key="j"
-                      :title="item.name"
-                      :name="j"
+                      :header="item.name"
                     >
                       <div class="time" v-html="item.time"></div>
                       <div class="description" v-html="item.description"></div>
-                    </el-collapse-item>
-                  </el-collapse>
+                    </a-collapse-panel>
+                  </a-collapse>
                 </div>
               </div>
             </a-col>
@@ -305,7 +308,6 @@ export default {
   },
   methods: {
     getCurrentIndex (i) {
-      console.log(i)
       this.currentIndex = i
     }
   },
@@ -322,15 +324,15 @@ export default {
     .recruitment-container {
       .acquisition-wrapper {
         background: #ffffff;
-        .acquisition {
-          padding-bottom: 3rem;
-          text-align: center;
-          .title {
+          .a-title {
             height: 0;
             font-size: 1.3rem;
             text-align: center;
             padding: 3rem 0;
           }
+        .acquisition {
+          padding-bottom: 3rem;
+          text-align: center;
           .i {
             img {
               height: 6rem;
@@ -350,7 +352,7 @@ export default {
       .outside-work-wrapper {
         background: #e8ecf4;
         margin-bottom: 2rem;
-        .title {
+        .o-title {
           height: 0;
           font-size: 1.3rem;
           text-align: center;
@@ -373,34 +375,51 @@ export default {
         }
       }
       .join-us-wrapper {
-        .title {
+        .j-title {
           height: 0;
           font-size: 1.3rem;
           text-align: center;
           padding: 3rem 0;
         }
         .office-wrapper {
-          border: 1px solid red;
-          .office-content {
-            height: 2rem;
-            line-height: 2rem;
-            border: 1px solid rgb(191, 198, 199);
-            .office-type {
-              font-size: 1.1rem;
-              text-align: center;
+          // border: 1px solid red;
+          .type-col {
+            margin-top: -1rem;
+            .office-content {
+              height: 2rem;
+              line-height: 2rem;
+              // border: 1px solid rgb(191, 198, 199);
+              .office-type {
+                font-size: 1.1rem;
+                text-align: center;
+                padding: 0 5rem;
+                .type {
+                  margin: 1rem;
+                }
+                .type-active {
+                  border: 1px solid #ccc;
+                  background: #fff;
+                  box-shadow: 0 0 1.5rem #e8ecf4;
+                  cursor: pointer;
+                  &:hover {
+                    box-shadow: 0 0 1.5rem #ccc;
+                  }
+                }
+              }
             }
           }
-          .office-description {
-            .el-collapse-item__header {
-              padding-left: 2rem;
-              font-size: 1.5rem;
-            }
-            .time {
-              padding: 2rem;
-              font-weight: bold;
-            }
-            .description {
-              padding-left: 2rem;
+          .detail {
+            .office-description {
+              .ant-collapse-header {
+                font-size: 1.5rem;
+              }
+              .time {
+                padding: 2rem;
+                font-weight: bold;
+              }
+              .description {
+                padding-left: 2rem;
+              }
             }
           }
         }

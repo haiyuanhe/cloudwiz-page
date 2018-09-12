@@ -4,25 +4,37 @@
     <div class="news-container">
       <PageHeader :headerInfo="headerInfo" />
       <div class="news-lists">
-        <a-row>
+        <a-row
+          type="flex"
+          justify="center"
+        >
           <a-col
-            :xs="{ span: 22, offset: 1}"
-            :sm="{ span: 22, offset: 1}"
-            :md="{ span: 22, offset: 1}"
-            :lg="{ span: 20, offset: 2}"
-            :xl="{ span: 20, offset: 2}"
+            :xs="{ span: 32}"
+            :sm="{ span: 32}"
+            :md="{ span: 24}"
+            :lg="{ span: 18}"
+            :xl="{ span: 18}"
             v-for="(item, index) in news"
             :key="`${item.title}-${index}`"
           >
             <div class="news-list">
               <a-row>
                 <a-col
-                  :span="8"
+                  style="text-align: left"
+                  :xs="{ span: 32}"
+                  :sm="{ span: 32}"
+                  :md="{ span: 24}"
+                  :lg="{ span: 8}"
+                  :xl="{ span: 8}"
                 >
                   <img :src="item.newsImg" alt="item.title" />
                 </a-col>
                 <a-col
-                  :span="16"
+                  :xs="{ span: 32}"
+                  :sm="{ span: 32}"
+                  :md="{ span: 24}"
+                  :lg="{ span: 16}"
+                  :xl="{ span: 16}"
                 >
                   <div class="top">{{item.title}}</div>
                   <div class="middle">{{item.description}}</div>
