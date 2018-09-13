@@ -15,6 +15,11 @@ export default {
   #app {
     background: #f7f8fb;
     margin-top: 4rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    .ant-modal-mask {
+      background: rgba(0, 0, 0, .1)!important;
+    }
     .cloudwiz-wrapper {
       .cloudwiz-middle {
         .c {

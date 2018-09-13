@@ -20,7 +20,7 @@
             <div class="news-list">
               <a-row>
                 <a-col
-                  style="text-align: left"
+                  class="news-images"
                   :xs="{ span: 32}"
                   :sm="{ span: 32}"
                   :md="{ span: 24}"
@@ -113,6 +113,17 @@ export default {
     -webkit-line-clamp: $nums;
     -webkit-box-orient: vertical;
   }
+
+  @media (max-width: 970px) {
+    .news-images {
+      text-align: center;
+    }
+  }
+  @media (min-width: 970px) {
+    .news-images {
+      text-align: left;
+    }
+  }
   .news-wrapper {
     background: #f7f8fb;
     .news-lists {
@@ -122,7 +133,6 @@ export default {
         border: 1px solid #ccc;
         @include b-shadow(#ccc, rgb(121, 114, 114));
         img {
-          // width: 100%;
           height: 15rem;
         }
         .top {

@@ -21,7 +21,7 @@
             <a-col
                 v-for="(item, index) in features"
                 :key="index"
-                :xs="32"
+                :xs="24"
                 :sm="16"
                 :md="16"
                 :lg="8"
@@ -54,7 +54,7 @@
                 :key="index"
                 :xs="16"
                 :sm="16"
-                :md="4"
+                :md="6"
                 :lg="6"
               >
                 <div class="user">
@@ -76,7 +76,7 @@
                 justify="center"
               >
                 <a-col
-                  :xs="32"
+                  :xs="24"
                   :sm="24"
                   :md="20"
                   :lg="16"
@@ -93,7 +93,7 @@
                             <img :src="item.icon" :alt="item.company">
                           </div>
                           <p class="cm">{{item.company}}</p>
-                          <p class="m">{{item.major}}</p>
+                          <p class="m">{{item.evaluator}}</p>
                         </div>
                       </div>
                     </el-carousel-item>
@@ -108,8 +108,8 @@
             <div class="f-lists">
               <a-row :gutter="24">
                 <a-col
-                  :xs="32"
-                  :sm="32"
+                  :xs="24"
+                  :sm="24"
                   :md="24"
                   :lg="12"
                 >
@@ -122,8 +122,8 @@
                   </div>
                 </a-col>
                 <a-col
-                  :xs="32"
-                  :sm="32"
+                  :xs="24"
+                  :sm="24"
                   :md="24"
                   :lg="12"
                 >
@@ -238,20 +238,20 @@ export default {
         {
           company: '中国电力科学院',
           icon: require('common/images/cases/CEPRI.png'),
-          major: '人工智能应用研究所平台技术室',
+          evaluator: '人工智能应用研究所平台技术室',
           content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
         },
         {
-          company: '中国电力科学院',
-          icon: require('common/images/cases/WYNDHAM.png'),
-          major: '人工智能应用研究所平台技术室2',
-          content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
+          company: '问卷网',
+          icon: require('common/images/cases/wenjuanwang.png'),
+          evaluator: '问卷网CTO梁群',
+          content: '部署Cloudwiz产品之后，统一了我们的运维管理工具，优化了管理流程，运维质量和效率都得到了极大的提升，每周提供的专家巡检报告，让我们对系统的关键服务、刷票情况有了直观了解，大量节省了人力和时间成本，是非常实用的运维解决方案。'
         },
         {
-          company: '中国电力科学院',
-          icon: require('common/images/cases/benz_icon.png'),
-          major: '人工智能应用研究所平台技术室3',
-          content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
+          company: '车友援',
+          icon: require('common/images/cases/cheyouyuan.png'),
+          evaluator: '车友援研发部门CTO',
+          content: 'Cloudwiz作为一款优秀的AIOps产品，具有超前的理念。不仅能够帮助我们全面监控各服务器和应用的健康指标，还结合人工智能大幅减少我们分析问题、定位问题的时间。在对PostgreSQL数据库的监控上，Cloudwiz实时提供死锁和慢查询的详细信息，帮助我们解决了很多性能问题。'
         }
       ]
     }

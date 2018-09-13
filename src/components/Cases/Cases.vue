@@ -39,7 +39,7 @@
                           <img :src="item.icon" :alt="item.company">
                         </div>
                         <p class="c">{{item.company}}</p>
-                        <p class="m">{{item.major}}</p>
+                        <p class="m">{{item.evaluator}}</p>
                       </div>
                     </a-col>
                     <a-col
@@ -64,9 +64,8 @@
             justify="center"
           >
             <a-col
-              style="border: 1px solid green;"
-              :xs="32"
-              :sm="32"
+              :xs="24"
+              :sm="24"
               :md="24"
               :lg="20"
             >
@@ -75,7 +74,6 @@
                 justify="center"
               >
                 <a-col
-                  style="border: 1px solid yellow;"
                   v-for="(item, index) in users"
                   :key="index"
                   :xs="24"
@@ -84,51 +82,67 @@
                   :lg="8"
                 >
                   <div class="list">
-                    <div class="icon" @click="showModal">
+                    <div class="icon" @click="showModal(item.company)">
                       <img :src="item.icon" :alt="item.company">
                     </div>
                     <p class="c">{{item.company}}</p>
                     <p class="d" v-html="item.effect"></p>
                   </div>
-                  <a-modal
-                    title="案例详情"
-                    width="80%"
-                    :footer="null"
-                    v-model="show"
-                  >
-                    <div class="m-header">
-                      <a-row
-                        type="flex"
-                        justify="center"
-                      >
-                        <a-col>
-                          <div>
-                            <img :src="item.icon" :alt="item.company">
-                          </div>
-                        </a-col>
-                        <a-col>
-                          <p class="t">{{item.company}}</p>
-                        </a-col>
-                      </a-row>
-                    </div>
-                    <div class="demand">
-                      <p>需求</p>
-                    </div>
-                    <div class="solution">
-                      <p>解决方案</p>
-                    </div>
-                    <div class="result">
-                      <p>结果</p>
-                    </div>
-                    <div class="testimony">
-                      <p>客户证言</p>
-                    </div>
-                  </a-modal>
                 </a-col>
               </a-row>
             </a-col>
           </a-row>
         </div>
+        <a-modal
+          title="案例详情"
+          width="80%"
+          :footer="null"
+          v-model="show"
+          class="case-detail"
+        >
+          <div class="case-info" v-if="!noCase">
+            <div class="m-header">
+              <a-row
+                type="flex"
+                justify="center"
+              >
+                <a-col
+                  :lg="10"
+                >
+                  <div class="icon">
+                    <img :src="showCase.icon" :alt="showCase.company">
+                  </div>
+                </a-col>
+                <a-col
+                  style="padding-left: 1rem;"
+                  :lg="14"
+                >
+                  <p class="c">{{showCase.company}}</p>
+                  <p class="s">{{showCase.short}}</p>
+                </a-col>
+              </a-row>
+            </div>
+            <div class="detail">
+              <div class="demand">
+                <p class="model-title">需求</p>
+                <p class="d" v-html="showCase.demand"></p>
+              </div>
+              <div class="solution">
+                <p class="model-title">解决方案</p>
+                <p class="s" v-html="showCase.solution"></p>
+              </div>
+              <div class="result">
+                <p class="model-title">结果</p>
+                <p class="r" v-html="showCase.result"></p>
+              </div>
+              <div class="testimony" v-if="showCase.testimony">
+                <p class="model-title">客户证言</p>
+                <p class="t" v-html="showCase.testimony"></p>
+              </div>
+            </div>
+          </div>
+          <div v-else>{{showCase}}</div>
+        </a-modal>
       </div>
     </div>
     <CloudFooter />
@@ -154,20 +168,20 @@ export default {
         {
           company: '中国电力科学院',
           icon: require('common/images/cases/CEPRI.png'),
-          major: '人工智能应用研究所平台技术室',
+          evaluator: '人工智能应用研究所平台技术室',
           content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
         },
         {
-          company: '中国电力科学院',
-          icon: require('common/images/cases/CCBank.png'),
-          major: '人工智能应用研究所平台技术室2',
-          content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
+          company: '问卷网',
+          icon: require('common/images/cases/wenjuanwang.png'),
+          evaluator: '问卷网CTO梁群',
+          content: '部署Cloudwiz产品之后，统一了我们的运维管理工具，优化了管理流程，运维质量和效率都得到了极大的提升，每周提供的专家巡检报告，让我们对系统的关键服务、刷票情况有了直观了解，大量节省了人力和时间成本，是非常实用的运维解决方案。'
         },
         {
-          company: '中国电力科学院',
-          icon: require('common/images/cases/CPIC.png'),
-          major: '人工智能应用研究所平台技术室3',
-          content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
+          company: '车友援',
+          icon: require('common/images/cases/cheyouyuan.png'),
+          evaluator: '车友援研发部门CTO',
+          content: 'Cloudwiz作为一款优秀的AIOps产品，具有超前的理念。不仅能够帮助我们全面监控各服务器和应用的健康指标，还结合人工智能大幅减少我们分析问题、定位问题的时间。在对PostgreSQL数据库的监控上，Cloudwiz实时提供死锁和慢查询的详细信息，帮助我们解决了很多性能问题。'
         }
       ],
       users: [
@@ -237,11 +251,63 @@ export default {
             <p>案例详情，敬请期待</p>
           `
         }
-      ]
+      ],
+      casesDetail: {
+        '国家电网': {
+          icon: require('common/images/cases/CCSG.png'),
+          short: '应用Cloudwiz优化运维流程，提高工作效率',
+          demand: '解决方案结果需要建立统一的运维演暇和管理方法，保障系统全天24小时的稳定运行．为科研和业务需要提供数据服务。运用AIOps系统，减轻运维团队工作压力，及时查看系统状态，从而实现快速响应和定位根因，完善应对故障的解决方案。',
+          solution: 'Cloudwiz 采用私有化部署的交付方式，实现多平台、跨系统统一监控。首先通过探针采集分布在各平台系统的运维效据，经过清洗转换后，统一存储管理，利用机器学习算法，对数据进行深度的挖掘分析，从而实现智能异常监测、根因分析等核心功能，提升排障效率。',
+          result: `
+            <ul style="list-style: disc;">
+              <li>实现多个系统的统一监控和管理，优化了运维流程，工作效剩导到提升。</li>
+              <li>通过根因分析，发现因时间跳变、定时脚本高消耗、 HBASE 配五问题等多因素引起的宕机事故，提升了系统的稳定性。</li>
+            </ul>
+          `,
+          testimony: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。在PMS系统中，部分门店的房间状态在顾客退房后没有及时进行更新，导致新入住客户无法正常办理入住手续，相关房源状态更新经常在某个'
+        },
+        '温德姆酒店': {
+          icon: require('common/images/cases/WYNDHAMHotel.png'),
+          short: '应用Cloudwiz实现故障溯源',
+          demand: '在PMS系统中，部分门店的房间状态在顾客退房后没有及时进行更新，导致断入住客户无法正常办理入住手续，相关房源状态更新经常在某个时间点出现严重延迟。通过传统的故障处理流程，业务部门难以判断导致系统异常的直接原因',
+          solution: 'Cloudwiz 智能运维平台采用 SAAS 接入模式，对服务器资源，中间件服务，应用业务系统实现指标进行实时监控。在此基础上，运用机器学习技术，对一定范围内的倍息进行关联规则分析，结合配登信息的拓扑分析，挖掘其背后的因果关系。',
+          result: `
+            <ul style="list-style: disc;">
+              <li>在Cloudwiz对系统指标的实时监测里，集中反映指标异常的周期性，运用 AI 智能算法，结合多指标关联性分析，得出业务在某时间的内存舰升，因而导致系统异常，引发系统晌应变恨。</li>
+              <li>内存资派得到有效调整后，系统响应问题得到有效缓解。目正做到故障追溯到源点，资源调整有据可依。</li>
+            </ul>
+          `
+        },
+        '奔驰汽车': {
+          icon: require('common/images/cases/benz-case-detail.png'),
+          short: '使用Cloudwiz轻松管理移动端应用后台系统',
+          demand: '为了提升服务水平，满足智能化需求，奔驰汽车为车主设计了一套移动端APP，用以对汽车的空调系统、导航系统等进行远程控制。作为公司的创新性项目，奔驰汽车需要保证这一IOT应用程序后台服务系统的稳定进行，并随时掌握系统环境的各项参数指标和运行情况',
+          solution: `
+            <ul style="list-style: disc;">
+              <li>提供全方位的今数监控目员务，无需特意设王规则就可以对各领域参数进行全面覆盖：实现异常的智能检测。</li>
+              <li>在针对实际业务分析的基础上，提供长期的 KPI 资源监控、分析及优化．并监控第三方服务 API 调用的健康状况。</li>
+              <li>利用系统日志日志，提取业务的应用番数．并展示、监控、预繁公有云资源使用状态。</li>
+            </ul>
+          `,
+          result: '确保了移动 App 端业务系统的不间断服务，帮助客户对自身的成本预估形成清晰的了解。通过关联性算法及 RAC 模型，能够快速确认问题的根源并及时予以解决。'
+        }
+      },
+      noCase: false,
+      showCase: {}
     }
   },
   methods: {
-    showModal () {
+    showModal (company) {
+      console.log(company)
+      this.showCase = {}
+      if (this.casesDetail[company] !== void 0) {
+        this.showCase = this.casesDetail[company]
+        this.showCase.company = company
+        this.noCase = false
+      } else {
+        this.showCase = '搜集中...'
+        this.noCase = true
+      }
       this.show = true
     }
   },
@@ -254,6 +320,55 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @media (max-width: 840px) {
+    .case-info {
+      .c {
+        text-align: center;
+      }
+    }
+  }
+  .case-info {
+    .m-header {
+      font-size: 2rem;
+      background: #f7f8fb;
+      margin-bottom: 2rem;
+      padding: 2rem 0;
+      .icon {
+        img {
+          height: 5rem;
+          display: block;
+          float: right;
+          padding-right: 1rem;
+        }
+      }
+      .c {
+        font-size: 2rem;
+        height: 1rem;
+      }
+      .s {
+        font-size: 1rem;
+        color: #787878;
+      }
+    }
+    .detail {
+      margin: 0 2rem;
+      .model-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      .demand, .solution, .result {
+        margin-bottom: 2rem;
+      }
+      .testimony {
+        .t {
+          background: #f7f8fb;
+          padding: 2rem 3rem;
+          font-size: 1.1rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
   .cases-wrapper {
     background: #f7f8fb;
     .cases-container {
@@ -347,6 +462,8 @@ export default {
               color: #767778;
             }
           }
+        }
+        .case-detail {
         }
       }
     }

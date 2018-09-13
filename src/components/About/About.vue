@@ -7,64 +7,115 @@
         <div class="middle-content">
           <div class="about-work">
             <a-row
-            :gutter="32"
-            type="flex"
-            justify="center">
+              type="flex"
+              justify="center">
               <a-col
-                class="gutter-row"
-                :xs="24"
-                :sm="24"
-                :md="20"
-                :lg="10"
-              >
-                <div class="work-pics">
-                  <div class="left">
-                    <img class="work2" src="../../common/images/about/2.png" alt="work2">
-                    <img class="work3" src="../../common/images/about/3.png" alt="work3">
-                  </div>
-                  <div class="right">
-                    <img src="../../common/images/about/1.png" alt="work1">
-                  </div>
-                </div>
-              </a-col>
-              <a-col
-                class="gutter-row"
                 :xs="24"
                 :sm="24"
                 :md="24"
-                :lg="14"
-                >
-                <div class="company-description">
-                  <div class="company">
-                    <p class="name">云兴维智（北京）科技有限公司</p>
-                    <p class="description">成立于2016年，是国际领先的AIOps技术高科技软件公司。</p>
-                  </div>
-                  <div class="our-description">
-                    <p>我们采用机器学习和人工智能技术，为各类企业数据中心、在线系统和云平台提供高智能、高性能和高可靠性的大规模运维监控和数据分析服务平台。</p>
-                  </div>
-                  <div class="services">
-                    <a-row>
+                :lg="20">
+                <a-row
+                  type="flex"
+                  justify="center">
+                  <a-col
+                    :xs="24"
+                    :sm="24"
+                    :md="24"
+                    :lg="10">
+                    <a-row
+                      type="flex"
+                      justify="center">
                       <a-col
-                        class="gutter-row"
-                        :xs="32"
-                        :sm="32"
-                        :md="16"
-                        :lg="12"
-                      >
-                        <div class="left">
-                          <p class="number">5W+</p>
-                          <p>5万台以上的服务器，覆盖多个数据中心。</p>
-                        </div>
+                        :xs="10"
+                        :sm="10"
+                        :md="10"
+                        :lg="10">
+                        <a-row
+                          type="flex"
+                          justify="center">
+                          <a-col>
+                            <div>
+                              <img class="work2" src="../../common/images/about/2.png" alt="work2">
+                            </div>
+                          </a-col>
+                        </a-row>
+                        <a-row
+                          type="flex"
+                          justify="center">
+                          <a-col>
+                            <div>
+                              <img class="work3" src="../../common/images/about/3.png" alt="work3">
+                            </div>
+                          </a-col>
+                        </a-row>
                       </a-col>
-                      <a-col>
-                        <div class="right">
-                          <p class="number">10</p>
-                          <p>年以上的设计、建造和运营大数据系统的经验。</p>
+                      <a-col
+                        class="right"
+                        :xs="12"
+                        :sm="12"
+                        :md="12"
+                        :lg="12"
+                        >
+                        <div>
+                          <img src="../../common/images/about/1.png" alt="work1">
                         </div>
                       </a-col>
                     </a-row>
-                  </div>
-                </div>
+                  </a-col>
+                  <a-col
+                    :xs="24"
+                    :sm="24"
+                    :md="24"
+                    :lg="14">
+                      <a-row>
+                        <a-col
+                          :xs="24"
+                          :sm="24"
+                          :md="24"
+                          :lg="24">
+                          <div class="company-description">
+                            <div class="company">
+                              <p class="name">云兴维智（北京）科技有限公司</p>
+                              <p class="description">成立于2016年，是国际领先的AIOps技术高科技软件公司。</p>
+                            </div>
+                            <div class="our-description">
+                              <p>我们采用机器学习和人工智能技术，为各类企业数据中心、在线系统和云平台提供高智能、高性能和高可靠性的大规模运维监控和数据分析服务平台。</p>
+                            </div>
+                          </div>
+                        </a-col>
+                      </a-row>
+                      <div class="services">
+                        <a-row
+                          type="flex"
+                          justify="center"
+                        >
+                          <a-col
+                            class="gutter-row"
+                            :xs="24"
+                            :sm="24"
+                            :md="16"
+                            :lg="12"
+                          >
+                            <div class="left">
+                              <p class="number">5W+</p>
+                              <p>5万台以上的服务器，覆盖多个数据中心。</p>
+                            </div>
+                          </a-col>
+                          <a-col
+                            :xs="24"
+                            :sm="24"
+                            :md="16"
+                            :lg="12"
+                          >
+                            <div class="right">
+                              <p class="number">10</p>
+                              <p>年以上的设计、建造和运营大数据系统的经验。</p>
+                            </div>
+                          </a-col>
+                        </a-row>
+                      </div>
+                  </a-col>
+                </a-row>
               </a-col>
             </a-row>
           </div>
@@ -83,8 +134,8 @@
               <a-col
                 v-for="(item, index) in team_mates"
                 :key="index"
-                :xs="32"
-                :sm="32"
+                :xs="24"
+                :sm="24"
                 :md="26"
                 :lg="10"
                 :xl="8"
@@ -258,63 +309,62 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @media (max-width: 970px) {
+    .middle-content {
+      padding-top: 0;
+    }
+    .company-description {
+      margin: 1rem 0rem;
+      padding: 0 .5rem;
+    }
+    .services {
+      margin: 1rem 0rem;
+      text-align: center;
+    }
+  }
+  @media (min-width: 970px) {
+    .middle-content {
+      padding-top: 3rem;
+    }
+    .company-description {
+      margin: 1rem 5rem;
+    }
+    .services {
+      margin: 1rem 5rem;
+    }
+  }
   .about-wrapper {
     background: #e8ecf4;
     .about-container {
       .about-top {
         background: #fff;
         .middle-content {
-          width: 85%;
-          margin: 0 auto;
-          padding: 3rem;
-          .about-work {
-            height: 100%;
-            .work-pics {
-              display: grid;
-              margin: 1rem;
-              grid-template-columns: 48% 4% 48%;
-              .left {
-                display: flex;
-                flex-direction: column;
-                margin: 0 .5rem;
-                background-size: cover;
-                .work2 {
-                  height: 50%;
-                  margin-bottom: .5rem;
-                  align-items: start;
-                }
-                .work3 {
-                  height: 50%;
-                  align-items: end;
-                }
-              }
+          .right {
+            img {
+              height: 528px;
             }
           }
           .company-description {
-            margin: 1rem 5rem;
             .company {
               .name {
-                height: 0;
                 font-size: 2rem;
-                padding: 3rem 0;
+                padding: 2rem 0;
               }
               .description {
-                height: 0;
                 font-size: 1rem;
               }
             }
             .our-description {
-              margin: 4rem 0;
               font-size: 1rem;
               line-height: 2rem;
             }
-            .services {
-              .number {
-                color: #1a7bd2;
-                font-size: 3rem;
-                height: 0;
-                padding-bottom: 2rem;
-              }
+          }
+          .services {
+            .number {
+              color: #1a7bd2;
+              font-size: 3rem;
+              height: 0;
+              padding-bottom: 2rem;
             }
           }
         }

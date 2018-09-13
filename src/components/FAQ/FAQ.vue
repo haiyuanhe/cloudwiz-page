@@ -38,7 +38,7 @@
           <a-col
             style="border: 1px solid blue;"
             class="faq-lists"
-            :xs="32"
+            :xs="24"
             :sm="16"
             :md="16"
             :lg="14"

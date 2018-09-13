@@ -10,9 +10,8 @@
           justify="center"
         >
           <a-col
-            style="border: 1px solid green;"
             class="advantage-wrapper"
-            :xs="24"
+            :xs="22"
             :sm="20"
             :md="20"
             :lg="18"
@@ -51,11 +50,11 @@
           justify="center"
         >
           <a-col
-            :xs="32"
-            :sm="32"
-            :md="24"
-            :lg="24"
-            :xl="24"
+            :xs="22"
+            :sm="22"
+            :md="22"
+            :lg="22"
+            :xl="22"
             :xxl="20"
           >
             <a-row
@@ -63,7 +62,6 @@
               justify="center"
             >
               <a-col
-                style="border: 1px solid blue;"
                 class="cloudwiz-service"
                 v-for="(item, index) in services"
                 :key="index"
@@ -93,8 +91,8 @@
           justify="center"
         >
           <a-col
-            :xs="32"
-            :sm="32"
+            :xs="22"
+            :sm="22"
             :md="24"
             :lg="24"
             :xl="24"
@@ -166,55 +164,50 @@ export default {
           icon: require('common/images/products/advantage/2.png'),
           title: '消除运维数据孤岛，实现数据关联，真正实现整合和共享',
           points: [
-            '高效、精准的报警，告别“alert fatigue”。',
-            '智能异常检测，及时跟踪系统异常。',
-            '智能分析诊断，发掘因果关系。',
-            '专业故障溯源知识图谱，定制系统扥洗，提升运维效率。',
-            '提供多平台实时报警，实时报警推送。'
+            '简单易操作，将数据传输至数据处理和存储器；',
+            '多种数据采集方式，灵活多变，快速适应；',
+            '支持物理机、虚拟环境、容器环境和多云混合环境；',
+            '全面收集不同类型的运维指标、日志、事件等；',
+            '方便快捷的第三方系统对接。'
           ]
         },
         {
           icon: require('common/images/products/advantage/3.png'),
           title: '洞悉业务和IT体系，随心掌握IT系统对业务的影响',
           points: [
-            '高效、精准的报警，告别“alert fatigue”。',
-            '智能异常检测，及时跟踪系统异常。',
-            '智能分析诊断，发掘因果关系。',
-            '专业故障溯源知识图谱，定制系统扥洗，提升运维效率。',
-            '提供多平台实时报警，实时报警推送。'
+            '业务系统可视化，持续优化助力业务决策；',
+            '故障溯源和定位，准确发现系统故障的根因；',
+            '发现、衡量IT系统问题对业务系统的影响；',
+            '根因问题溯源、事件关联、事件告警。'
           ]
         },
         {
           icon: require('common/images/products/advantage/4.png'),
           title: '本地和云知识库有效提高运维和运营效率',
           points: [
-            '高效、精准的报警，告别“alert fatigue”。',
-            '智能异常检测，及时跟踪系统异常。',
-            '智能分析诊断，发掘因果关系。',
-            '专业故障溯源知识图谱，定制系统扥洗，提升运维效率。',
-            '提供多平台实时报警，实时报警推送。'
+            '降低运维成本，提高运维效率；',
+            '快速发现问题，准确定位故障；',
+            '随着服务推进和数据积累，实现系统自迭代升级；',
+            '形成系统运维知识库，提升系统运维工作效率。'
           ]
         },
         {
           icon: require('common/images/products/advantage/5.png'),
           title: '系统资源规划和运行预测，为业务的发展保驾护航',
           points: [
-            '高效、精准的报警，告别“alert fatigue”。',
-            '智能异常检测，及时跟踪系统异常。',
-            '智能分析诊断，发掘因果关系。',
-            '专业故障溯源知识图谱，定制系统扥洗，提升运维效率。',
-            '提供多平台实时报警，实时报警推送。'
+            '资源规划和容量管理、预测，消除业务发展瓶颈；',
+            '主动支持IT运维，实现真正的智能运维；',
+            '真正实现敏捷运维和资源的预先管理。'
           ]
         },
         {
           icon: require('common/images/products/advantage/6.png'),
           title: '针对现代多种IT架构的智能监控运维',
           points: [
-            '高效、精准的报警，告别“alert fatigue”。',
-            '智能异常检测，及时跟踪系统异常。',
-            '智能分析诊断，发掘因果关系。',
-            '专业故障溯源知识图谱，定制系统扥洗，提升运维效率。',
-            '提供多平台实时报警，实时报警推送。'
+            '打通IAAS和PAAS架构，适应多云、混合云等现代IT架构；',
+            '基于KUBERINETE的容器运维、监控和资源优化；',
+            '支持VMWARE和常用虚拟环境；',
+            '支持传统环境的运维、监控和资源优化。'
           ]
         }
       ],
@@ -311,6 +304,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @media (max-width: 600px) {
+    .list {
+      .icon {
+        position: absolute;
+        right: -3rem;
+        bottom: -3rem;
+        img {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+    }
+  }
+  @media (min-width: 600px) {
+    .list {
+      .icon {
+        position: absolute;
+        right: -3rem;
+        bottom: -3rem;
+        img {
+          width: 12rem;
+          height: 12rem;
+        }
+      }
+    }
+  }
   .cloudwiz-wrapper {
     background: #f6f7fa;
     .cloudwiz-container {
@@ -330,18 +349,9 @@ export default {
             .list {
               position: relative;
               .detail {
-                padding-bottom: 5rem;
+                padding: 0 0 5rem 2rem;
                 ul {
                   list-style: disc!important;
-                }
-                .icon {
-                  position: absolute;
-                  right: -4rem;
-                  bottom: -3rem;
-                  img {
-                    width: 15rem;
-                    height: 15rem;
-                  }
                 }
               }
             }

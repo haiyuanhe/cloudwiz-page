@@ -6,7 +6,6 @@
         justify="center"
       >
         <a-col
-          style="border: 1px solid red;"
           :xs="24"
           :sm="24"
           :md="24"
@@ -19,24 +18,23 @@
             justify="center"
           >
             <a-col
-              style="border: 1px solid blue;text-align:center;"
+              style="text-align:center;"
               class="logo"
-              :xs="8"
-              :sm="8"
-              :md="8"
-              :lg="8"
+              :xs="12"
+              :sm="12"
+              :md="12"
+              :lg="12"
               :xl="4"
               :xxl="6"
             >
                 <img src="../../common/images/cloudwiz.jpg" alt="Cloudwiz"/>
             </a-col>
             <a-col
-              style="border: 1px solid blue;"
-              :xs="20"
-              :sm="20"
-              :md="20"
-              :lg="20"
-              :xl="20"
+              :xs="24"
+              :sm="24"
+              :md="24"
+              :lg="24"
+              :xl="24"
               :xxl="18"
             >
               <a-row
@@ -44,11 +42,10 @@
                 justify="center"
               >
                 <a-col
-                  style="border: 1px solid blue;"
-                  :xs="22"
-                  :sm="20"
-                  :md="16"
-                  :lg="16"
+                  :xs="24"
+                  :sm="24"
+                  :md="8"
+                  :lg="8"
                   :xl="8"
                   :xxl="8"
                 >
@@ -56,39 +53,47 @@
                     <p class="link-header">联系方式</p>
                     <p class="item">电话：010-6295 8816</p>
                     <p class="item">邮箱：<a href="mailto:service@cloudwiz.cn">service@cloudwiz.cn</a></p>
-                    <p class="item">地址：<a href="//f.amap.com/64cXQ_0942kf5">北京市海淀区清河永泰园甲1号建金中心</a></p>
+                    <p class="item">地址：<a href="//f.amap.com/64cXQ_0942kf5" target="_blank">北京市海淀区清河永泰园甲1号建金中心</a></p>
                   </div>
                 </a-col>
                 <a-col
-                  style="border: 1px solid blue;"
-                  :xs="22"
-                  :sm="20"
-                  :md="16"
-                  :lg="16"
+                  :xs="24"
+                  :sm="24"
+                  :md="8"
+                  :lg="8"
                   :xl="8"
                   :xxl="8"
                 >
                   <div class="link contact">
                     <p class="link-header">快捷入口</p>
-                    <p class="item">免费试用</p>
-                    <p class="item">产品价格</p>
-                    <p class="item">招贤纳士</p>
+                    <p class="item">
+                      <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
+                    </p>
+                    <p class="item">
+                      <router-link to="/cloudwiz">
+                        <span>产品价格</span>
+                      </router-link>
+                    </p>
+                    <p class="item">
+                      <router-link to="/recruitment">
+                        <span>招贤纳士</span>
+                      </router-link>
+                    </p>
                   </div>
                 </a-col>
                 <a-col
-                  style="border: 1px solid blue;"
-                  :xs="22"
-                  :sm="20"
-                  :md="16"
-                  :lg="16"
+                  :xs="24"
+                  :sm="24"
+                  :md="8"
+                  :lg="8"
                   :xl="8"
                   :xxl="8"
                 >
                   <div class="link product-instructions">
                   <p class="link-header">产品使用说明</p>
-                  <p class="item"><a href="#">快速开始</a></p>
-                  <p class="item"><a href="#">软硬件环境</a></p>
-                  <p class="item"><a href="#">应用场景</a></p>
+                  <p class="item"><a target="_blank" href="//www.cloudwiz.cn/document">快速开始</a></p>
+                  <p class="item"><a target="_blank" href="//www.cloudwiz.cn/document/part2/software_and_hardware_environment.html">软硬件环境</a></p>
+                  <p class="item"><a target="_blank" href="//www.cloudwiz.cn/document/part4/collector.html">应用场景</a></p>
                 </div>
                 </a-col>
               </a-row>
@@ -102,7 +107,6 @@
         justify="center"
       >
         <a-col
-          style="border: 1px solid yellow;"
           :xs="22"
           :sm="10"
           :md="10"
@@ -132,11 +136,16 @@ export default {
       padding: 5rem;
       .logo {
         text-align: center;
-      }
-      .link-header {
         margin-bottom: 2rem;
-        font-size: 1.1rem;
-        color: #cfc9c9;
+      }
+      .link{
+        padding-left: .8rem;
+        line-height: 1.2rem;
+        .link-header {
+          margin-bottom: 2rem;
+          font-size: 1.1rem;
+          color: #cfc9c9;
+        }
       }
       .item {
         padding: .2rem 0;
