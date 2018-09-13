@@ -61,8 +61,8 @@
                   :sm="24"
                   :md="8"
                   :lg="8"
-                  :xl="8"
-                  :xxl="8"
+                  :xl="4"
+                  :xxl="4"
                 >
                   <div class="link contact">
                     <p class="link-header">快捷入口</p>

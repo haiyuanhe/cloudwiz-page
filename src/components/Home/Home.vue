@@ -8,7 +8,7 @@
           <p class="aiops">国内领先的全IT架构AIOps</p>
           <p class="aiops">智能运维平台</p>
           <a-button class="free-used" type="primary">
-            <a target="_blank" href="//app.cloudwiz.cn">免费使用</a>
+            <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
           </a-button>
           <a-button class="understand" ghost>
             <router-link to="/cloudwiz">

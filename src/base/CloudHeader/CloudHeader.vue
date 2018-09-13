@@ -13,7 +13,13 @@
           </router-link>
           <a-dropdown class="ant-dropdown-link tab-link">
             <span class="tab-link">产品中心<a-icon type="down" style="color: #979b9b"/></span>
-            <a-menu slot="overlay" theme="dark">
+            <a-menu
+              slot="overlay"
+              theme="dark"
+              :style="{
+                top: 1 + 'rem',
+                left: -1 + 'rem'
+              }">
               <a-menu-item>
                 <router-link to="/cloudwiz">
                   <span>产品介绍</span>
@@ -37,7 +43,13 @@
           </router-link>
           <a-dropdown class="ant-dropdown-link menu-item about-us">
             <span class="tab-link">关于我们<a-icon type="down" style="color: #979b9b"/></span>
-            <a-menu slot="overlay" theme="dark">
+            <a-menu
+              slot="overlay"
+              theme="dark"
+              :style="{
+                top: 1 + 'rem',
+                left: -1 + 'rem'
+              }">
               <a-menu-item>
                 <router-link to="/about">
                   <span>关于公司</span>
@@ -65,7 +77,7 @@
           <a target="_blank" href="//app.cloudwiz.cn">登录</a>
         </div>
         <div class="use free-used">
-          <a target="_blank" href="//app.cloudwiz.cn">免费使用</a>
+          <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
         </div>
       </div>
       <div class="mobail" v-show="this.screenWidth <= 970">
@@ -159,7 +171,7 @@
               <a target="_blank" href="//app.cloudwiz.cn">登录</a>
             </a-menu-item>
             <a-menu-item>
-              <a target="_blank" href="//app.cloudwiz.cn">免费使用</a>
+              <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
             </a-menu-item>
           </a-menu>
         </a-dropdown>
@@ -299,8 +311,8 @@ export default {
         .free-used {
           font-family: Avenir;
           a {
-            padding: .3rem;
-            border: 1px solid #003fff;
+            padding: 0.6rem;
+            border: 1px solid #436dec;
           }
         }
       }

@@ -13,7 +13,8 @@
                 :xs="24"
                 :sm="24"
                 :md="24"
-                :lg="20">
+                :lg="20"
+                style="margin: 3rem">
                 <a-row
                   type="flex"
                   justify="center">
@@ -57,7 +58,7 @@
                         :lg="12"
                         >
                         <div>
-                          <img src="../../common/images/about/1.png" alt="work1">
+                          <img class="work1" src="../../common/images/about/1.png" alt="work1">
                         </div>
                       </a-col>
                     </a-row>
@@ -98,7 +99,7 @@
                           >
                             <div class="left">
                               <p class="number">5W+</p>
-                              <p>5万台以上的服务器，覆盖多个数据中心。</p>
+                              <p>的服务器，覆盖多个数据中心。</p>
                             </div>
                           </a-col>
                           <a-col
@@ -339,9 +340,14 @@ export default {
       .about-top {
         background: #fff;
         .middle-content {
+          .work2, .work3 {
+            width: 200px;
+            height: 240px;
+            margin: 0 2rem;
+          }
           .right {
             img {
-              height: 528px;
+              height: 482px;
             }
           }
           .company-description {
@@ -400,10 +406,10 @@ export default {
               text-align: center;
               background: #fff;
               border: 1px solid #e8ecf3;
-              box-shadow: 0 0 1.5rem #b6c1d3;
+              // box-shadow: 0 0 1.5rem #b6c1d3;
               cursor: pointer;
               &:hover {
-                box-shadow: 0 0 1.5rem #63b1c3;
+                box-shadow: 0 0 2.5rem #b6c1d3;
               }
               display: flex;
               flex-direction: column;

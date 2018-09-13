@@ -431,7 +431,6 @@ export default {
           }
         }
         .cases-lists {
-          border: 1px solid red;
           .list {
             margin: 1rem;
             height: 18rem;
@@ -440,7 +439,7 @@ export default {
               border: 1px solid #e9ebec;
               background: #fff;
               height: 12rem;
-              line-height: 12rem;
+              line-height: 15rem;
               margin: auto;
               text-align: center;
               cursor: pointer;
@@ -449,6 +448,7 @@ export default {
               }
               img {
                 height: 4rem;
+                // width: 90%;
               }
             }
             .c {

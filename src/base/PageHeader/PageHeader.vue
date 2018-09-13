@@ -2,7 +2,7 @@
   <div
     class="page-header"
     :style="{
-      background: `url(${headerInfo.Imgurl}) no-repeat`,
+      background: `url(${headerInfo.Imgurl}) no-repeat center`,
       height: `${height}rem`
     }">
     <div class="header-title">
