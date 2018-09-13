@@ -9,8 +9,8 @@
           justify="center"
         >
           <a-col
-            :xs="{ span: 32}"
-            :sm="{ span: 32}"
+            :xs="{ span: 24}"
+            :sm="{ span: 24}"
             :md="{ span: 24}"
             :lg="{ span: 18}"
             :xl="{ span: 18}"
@@ -21,8 +21,8 @@
               <a-row>
                 <a-col
                   class="news-images"
-                  :xs="{ span: 32}"
-                  :sm="{ span: 32}"
+                  :xs="{ span: 24}"
+                  :sm="{ span: 24}"
                   :md="{ span: 24}"
                   :lg="{ span: 8}"
                   :xl="{ span: 8}"
@@ -30,8 +30,8 @@
                   <img :src="item.newsImg" alt="item.title" />
                 </a-col>
                 <a-col
-                  :xs="{ span: 32}"
-                  :sm="{ span: 32}"
+                  :xs="{ span: 24}"
+                  :sm="{ span: 24}"
                   :md="{ span: 24}"
                   :lg="{ span: 16}"
                   :xl="{ span: 16}"
@@ -122,6 +122,9 @@ export default {
   @media (min-width: 970px) {
     .news-images {
       text-align: left;
+      img {
+        padding: .5rem;
+      }
     }
   }
   .news-wrapper {

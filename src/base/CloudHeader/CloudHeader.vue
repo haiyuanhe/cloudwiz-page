@@ -56,7 +56,7 @@
             </a-menu>
           </a-dropdown>
           <li class="menu-item offline-analysis">
-            <span>离线分析平台</span>
+            <a target="_blank" href="//play.cloudwiz.cn/offline_analysis">离线分析平台</a>
           </li>
         </ul>
       </div>
@@ -152,7 +152,9 @@
                 </a-menu-item>
               </a-collapse-panel>
             </a-collapse>
-            <a-menu-item>离线分析平台</a-menu-item>
+            <a-menu-item>
+              <a target="_blank" href="//play.cloudwiz.cn/offline_analysis">离线分析平台</a>
+            </a-menu-item>
             <a-menu-item>
               <a target="_blank" href="//app.cloudwiz.cn">登录</a>
             </a-menu-item>

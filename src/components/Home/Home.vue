@@ -7,8 +7,14 @@
           <p class="ai">用数据让运维智能化</p>
           <p class="aiops">国内领先的全IT架构AIOps</p>
           <p class="aiops">智能运维平台</p>
-          <a-button class="free-used" type="primary">免费使用</a-button>
-          <a-button class="understand" ghost>了解产品</a-button>
+          <a-button class="free-used" type="primary">
+            <a target="_blank" href="//app.cloudwiz.cn">免费使用</a>
+          </a-button>
+          <a-button class="understand" ghost>
+            <router-link to="/cloudwiz">
+              <span>了解产品</span>
+            </router-link>
+          </a-button>
         </div>
       </div>
       <div class="home-middle">
@@ -118,7 +124,9 @@
                     <p>无需安装探针，直接导入数据</p>
                     <p>多种算法选择，完整功能试用</p>
                     <p>轻松享受Cloudwiz极致便捷体验</p>
-                    <a-button type="primary">立即试用</a-button>
+                    <a-button type="primary">
+                      <a target="_blank" href="//play.cloudwiz.cn/offline_analysis">立即试用</a>
+                    </a-button>
                   </div>
                 </a-col>
                 <a-col
@@ -132,7 +140,9 @@
                     <p>在线探针安装，实时响应</p>
                     <p>使用真实数据，直观查看</p>
                     <p>所见即所得的完整效果呈现</p>
-                    <a-button class="f-used">立即试用</a-button>
+                    <a-button class="f-used">
+                      <a target="_blank" href="//app.cloudwiz.cn">立即试用</a>
+                    </a-button>
                   </div>
                 </a-col>
               </a-row>
@@ -426,7 +436,7 @@ export default {
         margin-top: -6rem;
         .new-features {
           width: 90%;
-          margin: 0 auto;
+          margin: 2rem auto;
           .f-lists {
             width: 80%;
             margin: 0 auto;
