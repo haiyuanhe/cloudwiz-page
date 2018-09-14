@@ -320,7 +320,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media (max-width: 840px) {
+  @media screen and (max-width: 840px) {
     .case-info {
       .c {
         text-align: center;
@@ -396,7 +396,7 @@ export default {
             background: #fff;
             cursor: pointer;
             &:hover {
-              box-shadow: 0 0 1.5rem rgba(2, 8, 22, .1);
+              box-shadow: 1.1rem 1.1rem 1.4rem rgba(2, 8, 22, .1);
             }
             .left {
               text-align: center;
@@ -444,7 +444,7 @@ export default {
               text-align: center;
               cursor: pointer;
               &:hover {
-                box-shadow: 0 0 1.5rem rgba(2, 8, 22, .1);
+                box-shadow: 1.1rem 1.1rem 1.4rem rgba(2, 8, 22, .1);
               }
               img {
                 height: 4rem;

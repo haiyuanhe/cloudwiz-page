@@ -57,9 +57,9 @@
               <a-col
                 v-for="(item, index) in users"
                 :key="index"
-                :xs="16"
-                :sm="16"
-                :md="6"
+                :xs="22"
+                :sm="22"
+                :md="8"
                 :lg="6"
               >
                 <div class="user">
@@ -119,7 +119,7 @@
                 <a-col
                   :xs="24"
                   :sm="24"
-                  :md="24"
+                  :md="12"
                   :lg="12"
                 >
                   <div class="f">
@@ -135,7 +135,7 @@
                 <a-col
                   :xs="24"
                   :sm="24"
-                  :md="24"
+                  :md="12"
                   :lg="12"
                 >
                   <div class="f">
@@ -277,7 +277,7 @@ export default {
 </script>
 
 <style lang="scss">
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
   .f-lists {
     width: 100%;
     margin: 0 auto;
@@ -286,7 +286,7 @@ export default {
     font-size: 1.3rem;
   }
 }
-@media (min-width: 1100px) {
+@media screen and (min-width: 1100px) {
   .f-lists {
     width: 80%;
     margin: 0 auto;
@@ -297,10 +297,11 @@ export default {
   background: #f7f8fb;
   .home-container {
     .home-top {
-      height: 55rem;
+      height: 40rem;
       color: #fff;
       background-image: url('../../common/images/home/home_header.png');
       background-size: 100% 100%;
+      background-position: right bottom;
       background-repeat: no-repeat;
       position: relative;
       .top-content {
@@ -342,13 +343,9 @@ export default {
         width: 75%;
         margin: 0 auto;
         .feature-wrapper {
-          margin: .8rem .6rem;
+          margin: 1rem .4rem;
           border: 1px solid #efefef;
-          box-shadow: 0 0 1.5rem #ccc;
-          cursor: pointer;
-          &:hover {
-            box-shadow: 0 0 1.5rem rgb(121, 114, 114);
-          }
+          box-shadow: 1.1rem 1.1rem 1.4rem rgba(2, 8, 22, .1);
           .feature {
             width: 90%;
             margin: 2.5rem auto;

@@ -144,12 +144,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media (max-width: 1100px) {
+  @media screen and (max-width: 1100px) {
     .faq-type-active {
       border-bottom: 2px solid rgb(168, 34, 34);
     }
   }
-  @media (min-width: 1100px) {
+  @media screen and (min-width: 1100px) {
     .faq-type-active {
       border: 1px solid rgb(186, 186, 189);
       background: #fff;

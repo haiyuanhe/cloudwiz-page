@@ -37,7 +37,11 @@
                           justify="center">
                           <a-col>
                             <div>
-                              <img class="work2" src="../../common/images/about/2.png" alt="work2">
+                              <img
+                                class="work2"
+                                src="../../common/images/about/2.png"
+                                alt="work2"
+                                srcset="../../common/images/about/2.png 2x">
                             </div>
                           </a-col>
                         </a-row>
@@ -164,7 +168,9 @@
                       :lg="8"
                     >
                       <div class="company">
-                        <img :src="cinfo.company" :alt="cinfo.name">
+                        <img
+                          :src="cinfo.company"
+                          :alt="cinfo.name">
                       </div>
                     </a-col>
                   </a-row>
@@ -313,7 +319,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media (max-width: 1100px) {
+  @media screen and (max-width: 1100px) {
     .middle-content {
       padding-top: 0;
     }
@@ -329,7 +335,7 @@ export default {
       text-align: center;
     }
   }
-  @media (min-width: 1100px) {
+  @media screen and (min-width: 1100px) {
     .middle-content {
       padding-top: 3rem;
     }

@@ -9,9 +9,9 @@
           justify="center"
         >
           <a-col
-            :xs="{ span: 24}"
-            :sm="{ span: 24}"
-            :md="{ span: 24}"
+            :xs="{ span: 22}"
+            :sm="{ span: 22}"
+            :md="{ span: 22}"
             :lg="{ span: 19}"
             :xl="{ span: 18}"
             v-for="(item, index) in news"
@@ -37,7 +37,7 @@
                   :sm="{ span: 24}"
                   :md="{ span: 24}"
                   :lg="{ span: 16}"
-                  :xl="{ span: 14}"
+                  :xl="{ span: 16}"
                   class="cd"
                 >
                   <div class="top">{{item.title}}</div>
@@ -80,7 +80,7 @@ export default {
           newsImg: require('common/images/news/news1.png'),
           title: '云上金融新时代 | 云兴维智亮相中国国际金融展',
           description: '2018年8月23日，第二十六届中国国际金融展在北京展览馆盛大开幕。云兴维智受邀参加，并在现场为参展嘉宾展示了公司在云计算与智&&2018年8月23日，第二十六届中国国际金融展在北京展览馆盛大开幕。云兴维智受邀参加，并在现场为参展嘉宾展示了公司在云计算与智2018年8月23日，第二十六届中国国际金融展在北京展览馆盛大开幕。云兴维智受邀参加，并在现场为参展嘉宾展示了公司在云计算与智能运维领域与国内外优秀金融机构合作的成功经验。',
-          occur_time: '2017/08/24'
+          occur_time: '2018/08/24'
         },
         {
           type: '新闻',
@@ -88,7 +88,7 @@ export default {
           newsImg: require('common/images/news/news2.png'),
           title: '云兴维智：引领云+金融时代的新一轮革新',
           description: '8月26日，作为我国金融业唯一的全国性展览平台和亚太地区影响力最大的金融盛会，2018中国国际金融展圆满落幕。本次展会以“金融新时代·科技新发展·创新新气象”为主题。云兴维智作为国际领先的AIOps技术高科技软件公司，为国内外多家知名金融机构提供智能运维服务。在展会现场，云兴维智向观众展示了AIOps智能云运维解决方案在金融行业的广泛应用场景，引领了云+金融在智能化时代的新一轮革新。',
-          occur_time: '2017/09/07'
+          occur_time: '2018/09/07'
         }
       ]
     }
@@ -108,7 +108,7 @@ export default {
 
 <style lang="scss" scoped>
   @mixin b-shadow($bs, $bhs) {
-    box-shadow: 0 0 1.5rem $bs;
+    // box-shadow: 0 0 1.5rem $bs;
     cursor: pointer;
     &:hover {
       box-shadow: 0 0 1.5rem $bhs;
@@ -122,17 +122,17 @@ export default {
     -webkit-box-orient: vertical;
   }
 
-  @media (max-width: 1100px) {
+  @media screen and (max-width: 1100px) {
     .news-images {
-      padding-top: 1rem;
-      text-align: center;
+      // padding-top: 1rem;
+      // text-align: center;
     }
   }
-  @media (min-width: 1100px) {
+  @media screen and (min-width: 1100px) {
     .news-images {
-      text-align: left;
+      // text-align: left;
       img {
-        padding: .5rem;
+        // padding: .5rem;
       }
     }
   }
@@ -143,7 +143,7 @@ export default {
       .news-list {
         margin: .6rem 0;
         border: 1px solid #ccc;
-        @include b-shadow(#ccc, rgb(121, 114, 114));
+        @include b-shadow(#ccc, rgb(201, 201, 201));
         img {
           height: 15rem;
         }

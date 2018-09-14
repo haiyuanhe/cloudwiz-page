@@ -303,7 +303,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     .list {
       .icon {
         position: absolute;
@@ -316,7 +316,7 @@ export default {
       }
     }
   }
-  @media (min-width: 600px) {
+  @media screen and (min-width: 600px) {
     .list {
       .icon {
         position: absolute;

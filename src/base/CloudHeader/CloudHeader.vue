@@ -184,7 +184,7 @@ export default {
   name: 'CloudHeader',
   data () {
     return {
-      type: 'appstore',
+      type: 'bars',
       show: false,
       screenWidth: document.body.clientWidth
     }
@@ -196,7 +196,6 @@ export default {
         this.timer = true
         let that = this
         setTimeout(function () {
-          console.log(that.screenWidth)
           that.timer = false
         }, 400)
       }
@@ -213,14 +212,11 @@ export default {
   },
   methods: {
     change (e) {
-      this.type = e ? 'close' : 'appstore'
     },
     open () {
       this.show = true
-      this.type = this.type === 'close' ? 'appstore' : 'close'
     },
     handleMenuClick () {
-      this.type = this.type === 'close' ? 'appstore' : 'close'
       this.show = false
     }
   }
@@ -228,12 +224,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media (max-width: 1100px) {
+  @media screen and (max-width: 700px) {
+    .logo {
+        position: absolute;
+        left: 20%;
+        margin-left: 2rem;
+      }
+  }
+  @media screen and (max-width: 1100px) {
     .header-container {
       .logo {
         position: absolute;
-        left: 40%;
+        left: 0;
       }
+    }
+    .ant-dropdown-menu-item {
+      padding-bottom: .6rem;
     }
     .menu-link {
       font-size: 1.1rem;
@@ -334,7 +340,7 @@ export default {
       }
       .mobail {
         position: absolute;
-        left: 1rem;
+        right: 4rem;
         line-height: 4rem;
         font-size: 2rem;
         color: #fff;

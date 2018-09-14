@@ -117,7 +117,7 @@
           :xxl="6"
         >
           <p class="copyright">
-            copyright &copy; 2018 云兴维智（北京）科技有限公司 | 京ICP备17008193号
+            copyright &copy; {{(new Date()).getFullYear()}} 云兴维智（北京）科技有限公司 | 京ICP备17008193号
           </p>
         </a-col>
     </a-row>
@@ -143,8 +143,8 @@ export default {
       .link{
         padding-left: .8rem;
         line-height: 1.2rem;
+        padding-bottom: 2rem;
         .link-header {
-          margin-bottom: 2rem;
           font-size: 1.1rem;
           color: #cfc9c9;
         }
