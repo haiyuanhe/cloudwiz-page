@@ -19,6 +19,7 @@ export default {
     margin-top: 4rem;
     overflow-x: hidden;
     overflow-y: scroll;
+    height: 100vh;
     .ant-modal-mask {
       background: rgba(0, 0, 0, .1)!important;
     }

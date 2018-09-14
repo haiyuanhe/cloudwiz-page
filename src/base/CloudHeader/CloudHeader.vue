@@ -8,7 +8,7 @@
       </div>
       <div class="navbar" v-show="this.screenWidth >= 1100">
         <ul>
-          <router-link class="menu-item home" to="/home">
+          <router-link class="menu-item home" to="/">
             <span class="tab-link">首页</span>
           </router-link>
           <a-dropdown class="ant-dropdown-link tab-link">
@@ -97,7 +97,7 @@
             }"
           >
             <a-menu-item>
-              <router-link class="menu-item home" to="/home">
+              <router-link class="menu-item home" to="/">
                 <span class="tab-link menu-link">首页</span>
               </router-link>
             </a-menu-item>
@@ -298,7 +298,8 @@ export default {
           display: inline;
           margin: 1rem;
           line-height: 4rem;
-          &.router-link-active {
+          color: #999b9f;
+          &.router-link-exact-active {
             .tab-link {
               color: #fff;
             }

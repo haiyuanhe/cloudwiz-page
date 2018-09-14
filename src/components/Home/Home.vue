@@ -281,6 +281,9 @@ export default {
     width: 100%;
     margin: 0 auto;
   }
+  .ai {
+    font-size: 1.3rem;
+  }
 }
 @media (min-width: 1100px) {
   .f-lists {
