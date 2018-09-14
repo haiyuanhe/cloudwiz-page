@@ -9,7 +9,6 @@
           justify="center"
         >
           <a-col
-            style="border: 1px solid red;"
             :xs="24"
             :sm="8"
             :md="24"
@@ -36,7 +35,6 @@
             </a-row>
           </a-col>
           <a-col
-            style="border: 1px solid blue;"
             class="faq-lists"
             :xs="24"
             :sm="16"
@@ -50,7 +48,7 @@
                   class="faq-qa"
                   v-if="faqs[currentIndex].lists.length > 0"
                 >
-                  <a-collapse accordion>
+                  <a-collapse defaultActiveKey="0" accordion>
                     <a-collapse-panel
                       v-for="(item) in faqs[currentIndex].lists"
                       :header="item.q"

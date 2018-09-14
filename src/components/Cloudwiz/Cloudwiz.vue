@@ -20,7 +20,7 @@
           >
             <div class="advantage">
               <a-collapse
-                v-model="activeKey"
+                defaultActiveKey="0"
                 accordion>
                 <a-collapse-panel
                   v-for="(item, j) in advantage"
@@ -142,7 +142,6 @@ export default {
   name: 'cloudwiz',
   data () {
     return {
-      activeKey: ['1'],
       headerInfo: {
         Imgurl: require('common/images/products/cloudwiz-background.png'),
         title: 'Cloudwiz',
@@ -352,6 +351,7 @@ export default {
                 padding: 0 0 5rem 2rem;
                 ul {
                   list-style: disc!important;
+                  font-size: 1rem;
                 }
               }
             }

@@ -89,6 +89,7 @@
             slot="overlay"
             theme="dark"
             class="menu-lists"
+            v-show="show"
             :style="{
               top: -5 + 'px',
               left: 0,
@@ -97,7 +98,7 @@
           >
             <a-menu-item>
               <router-link class="menu-item home" to="/home">
-                <span class="tab-link">首页</span>
+                <span class="tab-link menu-link">首页</span>
               </router-link>
             </a-menu-item>
             <a-collapse accordion class="menu-item">
@@ -110,17 +111,15 @@
                   borderRadius: none;
                 "
               >
-                <a-menu-item>
+                <a-menu-item @click="handleMenuClick">
                   <router-link to="/cloudwiz">
                     <span>产品介绍</span>
                   </router-link>
                 </a-menu-item>
-                <a-menu-item>
-                  <router-link to="/documents">
-                    <span>产品使用说明</span>
-                  </router-link>
+                <a-menu-item @click="handleMenuClick">
+                  <a target="_blank" href="//www.cloudwiz.cn/document">产品使用说明</a>
                 </a-menu-item>
-                <a-menu-item>
+                <a-menu-item @click="handleMenuClick">
                   <router-link to="/FAQ">
                     <span>常见问题</span>
                   </router-link>
@@ -129,12 +128,12 @@
             </a-collapse>
             <a-menu-item>
               <router-link class="menu-item user-case" to="/cases">
-                <span class="tab-link">客户案例</span>
+                <span class="tab-link menu-link">客户案例</span>
               </router-link>
             </a-menu-item>
             <a-menu-item>
               <router-link class="menu-item company-news" to="/news">
-                <span class="tab-link">公司动态</span>
+                <span class="tab-link menu-link">公司动态</span>
               </router-link>
             </a-menu-item>
             <a-collapse accordion class="menu-item">
@@ -147,17 +146,17 @@
                   borderRadius: none;
                 "
               >
-                <a-menu-item>
+                <a-menu-item @click="handleMenuClick">
                   <router-link to="/about">
                     <span>关于公司</span>
                   </router-link>
                 </a-menu-item>
-                <a-menu-item>
+                <a-menu-item @click="handleMenuClick">
                   <router-link to="/contact">
                     <span>联系我们</span>
                   </router-link>
                 </a-menu-item>
-                <a-menu-item>
+                <a-menu-item @click="handleMenuClick">
                   <router-link to="/recruitment">
                     <span>招贤纳士</span>
                   </router-link>
@@ -165,13 +164,13 @@
               </a-collapse-panel>
             </a-collapse>
             <a-menu-item>
-              <a target="_blank" href="//play.cloudwiz.cn/offline_analysis">离线分析平台</a>
+              <a target="_blank" href="//play.cloudwiz.cn/offline_analysis" class="menu-link">离线分析平台</a>
             </a-menu-item>
             <a-menu-item>
-              <a target="_blank" href="//app.cloudwiz.cn">登录</a>
+              <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">登录</a>
             </a-menu-item>
             <a-menu-item>
-              <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
+              <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">免费试用</a>
             </a-menu-item>
           </a-menu>
         </a-dropdown>
@@ -186,6 +185,7 @@ export default {
   data () {
     return {
       type: 'appstore',
+      show: false,
       screenWidth: document.body.clientWidth
     }
   },
@@ -216,6 +216,11 @@ export default {
       this.type = e ? 'close' : 'appstore'
     },
     open () {
+      this.show = true
+      this.type = this.type === 'close' ? 'appstore' : 'close'
+    },
+    handleMenuClick () {
+      this.show = false
       this.type = this.type === 'close' ? 'appstore' : 'close'
     }
   }
@@ -229,6 +234,9 @@ export default {
         position: absolute;
         left: 40%;
       }
+    }
+    .menu-link {
+      font-size: 1.1rem;
     }
     .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
       text-align: center;
@@ -246,14 +254,19 @@ export default {
   .ant-collapse /deep/ .ant-collapse-content {
     border: none;
     background: inherit;
+    .ant-collapse-content-box {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
   .ant-collapse /deep/ .ant-collapse-header {
     color: #a8adaf!important;
     padding: 3px 12px;
     text-align: center;
+    font-size: 1.1rem;
     .arrow {
       line-height: 30px;
-      left: calc(50% + 30px);
+      left: calc(50% + 40px);
     }
   }
   .header-wrapper {

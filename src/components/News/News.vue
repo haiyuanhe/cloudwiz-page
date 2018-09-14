@@ -116,6 +116,7 @@ export default {
 
   @media (max-width: 970px) {
     .news-images {
+      padding-top: 1rem;
       text-align: center;
     }
   }

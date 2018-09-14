@@ -100,7 +100,7 @@
             >
               <div class="detail">
                 <div class="office-description">
-                  <a-collapse accordion v-if="offices[currentIndex].position.length">
+                  <a-collapse defaultActiveKey="0" accordion v-if="offices[currentIndex].position.length">
                     <a-collapse-panel
                       class="name"
                       v-for="(item, j) in offices[currentIndex].position"
