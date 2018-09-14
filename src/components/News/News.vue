@@ -12,7 +12,7 @@
             :xs="{ span: 24}"
             :sm="{ span: 24}"
             :md="{ span: 24}"
-            :lg="{ span: 18}"
+            :lg="{ span: 19}"
             :xl="{ span: 18}"
             v-for="(item, index) in news"
             :key="`${item.title}-${index}`"
@@ -37,7 +37,7 @@
                   :sm="{ span: 24}"
                   :md="{ span: 24}"
                   :lg="{ span: 16}"
-                  :xl="{ span: 16}"
+                  :xl="{ span: 14}"
                   class="cd"
                 >
                   <div class="top">{{item.title}}</div>
@@ -149,7 +149,7 @@ export default {
         }
         .top {
           font-size: 1.5rem;
-          padding: 1.5rem 2rem;
+          padding: 2rem 2rem;
         }
         .middle {
           font-size: .8rem;
@@ -159,6 +159,7 @@ export default {
         }
         .bottom {
           padding: 1rem 2rem;
+          margin-bottom: 3rem;
           .time {
             float: left;
             line-height: 2.2rem;

@@ -399,10 +399,10 @@ export default {
           padding: 2rem .5rem;
           text-align: center;
           background: #fff;
-          box-shadow: 0 0 1.5rem #e8ecf4;
+          // box-shadow: 0 0 1.5rem #e8ecf4;
           cursor: pointer;
           &:hover {
-            box-shadow: 0 0 1.5rem rgb(153, 148, 148);
+            box-shadow: 0 0 1.5rem #ccced3;
           }
           .procuct-list {
             .v {

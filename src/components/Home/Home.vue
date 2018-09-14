@@ -51,7 +51,6 @@
         <div class="users-wrapper">
           <div class="users">
             <a-row
-              :gutter="16"
               type="flex"
               justify="center"
             >
@@ -77,7 +76,6 @@
           <div class="users-faq-wrapper">
             <div class="faq">
               <a-row
-                :gutter="16"
                 type="flex"
                 justify="center"
               >
@@ -114,7 +112,10 @@
         <div class="new-features-wrapper">
           <div class="new-features">
             <div class="f-lists">
-              <a-row :gutter="24">
+              <a-row
+                type="flex"
+                justify="center"
+              >
                 <a-col
                   :xs="24"
                   :sm="24"
@@ -385,9 +386,9 @@ export default {
         .users {
           width: 80%;
           margin: 0 auto;
-          padding: 3rem 2rem;
+          padding: 3rem 4rem;
           color: #fff;
-          text-align: center;
+          text-align: left;
           .user {
             height: 4rem;
             img {

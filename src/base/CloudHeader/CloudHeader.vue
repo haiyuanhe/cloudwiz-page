@@ -96,7 +96,7 @@
               width: screenWidth + 'px',
             }"
           >
-            <a-menu-item>
+            <a-menu-item @click="handleMenuClick">
               <router-link class="menu-item home" to="/">
                 <span class="tab-link menu-link">首页</span>
               </router-link>
@@ -126,12 +126,12 @@
                 </a-menu-item>
               </a-collapse-panel>
             </a-collapse>
-            <a-menu-item>
+            <a-menu-item @click="handleMenuClick">
               <router-link class="menu-item user-case" to="/cases">
                 <span class="tab-link menu-link">客户案例</span>
               </router-link>
             </a-menu-item>
-            <a-menu-item>
+            <a-menu-item @click="handleMenuClick">
               <router-link class="menu-item company-news" to="/news">
                 <span class="tab-link menu-link">公司动态</span>
               </router-link>
@@ -163,13 +163,13 @@
                 </a-menu-item>
               </a-collapse-panel>
             </a-collapse>
-            <a-menu-item>
+            <a-menu-item @click="handleMenuClick">
               <a target="_blank" href="//play.cloudwiz.cn/offline_analysis" class="menu-link">离线分析平台</a>
             </a-menu-item>
-            <a-menu-item>
+            <a-menu-item @click="handleMenuClick">
               <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">登录</a>
             </a-menu-item>
-            <a-menu-item>
+            <a-menu-item @click="handleMenuClick">
               <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">免费试用</a>
             </a-menu-item>
           </a-menu>
@@ -220,8 +220,8 @@ export default {
       this.type = this.type === 'close' ? 'appstore' : 'close'
     },
     handleMenuClick () {
-      this.show = false
       this.type = this.type === 'close' ? 'appstore' : 'close'
+      this.show = false
     }
   }
 }

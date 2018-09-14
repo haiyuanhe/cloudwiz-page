@@ -22,7 +22,8 @@
                     :xs="24"
                     :sm="24"
                     :md="24"
-                    :lg="10">
+                    :lg="10"
+                    style="text-align:center;">
                     <a-row
                       type="flex"
                       justify="center">
@@ -68,7 +69,9 @@
                     :sm="24"
                     :md="24"
                     :lg="14">
-                      <a-row>
+                      <a-row
+                        type="flex"
+                        justify="center">
                         <a-col
                           :xs="24"
                           :sm="24"
@@ -140,7 +143,7 @@
                 :md="26"
                 :lg="10"
                 :xl="8"
-                :xxl="5"
+                :xxl="8"
               >
                 <div class="list">
                   <div class="avatar">
@@ -317,6 +320,9 @@ export default {
     .company-description {
       margin: 1rem 0rem;
       padding: 0 .5rem;
+      .name {
+        text-align: center;
+      }
     }
     .services {
       margin: 1rem 0rem;

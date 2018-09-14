@@ -41,11 +41,11 @@
               :md="24"
               :lg="24"
             >
-              <el-carousel :interval="5000" type="card" arrow="always">
+              <el-carousel :interval="3000" type="card" arrow="always">
                 <el-carousel-item v-for="(item, index) in doings" :key="index">
                   <div class="doing">
                     <img :src="item.image" :alt="item.title">
-                    <p>{{item.title}}</p>
+                    <p style="margin-top: 1rem;">{{item.title}}</p>
                   </div>
                 </el-carousel-item>
               </el-carousel>
@@ -278,6 +278,32 @@ export default {
       padding-bottom: .5rem;
       border-bottom: 2px solid rgb(223, 53, 53);
     }
+    .el-carousel /deep/ .el-carousel__container {
+      height: 320px;
+    }
+    .w-carousel {
+      width: 100%;
+      margin: 0 auto;
+      .is-active {
+        .doing {
+          p {
+            display: block;
+            padding: .2rem;
+            font-size: 1rem;
+            text-align: center;
+          }
+        }
+      }
+      .doing {
+        img {
+          width: 100%;
+          height: 17rem;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
   }
   @media (min-width: 1100px) {
     .office-content {
@@ -293,9 +319,37 @@ export default {
         box-shadow: 0 0 1.5rem #ccc;
       }
     }
+    .el-carousel /deep/ .el-carousel__container {
+      height: 330px;
+    }
+    .w-carousel {
+      width: 90%;
+      margin: 0 auto;
+      .doing {
+        img {
+          width: 100%;
+          height: 17rem;
+        }
+        p {
+          padding: .54rem;
+          font-size: 1.3rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .el-carousel__item /deep/ .el-carousel__mask {
+    background-color: #e8ecf4;
   }
   .w-carousel /deep/ .el-carousel__arrow {
-    background-color: rgba(12, 116, 234, 1);
+    position: absolute;
+    top: 9rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(12, 116, 234, .5);
+    i {
+      font-size: 1.5rem;
+    }
   }
   .w-carousel /deep/ .el-carousel__indicators--outside {
     .is-active button {
@@ -303,8 +357,8 @@ export default {
     }
     button {
       border-radius: 50%;
-      height: .5rem;
-      width: .5rem;
+      height: .8rem;
+      width: .8rem;
     }
   }
   .recruitment-wrapper {
@@ -345,21 +399,21 @@ export default {
           text-align: center;
           padding: 3rem 0;
         }
-        .w-carousel {
-          width: 90%;
-          margin: 0 auto;
-          .doing {
-            img {
-              width: 100%;
-              height: 17rem;
-            }
-            p {
-              padding: .54rem;
-              font-size: 1.3rem;
-              text-align: center;
-            }
-          }
-        }
+        // .w-carousel {
+        //   width: 90%;
+        //   margin: 0 auto;
+        //   .doing {
+        //     img {
+        //       width: 100%;
+        //       height: 17rem;
+        //     }
+        //     p {
+        //       padding: .54rem;
+        //       font-size: 1.3rem;
+        //       text-align: center;
+        //     }
+        //   }
+        // }
       }
       .join-us-wrapper {
         .j-title {

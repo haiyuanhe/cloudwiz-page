@@ -27,7 +27,9 @@
               :xl="4"
               :xxl="6"
             >
+              <router-link to="/">
                 <img src="../../common/images/cloudwiz.jpg" alt="Cloudwiz"/>
+              </router-link>
             </a-col>
             <a-col
               :xs="24"
