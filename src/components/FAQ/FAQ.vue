@@ -10,17 +10,18 @@
         >
           <a-col
             :xs="24"
-            :sm="8"
+            :sm="24"
             :md="24"
-            :lg="10"
+            :lg="4"
           >
             <a-row
-            >
+              type="flex"
+              justify="center">
               <a-col
                 :xs="12"
-                :sm="16"
-                :md="10"
-                :lg="16"
+                :sm="8"
+                :md="8"
+                :lg="24"
                 v-for="(faq, index) in faqs"
                 :key="index"
               >
@@ -54,7 +55,7 @@
                       :header="item.q"
                       :key="item.q"
                     >
-                      <p v-html="item.a"></p>
+                      <p class="answer" v-html="item.a"></p>
                     </a-collapse-panel>
                   </a-collapse>
                 </div>
@@ -143,6 +144,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @media (max-width: 1100px) {
+    .faq-type-active {
+      border-bottom: 2px solid rgb(168, 34, 34);
+    }
+  }
+  @media (min-width: 1100px) {
+    .faq-type-active {
+      border: 1px solid rgb(186, 186, 189);
+      background: #fff;
+    }
+  }
+  .ant-collapse {
+    border: 1px solid rgba(219, 219, 219, .7);
+  }
+  .ant-collapse /deep/ .ant-collapse-item {
+    border: none;
+  }
+  .ant-collapse /deep/ .ant-collapse-header {
+    font-size: 1.1rem;
+  }
   .faq-wrapper {
     .faq-container {
       .faq-content {
@@ -152,13 +173,15 @@ export default {
           margin: 0 1rem 1rem 1rem;
           padding: 1rem;
         }
-        .faq-type-active {
-          border: 1px solid rgb(186, 186, 189);
-          background: #fff;
-        }
         .faq-lists {
           .list {
             background: #fff;
+          }
+          .faq-qa {
+            .answer {
+              padding-left: 1.6rem;
+              font-size: .9rem;
+            }
           }
           .no-qa {
             margin: 2rem;

@@ -273,13 +273,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media (max-width: 970px) {
+  @media (max-width: 1100px) {
     .type-active {
       padding-bottom: .5rem;
       border-bottom: 2px solid rgb(223, 53, 53);
     }
   }
-  @media (min-width: 970px) {
+  @media (min-width: 1100px) {
     .office-content {
       height: 2rem;
       line-height: 2rem;

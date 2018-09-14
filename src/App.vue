@@ -34,7 +34,7 @@ export default {
         .fs {
           .content {
             .not-support {
-              color: #9d9fa3;
+              color: #d4d4d4;
             }
           }
         }

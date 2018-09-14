@@ -66,8 +66,8 @@
             <a-col
               :xs="24"
               :sm="24"
-              :md="24"
-              :lg="20"
+              :md="19"
+              :lg="19"
             >
               <a-row
                 type="flex"

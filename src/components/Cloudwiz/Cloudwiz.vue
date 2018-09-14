@@ -15,8 +15,8 @@
             :sm="20"
             :md="20"
             :lg="18"
-            :xl="16"
-            :xxl="16"
+            :xl="17"
+            :xxl="17"
           >
             <div class="advantage">
               <a-collapse
@@ -70,7 +70,7 @@
                 :md="10"
                 :lg="7"
                 :xl="6"
-                :xxl="5"
+                :xxl="6"
               >
                 <div class="left">
                   <img :src="item.icon" alt="item.title" />
@@ -96,7 +96,7 @@
             :md="24"
             :lg="24"
             :xl="24"
-            :xxl="20"
+            :xxl="22"
           >
             <a-row
               type="flex"
@@ -155,7 +155,7 @@ export default {
             '高效、精准的报警，告别“alert fatigue”。',
             '智能异常检测，及时跟踪系统异常。',
             '智能分析诊断，发掘因果关系。',
-            '专业故障溯源知识图谱，定制系统扥洗，提升运维效率。',
+            '专业故障溯源知识图谱，定制系统分析，提升运维效率。',
             '提供多平台实时报警，实时报警推送。'
           ]
         },
@@ -328,6 +328,12 @@ export default {
         }
       }
     }
+  }
+  .ant-collapse {
+    border: 1px solid rgba(219, 219, 219, .7);
+  }
+  .ant-collapse /deep/ .ant-collapse-item {
+    border: none;
   }
   .cloudwiz-wrapper {
     background: #f6f7fa;

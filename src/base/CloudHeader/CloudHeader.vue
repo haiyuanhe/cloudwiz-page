@@ -6,7 +6,7 @@
           <img src="../../common/images/cloudwiz.jpg" alt="Cloudwiz"/>
         </router-link>
       </div>
-      <div class="navbar" v-show="this.screenWidth >= 970">
+      <div class="navbar" v-show="this.screenWidth >= 1100">
         <ul>
           <router-link class="menu-item home" to="/home">
             <span class="tab-link">首页</span>
@@ -18,7 +18,7 @@
               theme="dark"
               :style="{
                 top: 1 + 'rem',
-                left: -1 + 'rem'
+                left: -.8 + 'rem'
               }">
               <a-menu-item>
                 <router-link to="/cloudwiz">
@@ -48,7 +48,7 @@
               theme="dark"
               :style="{
                 top: 1 + 'rem',
-                left: -1 + 'rem'
+                left: -.8 + 'rem'
               }">
               <a-menu-item>
                 <router-link to="/about">
@@ -72,7 +72,7 @@
           </li>
         </ul>
       </div>
-      <div class="used" v-show="this.screenWidth >= 970">
+      <div class="used" v-show="this.screenWidth >= 1100">
         <div class="use signin">
           <a target="_blank" href="//app.cloudwiz.cn">登录</a>
         </div>
@@ -80,7 +80,7 @@
           <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
         </div>
       </div>
-      <div class="mobail" v-show="this.screenWidth <= 970">
+      <div class="mobail" v-show="this.screenWidth <= 1100">
         <a-dropdown :trigger="['click']" @visibleChange="change" class="mobail-menu">
           <div class="ant-dropdown-link">
             <a-icon :type="type" @click="open"/>
@@ -228,7 +228,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media (max-width: 970px) {
+  @media (max-width: 1100px) {
     .header-container {
       .logo {
         position: absolute;
@@ -280,7 +280,7 @@ export default {
     .header-container {
       height: 4rem;
       line-height: 4rem;
-      width: 90%;
+      width: 80%;
       margin: 0 auto;
       display: flex;
       .logo {
@@ -297,6 +297,7 @@ export default {
         .menu-item {
           display: inline;
           margin: 1rem;
+          line-height: 4rem;
           &.router-link-active {
             .tab-link {
               color: #fff;
@@ -305,6 +306,7 @@ export default {
         }
         .offline-analysis {
           a {
+            line-height: 4rem;
             font-size: 1.25rem;
             color: #0072ff;
             font-style: italic;
@@ -324,7 +326,7 @@ export default {
         .free-used {
           font-family: Avenir;
           a {
-            padding: 0.6rem;
+            padding: 0.3rem 1rem;
             border: 1px solid #436dec;
           }
         }
@@ -332,6 +334,7 @@ export default {
       .mobail {
         position: absolute;
         left: 1rem;
+        line-height: 4rem;
         font-size: 2rem;
         color: #fff;
       }

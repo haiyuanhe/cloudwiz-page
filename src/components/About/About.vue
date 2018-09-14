@@ -13,7 +13,7 @@
                 :xs="24"
                 :sm="24"
                 :md="24"
-                :lg="20"
+                :lg="18"
                 style="margin: 3rem">
                 <a-row
                   type="flex"
@@ -310,7 +310,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media (max-width: 970px) {
+  @media (max-width: 1100px) {
     .middle-content {
       padding-top: 0;
     }
@@ -323,7 +323,7 @@ export default {
       text-align: center;
     }
   }
-  @media (min-width: 970px) {
+  @media (min-width: 1100px) {
     .middle-content {
       padding-top: 3rem;
     }

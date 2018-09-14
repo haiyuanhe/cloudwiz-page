@@ -18,20 +18,20 @@
         </div>
       </div>
       <div class="home-middle">
-        <p class="middle-title">为什么选择运行？</p>
+        <p class="middle-title">为什么选择云兴？</p>
         <div class="features">
           <a-row
             type="flex"
             justify="center"
           >
             <a-col
-                v-for="(item, index) in features"
-                :key="index"
-                :xs="24"
-                :sm="16"
-                :md="16"
-                :lg="8"
-              >
+              v-for="(item, index) in features"
+              :key="index"
+              :xs="24"
+              :sm="16"
+              :md="16"
+              :lg="8"
+            >
               <div class="feature-wrapper">
                 <div class="feature">
                   <div class="left">
@@ -93,13 +93,15 @@
                     arrow="always">
                     <el-carousel-item v-for="(item, index) in evaluation" :key="index">
                       <div class="evaluation">
-                        <p class="ct">{{item.content}}</p>
-                        <div>
-                          <div class="icon">
-                            <img :src="item.icon" :alt="item.company">
+                        <div class="e">
+                          <p class="ct">{{item.content}}</p>
+                          <div>
+                            <div class="icon">
+                              <img :src="item.icon" :alt="item.company">
+                            </div>
+                            <p class="cm">{{item.company}}</p>
+                            <p class="m">{{item.evaluator}}</p>
                           </div>
-                          <p class="cm">{{item.company}}</p>
-                          <p class="m">{{item.evaluator}}</p>
                         </div>
                       </div>
                     </el-carousel-item>
@@ -274,14 +276,26 @@ export default {
 </script>
 
 <style lang="scss">
+@media (max-width: 1100px) {
+  .f-lists {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1100px) {
+  .f-lists {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 .home-wrapper {
   width: 100%;
   background: #f7f8fb;
   .home-container {
     .home-top {
-      height: 25rem;
+      height: 55rem;
       color: #fff;
-      background-image: url('../../common/images/home/home_header.jpg');
+      background-image: url('../../common/images/home/home_header.png');
       background-size: 100% 100%;
       background-repeat: no-repeat;
       position: relative;
@@ -293,18 +307,21 @@ export default {
           color: #928f8f;
           font-size: 1rem;
           padding: .5rem 0;
+          letter-spacing: .2rem;
         }
         .aiops {
           color: #fefefe;
-          font-size: 1.6rem;
-          padding: .8rem 0;
+          font-size: 1.8rem;
+          padding: 0rem 0;
         }
         .free-used {
           margin-top: .8rem;
           margin-right: 1rem;
+          padding: 0 1.5rem;
         }
         .understand {
           border-color: #077fea;
+          padding: 0 1.5rem;
         }
       }
     }
@@ -318,7 +335,7 @@ export default {
         text-align: center;
       }
       .features {
-        width: 90%;
+        width: 75%;
         margin: 0 auto;
         .feature-wrapper {
           margin: .8rem .6rem;
@@ -363,10 +380,11 @@ export default {
       .users-wrapper {
         background: #292d38;
         .users {
-          width: 90%;
+          width: 80%;
           margin: 0 auto;
           padding: 3rem 2rem;
           color: #fff;
+          text-align: center;
           .user {
             height: 4rem;
             img {
@@ -394,6 +412,9 @@ export default {
             .el-carousel {
               .el-carousel__container {
                 .el-carousel__arrow {
+                  width: 3rem;
+                  height: 3rem;
+                  font-size: 2rem;
                   background-color: rgba(7, 127, 234, .8)!important;
                 }
                 .evaluation {
@@ -435,15 +456,11 @@ export default {
       .new-features-wrapper {
         margin-top: -6rem;
         .new-features {
-          width: 90%;
+          width: 80%;
           margin: 2rem auto;
-          .f-lists {
-            width: 80%;
-            margin: 0 auto;
-          }
           .f {
             margin: .6rem;
-            padding-bottom: .5rem;
+            padding: 2rem;
             text-align: center;
             background: #fff;
             border: 1px solid #efefef;

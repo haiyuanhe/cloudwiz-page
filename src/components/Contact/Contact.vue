@@ -70,6 +70,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @media (max-width: 1100px) {
+    .map-img {
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: 1100px) {
+    .map-img {
+      margin-bottom: 3rem;
+    }
+  }
   .contact-wrapper {
     background: #f7f8fb;
     .address-info {
