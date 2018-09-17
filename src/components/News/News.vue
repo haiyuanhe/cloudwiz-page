@@ -30,7 +30,9 @@
                   :lg="{ span: 8}"
                   :xl="{ span: 8}"
                 >
-                  <img :src="item.newsImg" alt="item.title" />
+                  <div class="left">
+                    <img :src="item.newsImg" alt="item.title" />
+                  </div>
                 </a-col>
                 <a-col
                   :xs="{ span: 24}"
@@ -108,7 +110,6 @@ export default {
 
 <style lang="scss" scoped>
   @mixin b-shadow($bs, $bhs) {
-    // box-shadow: 0 0 1.5rem $bs;
     cursor: pointer;
     &:hover {
       box-shadow: 0 0 1.5rem $bhs;
@@ -124,15 +125,19 @@ export default {
 
   @media screen and (max-width: 1100px) {
     .news-images {
-      // padding-top: 1rem;
-      // text-align: center;
+      .left {
+        img {
+          width: 100%;
+        }
+      }
     }
   }
   @media screen and (min-width: 1100px) {
     .news-images {
-      // text-align: left;
-      img {
-        // padding: .5rem;
+      .left {
+        img {
+          width: 100%;
+        }
       }
     }
   }

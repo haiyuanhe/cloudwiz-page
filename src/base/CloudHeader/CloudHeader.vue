@@ -12,7 +12,7 @@
             <span class="tab-link">首页</span>
           </router-link>
           <a-dropdown class="menu-item ant-dropdown-link tab-link">
-            <span class="tab-link">产品中心<a-icon type="down" style="color: #979b9b"/></span>
+            <span class="tab-link">产品中心<a-icon type="down" style="color: #979b9b;"/></span>
             <a-menu
               slot="overlay"
               theme="dark"
@@ -232,10 +232,10 @@ export default {
       margin-left: 2rem;
     }
     .analysis {
+      background-color: #14171e;
       .offline-analysis {
-      color: #0072ff;
+        color: #0072ff;
         font-size: 1.25rem;
-        background-color: #14171e;
         font-style: italic;
         letter-spacing: 0rem;
       }
@@ -249,14 +249,13 @@ export default {
       }
     }
     .ant-dropdown-menu-item {
-      padding: 1.1rem;
+      padding: 1.1rem 2rem;
     }
     .menu-link {
       font-size: 1.1rem;
     }
     .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
       text-align: left;
-      padding-left: 1rem;
     }
     .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
       color: #fff;
@@ -264,20 +263,15 @@ export default {
     .undefined-item {
       padding: .6rem 0;
     }
-    .ant-collapse-content /deep/ .ant-collapse-content-box {
-      padding: 0 0 1rem 0;
-      background-color: #14171e;
-    }
   }
   .ant-collapse {
     border: none;
   }
   .ant-collapse /deep/ .ant-collapse-content {
     border: none;
-    background: inherit;
+    background: #14171e;
     .ant-collapse-content-box {
-      padding-top: 0;
-      padding-bottom: 0;
+      padding: 0 0 0 1rem;
     }
     a {
       color: #fff;
@@ -285,7 +279,7 @@ export default {
   }
   .ant-collapse /deep/ .ant-collapse-header {
     color: #ffffff;
-    padding: 1.1rem;
+    padding: 1.1rem 2rem;
     text-align: left;
     font-size: 1.1rem;
     .arrow {
@@ -300,7 +294,7 @@ export default {
     left: 0;
     right: 0;
     z-index: 100;
-    background: #191d26;
+    background: #001529;
     color: #999b9f;
     .header-container {
       height: 4rem;
@@ -324,6 +318,7 @@ export default {
           margin: 1rem;
           line-height: 4rem;
           color: #999b9f;
+          cursor: pointer;
           &.router-link-exact-active {
             .tab-link {
               color: #fff;

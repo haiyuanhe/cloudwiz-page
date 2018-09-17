@@ -3,6 +3,23 @@
     <CloudHeader />
     <div class="home-container">
       <div class="home-top">
+        <div class="back-image">
+          <a-row
+            type="flex"
+            justify="center"
+          >
+            <a-col
+              :xs="24"
+              :sm="24"
+              :md="24"
+              :lg="24"
+            >
+              <div class="bg">
+                <img src="../../common/images/bg.png" alt="背景图片">
+              </div>
+            </a-col>
+          </a-row>
+        </div>
         <div class="top-content">
           <p class="ai">用数据让运维智能化</p>
           <p class="aiops">国内领先的全IT架构AIOps</p>
@@ -25,24 +42,37 @@
             justify="center"
           >
             <a-col
-              v-for="(item, index) in features"
-              :key="index"
-              :xs="24"
-              :sm="16"
-              :md="16"
-              :lg="8"
+              :xs="22"
+              :sm="22"
+              :md="22"
+              :lg="18"
+              :xl="17"
             >
-              <div class="feature-wrapper">
-                <div class="feature">
-                  <div class="left">
-                    <img :src="item.name" :alt="item.title"/>
+              <a-row
+                type="flex"
+                justify="center"
+              >
+                <a-col
+                  v-for="(item, index) in features"
+                  :key="index"
+                  :xs="22"
+                  :sm="12"
+                  :md="12"
+                  :lg="8"
+                >
+                  <div class="feature-wrapper">
+                    <div class="feature">
+                      <div class="left">
+                        <img :src="item.name" :alt="item.title"/>
+                      </div>
+                      <div class="right">
+                        <div class="feature-title">{{item.title}}</div>
+                        <div class="feature-description">{{item.description}}</div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="right">
-                    <div class="feature-title">{{item.title}}</div>
-                    <div class="feature-description">{{item.description}}</div>
-                  </div>
-                </div>
-              </div>
+                </a-col>
+              </a-row>
             </a-col>
           </a-row>
         </div>
@@ -54,18 +84,31 @@
               type="flex"
               justify="center"
             >
-              <a-col
-                v-for="(item, index) in users"
-                :key="index"
-                :xs="22"
-                :sm="22"
-                :md="8"
-                :lg="6"
+            <a-col
+              :xs="22"
+              :sm="20"
+              :md="20"
+              :lg="18"
+              :xl="18"
+            >
+              <a-row
+                type="flex"
+                justify="center"
               >
-                <div class="user">
-                    <img :src="item.name" :alt="item.title"/>
-                </div>
-              </a-col>
+                <a-col
+                  v-for="(item, index) in users"
+                  :key="index"
+                  :xs="12"
+                  :sm="12"
+                  :md="8"
+                  :lg="6"
+                >
+                  <div class="user">
+                      <img :src="item.name" :alt="item.title"/>
+                  </div>
+                </a-col>
+              </a-row>
+            </a-col>
             </a-row>
           </div>
         </div>
@@ -117,36 +160,49 @@
                 justify="center"
               >
                 <a-col
-                  :xs="24"
-                  :sm="24"
-                  :md="12"
-                  :lg="12"
+                  :xs="22"
+                  :sm="20"
+                  :md="20"
+                  :lg="19"
+                  :xl="18"
                 >
-                  <div class="f">
-                    <div class="f-title">离线分析平台</div>
-                    <p>无需安装探针，直接导入数据</p>
-                    <p>多种算法选择，完整功能试用</p>
-                    <p>轻松享受Cloudwiz极致便捷体验</p>
-                    <a-button type="primary">
-                      <a target="_blank" href="//play.cloudwiz.cn/offline_analysis">立即试用</a>
-                    </a-button>
-                  </div>
-                </a-col>
-                <a-col
-                  :xs="24"
-                  :sm="24"
-                  :md="12"
-                  :lg="12"
-                >
-                  <div class="f">
-                    <div class="f-title">在线试用</div>
-                    <p>在线探针安装，实时响应</p>
-                    <p>使用真实数据，直观查看</p>
-                    <p>所见即所得的完整效果呈现</p>
-                    <a-button class="f-used">
-                      <a target="_blank" href="//app.cloudwiz.cn">立即试用</a>
-                    </a-button>
-                  </div>
+                  <a-row
+                    type="flex"
+                    justify="center"
+                  >
+                    <a-col
+                      :xs="22"
+                      :sm="22"
+                      :md="11"
+                      :lg="11"
+                    >
+                      <div class="f">
+                        <div class="f-title">离线分析平台</div>
+                        <p>无需安装探针，直接导入数据</p>
+                        <p>多种算法选择，完整功能试用</p>
+                        <p>轻松享受Cloudwiz极致便捷体验</p>
+                        <a-button type="primary">
+                          <a target="_blank" href="//play.cloudwiz.cn/offline_analysis">立即试用</a>
+                        </a-button>
+                      </div>
+                    </a-col>
+                    <a-col
+                      :xs="22"
+                      :sm="22"
+                      :md="11"
+                      :lg="11"
+                    >
+                      <div class="f">
+                        <div class="f-title">在线试用</div>
+                        <p>在线探针安装，实时响应</p>
+                        <p>使用真实数据，直观查看</p>
+                        <p>所见即所得的完整效果呈现</p>
+                        <a-button class="f-used">
+                          <a target="_blank" href="//app.cloudwiz.cn">立即试用</a>
+                        </a-button>
+                      </div>
+                    </a-col>
+                  </a-row>
                 </a-col>
               </a-row>
             </div>
@@ -253,14 +309,14 @@ export default {
           icon: require('common/images/cases/CEPRI.png'),
           evaluator: '人工智能应用研究所平台技术室',
           content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。',
-          className: ''
+          className: 'CEPRI'
         },
         {
           company: '问卷网',
           icon: require('common/images/cases/wenjuanwang.png'),
           evaluator: '问卷网CTO梁群',
           content: '部署Cloudwiz产品之后，统一了我们的运维管理工具，优化了管理流程，运维质量和效率都得到了极大的提升，每周提供的专家巡检报告，让我们对系统的关键服务、刷票情况有了直观了解，大量节省了人力和时间成本，是非常实用的运维解决方案。',
-          className: ''
+          className: 'wenjuanwang'
         },
         {
           company: '车友援',
@@ -280,19 +336,80 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (max-width: 768px) {
+  .back-image {
+    .bg {
+      img {
+        width: 90%;
+        height: 18rem;
+        border-radius: 1rem;
+        position: absolute;
+        top: 20rem;
+        left: 5%;
+      }
+    }
+  }
+  .top-content {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 1100px) {
-  .f-lists {
-    width: 100%;
-    margin: 0 auto;
+  .users-wrapper {
+    .users {
+      .user {
+        height: 4rem;
+      }
+    }
   }
   .ai {
-    font-size: 1.3rem;
+    font-family: MicrosoftYaHeiUILight;
+    font-size: 1rem;
+  }
+  .back-image {
+    .bg {
+      img {
+        width: 90%;
+        height: 18rem;
+        border-radius: 1rem;
+        position: absolute;
+        top: 20rem;
+        left: 5%;
+      }
+    }
+  }
+  .top-content {
+    position: absolute;
+    top: 5%;
+    left: 25%;
   }
 }
 @media screen and (min-width: 1100px) {
-  .f-lists {
-    width: 80%;
-    margin: 0 auto;
+  .users-wrapper {
+    .users {
+      .user {
+        height: 5rem;
+      }
+    }
+  }
+  .back-image {
+    .bg {
+      position: absolute;
+      left: 50%;
+      top: 10rem;
+      img {
+        width: 80%;
+        height: 25rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+  .top-content {
+    position: absolute;
+    top: 25%;
+    left: 22%;
   }
 }
 .home-wrapper {
@@ -302,15 +419,13 @@ export default {
     .home-top {
       height: 40rem;
       color: #fff;
-      background-image: url('../../common/images/home/home_header.png');
-      background-size: 100% 100%;
-      background-position: right bottom;
-      background-repeat: no-repeat;
+      background-image: linear-gradient(45deg, #111415 0%, #273b49 100%);
+      // background-image: url('../../common/images/home/home_header.png');
+      // background-size: 100% 100%;
+      // background-position: right bottom;
+      // background-repeat: no-repeat;
       position: relative;
       .top-content {
-        position: absolute;
-        top: 25%;
-        left: 22%;
         .ai {
           color: #fefefe;
           opacity: 0.75;
@@ -343,14 +458,11 @@ export default {
         text-align: center;
       }
       .features {
-        width: 75%;
-        margin: 0 auto;
         .feature-wrapper {
           margin: 1rem .4rem;
           border: 1px solid #efefef;
           box-shadow: 1rem 1rem 4rem 0rem rgba(2, 8, 22, 0.1);
           .feature {
-            width: 90%;
             margin: 2.5rem auto;
             display: flex;
             .left {
@@ -384,13 +496,10 @@ export default {
       .users-wrapper {
         background: #292d38;
         .users {
-          width: 80%;
-          margin: 0 auto;
-          padding: 3rem 4rem;
+          padding: 3rem 1rem;
           color: #fff;
           text-align: left;
           .user {
-            height: 5rem;
             img {
               height: 2.5rem;
             }
@@ -416,21 +525,22 @@ export default {
             top: -8rem;
             .el-carousel {
               .el-carousel__container {
+                height: 400px;
                 .el-carousel__arrow {
+                  top: 37%;
                   width: 3rem;
                   height: 3rem;
                   font-size: 2rem;
-                  background-color: rgba(7, 127, 234, .8)!important;
+                  background-color: rgba(7, 127, 234, .8);
                 }
                 .evaluation {
                   background: #fff;
                   text-align: center;
                   padding: 2rem;
                   border-radius: 4px;
-                  box-shadow: 0 0 1.5rem #fff;
                   cursor: pointer;
                   &:hover {
-                    box-shadow: 0 0 1.5rem rgb(145, 139, 139);
+                    box-shadow: 1.6rem 1.6rem 6.1rem 0rem rgba(0, 0, 0, 0.06);
                   }
                   .ct {
                     font-size: 1rem;
@@ -454,7 +564,7 @@ export default {
                     font-size: 0.8rem;
                   }
                 }
-                .che-you-yuan {
+                .CEPRI, .wenjuanwang, .che-you-yuan {
                   .ct {
                     font-size: .8rem;
                   }
@@ -465,10 +575,8 @@ export default {
         }
       }
       .new-features-wrapper {
-        margin-top: -6rem;
         .new-features {
-          width: 80%;
-          margin: 3rem auto;
+          margin-bottom: 3rem;
           .f {
             margin: .6rem;
             padding: 2rem;

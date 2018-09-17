@@ -395,9 +395,6 @@ export default {
             border: 1px solid #e9ebec;
             background: #fff;
             cursor: pointer;
-            &:hover {
-              box-shadow: 1.1rem 1.1rem 1.4rem rgba(2, 8, 22, .1);
-            }
             .left {
               text-align: center;
               margin: 2rem;

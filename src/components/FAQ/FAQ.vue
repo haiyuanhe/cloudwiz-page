@@ -9,19 +9,23 @@
           justify="center"
         >
           <a-col
-            :xs="24"
-            :sm="24"
-            :md="24"
-            :lg="4"
+            :xs="20"
+            :sm="20"
+            :md="20"
+            :lg="8"
+            :xl="8"
+            :xxl="8"
           >
             <a-row
               type="flex"
               justify="center">
               <a-col
                 :xs="12"
-                :sm="8"
-                :md="8"
-                :lg="24"
+                :sm="12"
+                :md="12"
+                :lg="8"
+                :xl="16"
+                :xxl="8"
                 v-for="(faq, index) in faqs"
                 :key="index"
               >
@@ -30,20 +34,28 @@
                   :class='{"faq-type-active": currentIndex === index}'
                   @click="getCurrentIndex(index)"
                 >
-                  {{faq.type}}
+                  <span>{{faq.type}}</span>
                 </div>
               </a-col>
             </a-row>
           </a-col>
           <a-col
             class="faq-lists"
-            :xs="24"
-            :sm="16"
-            :md="16"
-            :lg="14"
+            :xs="20"
+            :sm="20"
+            :md="20"
+            :lg="20"
+            :xl="16"
+            :xxl="8"
           >
-            <a-row>
+            <a-row
+              type="flex"
+              justify="center">
               <a-col
+                :xs="24"
+                :sm="24"
+                :md="24"
+                :lg="24"
               >
                 <div
                   class="faq-qa"
@@ -146,13 +158,35 @@ export default {
 <style lang="scss" scoped>
   @media screen and (max-width: 1100px) {
     .faq-type-active {
-      border-bottom: 2px solid rgb(168, 34, 34);
+      span {
+        border-bottom: 2px solid #026dcd;
+      }
+    }
+    .faq-wrapper {
+      .faq-container {
+        .faq-content {
+          margin: 2rem;
+          .faq-type {
+            margin: 0;
+          }
+        }
+      }
     }
   }
   @media screen and (min-width: 1100px) {
     .faq-type-active {
       border: 1px solid rgb(186, 186, 189);
       background: #fff;
+    }
+    .faq-wrapper {
+      .faq-container {
+        .faq-content {
+          margin: 4rem;
+          .faq-type {
+            margin: 0 1rem 1rem 1rem;
+          }
+        }
+      }
     }
   }
   .ant-collapse {
@@ -167,10 +201,8 @@ export default {
   .faq-wrapper {
     .faq-container {
       .faq-content {
-        margin: 4rem;
         .faq-type {
           text-align: center;
-          margin: 0 1rem 1rem 1rem;
           padding: 1rem;
         }
         .faq-lists {

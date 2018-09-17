@@ -65,7 +65,7 @@
                 class="cloudwiz-service"
                 v-for="(item, index) in services"
                 :key="index"
-                :xs="18"
+                :xs="20"
                 :sm="12"
                 :md="10"
                 :lg="7"
@@ -106,7 +106,7 @@
                 class="product-wrapper"
                 v-for="(item, index) in product"
                 :key="index"
-                :xs="18"
+                :xs="20"
                 :sm="12"
                 :md="7"
                 :lg="7"
@@ -120,7 +120,24 @@
                     <p class="content" v-html="item.functions"></p>
                   </div>
                   <div class="use">
-                    <a-button class="use-btn" type="primary">{{item.use}}</a-button>
+                    <a target="_blank" :href="item.link" v-if="item.link !== true">
+                      <a-button class="use-btn" type="primary">{{item.use}}</a-button>
+                    </a>
+                    <a-button
+                      v-if="item.link === true"
+                      class="use-btn"
+                      type="primary"
+                      @click="contactUs">
+                        <span>{{item.use}}</span>
+                      </a-button>
+                      <a-modal
+                        title="联系我们"
+                        v-model="showEmail"
+                        :footer="null"
+                      >
+                        <p>请致电：17070866703</p>
+                        <p>邮件：service@cloudwiz.cn</p>
+                      </a-modal>
                   </div>
                 </div>
               </a-col>
@@ -142,6 +159,7 @@ export default {
   name: 'cloudwiz',
   data () {
     return {
+      showEmail: false,
       headerInfo: {
         Imgurl: require('common/images/products/cloudwiz-background.png'),
         title: 'Cloudwiz',
@@ -244,6 +262,7 @@ export default {
           version: '试用版',
           ram: '日志100M/天，数据储存7天',
           use: '免费试用',
+          link: '//app.cloudwiz.cn',
           functions: `
             <p>5 个节点</p>
             <p>硬件、系统、网络指标</p>
@@ -261,6 +280,7 @@ export default {
           version: '企业版',
           ram: '日志200M/天，存储14天，指标存储30天',
           use: '开始注册',
+          link: '//app.cloudwiz.cn',
           functions: `
             <p>1000 个节点</p>
             <p>硬件、系统、网络指标</p>
@@ -278,6 +298,7 @@ export default {
           version: '定制版',
           ram: '企业依据自身需求定制，请联系我们了解更多信息',
           use: '联系我们',
+          link: true,
           functions: `
             <p>无限制主机</p>
             <p>硬件、系统、网络指标</p>
@@ -292,6 +313,11 @@ export default {
           `
         }
       ]
+    }
+  },
+  methods: {
+    contactUs () {
+      this.showEmail = true
     }
   },
   components: {
@@ -382,7 +408,7 @@ export default {
           }
           .right {
             flex: 1;
-            padding-right: .5rem;
+            padding-left: .5rem;
             .t {
               font-size: 1.1rem;
               padding-top: .2rem;
@@ -401,8 +427,6 @@ export default {
           padding: 2rem .5rem;
           text-align: center;
           background: #fff;
-          // box-shadow: 0 0 1.5rem #e8ecf4;
-          // cursor: pointer;
           &:hover {
             box-shadow: 0 0 1.5rem #ccced3;
           }
@@ -430,10 +454,6 @@ export default {
                 box-shadow: 0 0 1.5rem #e8ecf4;
                 padding: 0 2rem;
                 border-radius: 0;
-                // cursor: pointer;
-                // &:hover {
-                //   box-shadow: 0 0 1.5rem rgb(153, 148, 148);
-                // }
               }
             }
           }

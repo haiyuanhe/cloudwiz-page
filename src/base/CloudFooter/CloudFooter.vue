@@ -108,12 +108,12 @@
         justify="center"
       >
         <a-col
-          :xs="24"
-          :sm="24"
-          :md="24"
-          :lg="24"
-          :xl="24"
-          :xxl="24"
+          :xs="20"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="20"
+          :xxl="20"
         >
           <p class="copyright">
             Copyright &copy; {{(new Date()).getFullYear()}} 云兴维智（北京）科技有限公司 | 京ICP备17008193号

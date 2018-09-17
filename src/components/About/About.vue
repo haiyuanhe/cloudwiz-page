@@ -19,29 +19,28 @@
                   type="flex"
                   justify="center">
                   <a-col
-                    :xs="24"
-                    :sm="24"
-                    :md="24"
+                    :xs="22"
+                    :sm="22"
+                    :md="22"
                     :lg="10"
                     style="text-align:center;">
                     <a-row
                       type="flex"
                       justify="center">
                       <a-col
-                        :xs="10"
-                        :sm="10"
-                        :md="10"
-                        :lg="10">
+                        :xs="12"
+                        :sm="12"
+                        :md="12"
+                        :lg="12">
                         <a-row
                           type="flex"
                           justify="center">
                           <a-col>
-                            <div>
+                            <div class="w12">
                               <img
                                 class="work2"
                                 src="../../common/images/about/2.png"
-                                alt="work2"
-                                srcset="../../common/images/about/2.png 2x">
+                                alt="work2">
                             </div>
                           </a-col>
                         </a-row>
@@ -49,7 +48,7 @@
                           type="flex"
                           justify="center">
                           <a-col>
-                            <div>
+                            <div class="w3">
                               <img class="work3" src="../../common/images/about/3.png" alt="work3">
                             </div>
                           </a-col>
@@ -57,21 +56,21 @@
                       </a-col>
                       <a-col
                         class="right"
-                        :xs="12"
-                        :sm="12"
-                        :md="12"
-                        :lg="12"
+                        :xs="11"
+                        :sm="11"
+                        :md="11"
+                        :lg="11"
                         >
-                        <div>
+                        <div class="w1">
                           <img class="work1" src="../../common/images/about/1.png" alt="work1">
                         </div>
                       </a-col>
                     </a-row>
                   </a-col>
                   <a-col
-                    :xs="24"
-                    :sm="24"
-                    :md="24"
+                    :xs="22"
+                    :sm="22"
+                    :md="22"
                     :lg="14">
                       <a-row
                         type="flex"
@@ -144,7 +143,7 @@
                 :key="index"
                 :xs="24"
                 :sm="24"
-                :md="26"
+                :md="24"
                 :lg="10"
                 :xl="8"
                 :xxl="8"
@@ -352,14 +351,27 @@ export default {
       .about-top {
         background: #fff;
         .middle-content {
-          .work2, .work3 {
-            width: 200px;
-            height: 240px;
-            margin: 0 2rem;
+          .w12 {
+            padding: .1rem 0;
+            img {
+              width: 100%;
+              height: 14rem;
+            }
+          }
+          .w3 {
+            padding: .1rem 0;
+            img {
+              width: 100%;
+              height: 14rem;
+            }
           }
           .right {
-            img {
-              height: 482px;
+            padding: .1rem 0;
+            .w1 {
+              img {
+                width: 100%;
+                height: 28.3rem;
+              }
             }
           }
           .company-description {
@@ -370,6 +382,7 @@ export default {
               }
               .description {
                 font-size: 1rem;
+                line-height: 1.4rem;
               }
             }
             .our-description {
@@ -391,7 +404,6 @@ export default {
         background: #e8ecf4;
         width: 100%;
         .content {
-          width: 85%;
           margin: 3rem auto;
           .top {
             width: 85%;
@@ -418,7 +430,6 @@ export default {
               text-align: center;
               background: #fff;
               border: solid 0rem #e7e7e7;
-              // box-shadow: 0 0 1.5rem #b6c1d3;
               cursor: pointer;
               &:hover {
                 box-shadow: 0 0 2.5rem #b6c1d3;
