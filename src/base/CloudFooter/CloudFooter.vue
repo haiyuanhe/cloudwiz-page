@@ -18,12 +18,11 @@
             justify="center"
           >
             <a-col
-              style="text-align:center;"
               class="logo"
-              :xs="12"
-              :sm="12"
-              :md="12"
-              :lg="8"
+              :xs="24"
+              :sm="24"
+              :md="24"
+              :lg="6"
               :xl="4"
               :xxl="6"
             >
@@ -35,9 +34,9 @@
               :xs="24"
               :sm="24"
               :md="24"
-              :lg="16"
-              :xl="16"
-              :xxl="16"
+              :lg="18"
+              :xl="20"
+              :xxl="18"
             >
               <a-row
                 type="flex"
@@ -47,9 +46,9 @@
                   :xs="24"
                   :sm="24"
                   :md="8"
-                  :lg="8"
-                  :xl="8"
-                  :xxl="8"
+                  :lg="12"
+                  :xl="12"
+                  :xxl="12"
                 >
                   <div class="link contact">
                     <p class="link-header">联系方式</p>
@@ -62,9 +61,9 @@
                   :xs="24"
                   :sm="24"
                   :md="8"
-                  :lg="8"
-                  :xl="4"
-                  :xxl="4"
+                  :lg="6"
+                  :xl="6"
+                  :xxl="6"
                 >
                   <div class="link contact">
                     <p class="link-header">快捷入口</p>
@@ -87,9 +86,9 @@
                   :xs="24"
                   :sm="24"
                   :md="8"
-                  :lg="8"
-                  :xl="8"
-                  :xxl="8"
+                  :lg="6"
+                  :xl="6"
+                  :xxl="6"
                 >
                   <div class="link product-instructions">
                   <p class="link-header">产品使用说明</p>
@@ -109,15 +108,15 @@
         justify="center"
       >
         <a-col
-          :xs="22"
-          :sm="10"
-          :md="10"
-          :lg="10"
-          :xl="10"
-          :xxl="6"
+          :xs="24"
+          :sm="24"
+          :md="24"
+          :lg="24"
+          :xl="24"
+          :xxl="24"
         >
           <p class="copyright">
-            copyright &copy; {{(new Date()).getFullYear()}} 云兴维智（北京）科技有限公司 | 京ICP备17008193号
+            Copyright &copy; {{(new Date()).getFullYear()}} 云兴维智（北京）科技有限公司 | 京ICP备17008193号
           </p>
         </a-col>
     </a-row>
@@ -135,15 +134,13 @@ export default {
     background: #191d26;
     color: #999b9f;
     .footer-container {
-      padding: 5rem;
+      padding: 5rem 5rem 2rem 5rem;
       .logo {
-        text-align: center;
         margin-bottom: 2rem;
       }
       .link{
         padding-left: .8rem;
         line-height: 1.2rem;
-        padding-bottom: 2rem;
         .link-header {
           font-size: 1.1rem;
           color: #cfc9c9;
@@ -155,10 +152,10 @@ export default {
       }
     }
     .copyright {
-      font-size: .8rem;
       text-align: center;
       padding: 2rem 0;
       line-height: 1rem;
+      padding: 1rem 0;
     }
   }
 </style>

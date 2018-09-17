@@ -83,13 +83,13 @@
                   :xs="24"
                   :sm="24"
                   :md="20"
-                  :lg="16"
+                  :lg="12"
                 >
                   <el-carousel
                     indicator-position="none"
                     :autoplay="false"
                     arrow="always">
-                    <el-carousel-item v-for="(item, index) in evaluation" :key="index">
+                    <el-carousel-item v-for="(item, index) in evaluation" :key="index" :class="item.className">
                       <div class="evaluation">
                         <div class="e">
                           <p class="ct">{{item.content}}</p>
@@ -252,19 +252,22 @@ export default {
           company: '中国电力科学院',
           icon: require('common/images/cases/CEPRI.png'),
           evaluator: '人工智能应用研究所平台技术室',
-          content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
+          content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。',
+          className: ''
         },
         {
           company: '问卷网',
           icon: require('common/images/cases/wenjuanwang.png'),
           evaluator: '问卷网CTO梁群',
-          content: '部署Cloudwiz产品之后，统一了我们的运维管理工具，优化了管理流程，运维质量和效率都得到了极大的提升，每周提供的专家巡检报告，让我们对系统的关键服务、刷票情况有了直观了解，大量节省了人力和时间成本，是非常实用的运维解决方案。'
+          content: '部署Cloudwiz产品之后，统一了我们的运维管理工具，优化了管理流程，运维质量和效率都得到了极大的提升，每周提供的专家巡检报告，让我们对系统的关键服务、刷票情况有了直观了解，大量节省了人力和时间成本，是非常实用的运维解决方案。',
+          className: ''
         },
         {
           company: '车友援',
           icon: require('common/images/cases/cheyouyuan.png'),
           evaluator: '车友援研发部门CTO',
-          content: 'Cloudwiz作为一款优秀的AIOps产品，具有超前的理念。不仅能够帮助我们全面监控各服务器和应用的健康指标，还结合人工智能大幅减少我们分析问题、定位问题的时间。在对PostgreSQL数据库的监控上，Cloudwiz实时提供死锁和慢查询的详细信息，帮助我们解决了很多性能问题。'
+          content: 'Cloudwiz作为一款优秀的AIOps产品，具有超前的理念。不仅能够帮助我们全面监控各服务器和应用的健康指标，还结合人工智能大幅减少我们分析问题、定位问题的时间。在对PostgreSQL数据库的监控上，Cloudwiz实时提供死锁和慢查询的详细信息，帮助我们解决了很多性能问题。',
+          className: 'che-you-yuan'
         }
       ]
     }
@@ -316,8 +319,8 @@ export default {
         }
         .aiops {
           color: #fefefe;
-          font-size: 2rem;
-          padding: 0rem 0;
+          font-size: 1.8rem;
+          padding: 0;
         }
         .free-used {
           margin-top: .8rem;
@@ -387,9 +390,9 @@ export default {
           color: #fff;
           text-align: left;
           .user {
-            height: 4rem;
+            height: 5rem;
             img {
-              height: 2.3rem;
+              height: 2.5rem;
             }
           }
         }
@@ -399,7 +402,7 @@ export default {
         .slogan {
           font-size: 1.3rem;
           text-align: center;
-          padding-bottom: 12rem;
+          padding-bottom: 10rem;
           background: #292d38;
           color: #fff;
         }
@@ -407,6 +410,7 @@ export default {
           margin: 0 auto;
           position: relative;
           top: -1.5rem;
+          height: 16rem;
           .faq {
             position: relative;
             top: -8rem;
@@ -422,19 +426,18 @@ export default {
                   background: #fff;
                   text-align: center;
                   padding: 2rem;
-                  box-shadow: 0 0 0.2rem 1px #fff;
-                  border: 1px solid rgb(224, 224, 224);
+                  border-radius: 4px;
                   box-shadow: 0 0 1.5rem #fff;
                   cursor: pointer;
                   &:hover {
                     box-shadow: 0 0 1.5rem rgb(145, 139, 139);
                   }
                   .ct {
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                     text-align: left;
                     width: 80%;
                     margin: 0 auto;
-                    line-height: 1.6rem;
+                    line-height: 2rem;
                     font-weight: bold;
                   }
                   img {
@@ -443,10 +446,17 @@ export default {
                   }
                   .cm {
                     font-size: 1.3rem;
-                    font-weight: bold;
+                    color: #000;
+                    margin-bottom: 0.6rem;
                   }
                   .m {
                     color: #928f8f;
+                    font-size: 0.8rem;
+                  }
+                }
+                .che-you-yuan {
+                  .ct {
+                    font-size: .8rem;
                   }
                 }
               }
@@ -458,7 +468,7 @@ export default {
         margin-top: -6rem;
         .new-features {
           width: 80%;
-          margin: 2rem auto;
+          margin: 3rem auto;
           .f {
             margin: .6rem;
             padding: 2rem;
@@ -471,15 +481,18 @@ export default {
             }
             .f-title {
               font-size: 1.2rem;
-              padding: 1rem;
+              padding: .5rem 1rem 1.5rem 1rem;
             }
             .f-used {
               color: inherit;
             }
             & > p {
-              line-height: .4rem;
-              font-size: .7rem;
-              padding-bottom: 1rem;
+              font-size: .8rem;
+            }
+            & > button {
+              margin-top: 1rem;
+              padding: 0 2rem;
+              border-radius: 2px;
             }
           }
         }
