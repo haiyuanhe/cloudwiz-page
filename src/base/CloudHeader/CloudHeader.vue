@@ -11,7 +11,7 @@
           <router-link class="menu-item home" to="/">
             <span class="tab-link">首页</span>
           </router-link>
-          <a-dropdown class="ant-dropdown-link tab-link">
+          <a-dropdown class="menu-item ant-dropdown-link tab-link">
             <span class="tab-link">产品中心<a-icon type="down" style="color: #979b9b"/></span>
             <a-menu
               slot="overlay"
@@ -314,7 +314,7 @@ export default {
         .offline-analysis {
           a {
             line-height: 4rem;
-            font-size: 1.25rem;
+            font-size: 1rem;
             color: #0072ff;
             font-style: italic;
           }

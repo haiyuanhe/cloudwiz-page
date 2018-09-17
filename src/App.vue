@@ -36,6 +36,7 @@ export default {
           .content {
             .not-support {
               color: #d4d4d4;
+              font-weight: 100;
             }
           }
         }
