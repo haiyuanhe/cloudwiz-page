@@ -312,8 +312,8 @@ export default {
         top: 25%;
         left: 22%;
         .ai {
-          color: #928f8f;
-          font-size: 1rem;
+          color: #fefefe;
+          opacity: 0.75;
           padding: .5rem 0;
           letter-spacing: .2rem;
         }
@@ -348,7 +348,7 @@ export default {
         .feature-wrapper {
           margin: 1rem .4rem;
           border: 1px solid #efefef;
-          box-shadow: 1.1rem 1.1rem 1.4rem rgba(2, 8, 22, .1);
+          box-shadow: 1rem 1rem 4rem 0rem rgba(2, 8, 22, 0.1);
           .feature {
             width: 90%;
             margin: 2.5rem auto;

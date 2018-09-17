@@ -142,9 +142,11 @@ export default {
       margin: 3rem auto;
       .news-list {
         margin: .6rem 0;
-        border: 1px solid #dfdfdf;
+        border: solid 1px #dfdfdf;
         background: #fff;
-        @include b-shadow(#ccc, rgb(201, 201, 201));
+        &:hover {
+          box-shadow: 1rem 1rem 3rem 0rem rgba(0, 0, 0, 0.1);
+        }
         img {
           height: 15rem;
         }

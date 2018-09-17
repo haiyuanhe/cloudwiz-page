@@ -336,7 +336,8 @@ export default {
     border: none;
   }
   .cloudwiz-wrapper {
-    background: #f6f7fa;
+    background: #f6f8fb;
+    font-family: MicrosoftYaHeiUI;
     .cloudwiz-container {
       .title {
         padding: 3rem;
@@ -429,6 +430,7 @@ export default {
                 box-shadow: 0 0 1.5rem #e8ecf4;
                 padding: 0 2rem;
                 border-radius: 0;
+                // cursor: pointer;
                 // &:hover {
                 //   box-shadow: 0 0 1.5rem rgb(153, 148, 148);
                 // }

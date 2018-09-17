@@ -153,6 +153,8 @@ export default {
     }
     .copyright {
       text-align: center;
+      padding: 2rem 0;
+      line-height: 1rem;
       padding: 1rem 0;
     }
   }
