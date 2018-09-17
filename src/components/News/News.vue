@@ -26,8 +26,8 @@
                   class="news-images"
                   :xs="{ span: 24}"
                   :sm="{ span: 24}"
-                  :md="{ span: 24}"
-                  :lg="{ span: 8}"
+                  :md="{ span: 12}"
+                  :lg="{ span: 10}"
                   :xl="{ span: 8}"
                 >
                   <img :src="item.newsImg" alt="item.title" />
@@ -35,14 +35,14 @@
                 <a-col
                   :xs="{ span: 24}"
                   :sm="{ span: 24}"
-                  :md="{ span: 24}"
-                  :lg="{ span: 16}"
+                  :md="{ span: 12}"
+                  :lg="{ span: 14}"
                   :xl="{ span: 16}"
                   class="cd"
                 >
                   <div class="top">{{item.title}}</div>
                   <div class="middle">{{item.description}}</div>
-                  <div class="bottom">
+                  <div class="bottom clearfix">
                     <div class="time">{{getNewsTime(item.occur_time, item.type)}}</div>
                     <a-button type="primary">
                       <a target="_blank" :href="item.url">阅读全文</a>
@@ -142,7 +142,8 @@ export default {
       margin: 3rem auto;
       .news-list {
         margin: .6rem 0;
-        border: 1px solid #ccc;
+        border: 1px solid #dfdfdf;
+        background: #fff;
         @include b-shadow(#ccc, rgb(201, 201, 201));
         img {
           height: 15rem;
@@ -159,10 +160,12 @@ export default {
         }
         .bottom {
           padding: 1rem 2rem;
-          margin-bottom: 3rem;
           .time {
             float: left;
             line-height: 2.2rem;
+          }
+          button {
+            border-radius: 0;
           }
           .ant-btn-primary {
             float: right;

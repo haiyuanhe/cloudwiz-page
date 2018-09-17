@@ -5,91 +5,68 @@
       <PageHeader :headerInfo="headerInfo" />
       <div class="cases-content">
         <div class="cases-carousel">
-          <a-row
-            type="flex"
-            justify="center"
+          <a-carousel
+            class="carousel"
+            effect="fade"
+            autoplay
           >
-            <a-col
-              :xs="24"
-              :sm="24"
-              :md="16"
-              :lg="16"
-            >
-              <a-carousel
-                class="carousel"
-                effect="fade"
-                autoplay
-              >
-                <div
-                  v-for="(item, index) in evaluation"
-                  :key="index"
-                >
-                  <a-row
-                    type="flex"
-                    justify="center"
-                  >
-                    <a-col
-                      :xs="24"
-                      :sm="24"
-                      :md="14"
-                      :lg="12"
-                    >
-                      <div class="left">
-                        <div class="icon">
-                          <img :src="item.icon" :alt="item.company">
-                        </div>
-                        <p class="c">{{item.company}}</p>
-                        <p class="m">{{item.evaluator}}</p>
-                      </div>
-                    </a-col>
-                    <a-col
-                      :xs="24"
-                      :sm="24"
-                      :md="24"
-                      :lg="12"
-                    >
-                      <div class="right">
-                        <p class="d">{{item.content}}</p>
-                      </div>
-                    </a-col>
-                  </a-row>
-                </div>
-              </a-carousel>
-            </a-col>
-          </a-row>
-        </div>
-        <div class="cases-lists">
-          <a-row
-            type="flex"
-            justify="center"
-          >
-            <a-col
-              :xs="24"
-              :sm="24"
-              :md="19"
-              :lg="19"
+            <div
+              v-for="(item, index) in evaluation"
+              :key="index"
             >
               <a-row
                 type="flex"
                 justify="center"
               >
                 <a-col
-                  v-for="(item, index) in users"
-                  :key="index"
                   :xs="24"
-                  :sm="22"
-                  :md="15"
-                  :lg="8"
+                  :sm="24"
+                  :md="14"
+                  :lg="6"
                 >
-                  <div class="list">
-                    <div class="icon" @click="showModal(item.company)">
+                  <div class="left">
+                    <div class="icon">
                       <img :src="item.icon" :alt="item.company">
                     </div>
                     <p class="c">{{item.company}}</p>
-                    <p class="d" v-html="item.effect"></p>
+                    <p class="m">{{item.evaluator}}</p>
+                  </div>
+                </a-col>
+                <a-col
+                  :xs="24"
+                  :sm="24"
+                  :md="24"
+                  :lg="18"
+                >
+                  <div class="right">
+                    <p class="d">{{item.content}}</p>
                   </div>
                 </a-col>
               </a-row>
+            </div>
+          </a-carousel>
+        </div>
+        <div class="cases-lists">
+          <a-row
+            type="flex"
+            justify="center"
+            :gutter="16"
+          >
+            <a-col
+              v-for="(item, index) in users"
+              :key="index"
+              :xs="24"
+              :sm="22"
+              :md="15"
+              :lg="8"
+            >
+              <div class="list">
+                <div class="icon" @click="showModal(item.company)">
+                  <img :src="item.icon" :alt="item.company">
+                </div>
+                <p class="c">{{item.company}}</p>
+                <p class="d" v-html="item.effect"></p>
+              </div>
             </a-col>
           </a-row>
         </div>
@@ -320,6 +297,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .cases-content {
+    width: 80%;
+    margin: 0 auto;
+  }
   @media screen and (max-width: 840px) {
     .case-info {
       .c {
@@ -392,7 +373,6 @@ export default {
             }
           }
           .carousel {
-            border: 1px solid #e9ebec;
             background: #fff;
             cursor: pointer;
             &:hover {
@@ -412,8 +392,8 @@ export default {
               .c {
                 height: 0;
                 padding: .8rem;
-                font-weight: bold;
                 font-size: 1.3rem;
+                color: #000;
               }
               .m {
                 font-size: .8rem;
@@ -432,7 +412,6 @@ export default {
         }
         .cases-lists {
           .list {
-            margin: 1rem;
             height: 18rem;
             text-align: center;
             .icon {

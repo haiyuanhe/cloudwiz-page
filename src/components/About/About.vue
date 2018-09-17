@@ -22,16 +22,16 @@
                     :xs="24"
                     :sm="24"
                     :md="24"
-                    :lg="10"
+                    :lg="8"
                     style="text-align:center;">
                     <a-row
                       type="flex"
                       justify="center">
                       <a-col
-                        :xs="10"
-                        :sm="10"
-                        :md="10"
-                        :lg="10">
+                        :xs="12"
+                        :sm="12"
+                        :md="12"
+                        :lg="12">
                         <a-row
                           type="flex"
                           justify="center">
@@ -72,7 +72,7 @@
                     :xs="24"
                     :sm="24"
                     :md="24"
-                    :lg="14">
+                    :lg="16">
                       <a-row
                         type="flex"
                         justify="center">
@@ -106,7 +106,7 @@
                           >
                             <div class="left">
                               <p class="number">5W+</p>
-                              <p>的服务器，覆盖多个数据中心。</p>
+                              <p>5万台以上的服务器，覆盖多个数据中心。</p>
                             </div>
                           </a-col>
                           <a-col
@@ -117,7 +117,7 @@
                           >
                             <div class="right">
                               <p class="number">10</p>
-                              <p>年以上的设计、建造和运营大数据系统的经验。</p>
+                              <p>10年以上的设计、建造和运营大数据系统的经验。</p>
                             </div>
                           </a-col>
                         </a-row>
@@ -134,7 +134,7 @@
           <div class="top">
             <p class="title">团队介绍</p>
             <p class="description">
-              团队由数位长期在美国硅谷一线互联网高科技公司工作的海归专家，以及在中国跨国高科技企业从事市场营销的高管合作创立。 团队的核心成员来自微软总部、Twitter总部、亚马逊总部、阿里巴巴等一线互联网公司。
+              团队由数位长期在美国硅谷一线互联网高科技公司工作的海归专家，以及在中国跨国高科技企业从事市场营销的高管合作创立。<br />团队的核心成员来自微软总部、Twitter总部、亚马逊总部、阿里巴巴等一线互联网公司。
             </p>
           </div>
           <div class="worker-lists">
@@ -353,9 +353,7 @@ export default {
         background: #fff;
         .middle-content {
           .work2, .work3 {
-            width: 200px;
             height: 240px;
-            margin: 0 2rem;
           }
           .right {
             img {
@@ -366,15 +364,16 @@ export default {
             .company {
               .name {
                 font-size: 2rem;
-                padding: 2rem 0;
+                padding: 1rem 0;
+                margin-bottom: .6rem;
               }
               .description {
-                font-size: 1rem;
+                margin-bottom: 2.5rem;
               }
             }
             .our-description {
-              font-size: 1rem;
               line-height: 2rem;
+              margin-bottom: 3.5rem;
             }
           }
           .services {
@@ -419,7 +418,7 @@ export default {
               background: #fff;
               border: 1px solid #e8ecf3;
               // box-shadow: 0 0 1.5rem #b6c1d3;
-              cursor: pointer;
+              // cursor: pointer;
               &:hover {
                 box-shadow: 0 0 2.5rem #b6c1d3;
               }
