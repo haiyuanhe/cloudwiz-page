@@ -158,6 +158,7 @@ export default {
       font-size: .8rem;
       text-align: center;
       padding: 2rem 0;
+      line-height: 1rem;
     }
   }
 </style>

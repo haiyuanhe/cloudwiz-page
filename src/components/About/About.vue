@@ -417,7 +417,7 @@ export default {
               margin: .6rem;
               text-align: center;
               background: #fff;
-              border: 1px solid #e8ecf3;
+              border: solid 0rem #e7e7e7;
               // box-shadow: 0 0 1.5rem #b6c1d3;
               cursor: pointer;
               &:hover {
@@ -428,11 +428,11 @@ export default {
               .avatar {
                 height: 40%;
                 text-align: center;
-                padding: 3rem;
+                padding: 2rem;
                 background-size: cover;
                 img {
-                  width: 7rem;
-                  height: 7rem;
+                  width: 8rem;
+                  height: 8rem;
                 }
               }
               .mate {
@@ -454,7 +454,7 @@ export default {
                 margin: 1.5rem auto;
                 img {
                   background-size: cover;
-                  height: 36px;
+                  height: 2rem;
                 }
               }
             }

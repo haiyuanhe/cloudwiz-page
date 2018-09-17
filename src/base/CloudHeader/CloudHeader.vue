@@ -12,13 +12,14 @@
             <span class="tab-link">首页</span>
           </router-link>
           <a-dropdown class="ant-dropdown-link tab-link">
-            <span class="tab-link">产品中心<a-icon type="down" style="color: #979b9b"/></span>
+            <span class="tab-link">产品中心<a-icon type="down"/></span>
             <a-menu
               slot="overlay"
               theme="dark"
               :style="{
                 top: 1 + 'rem',
-                left: -.8 + 'rem'
+                left: -.8 + 'rem',
+                color: '#191d26'
               }">
               <a-menu-item>
                 <router-link to="/cloudwiz">
@@ -42,7 +43,7 @@
             <span class="tab-link">公司动态</span>
           </router-link>
           <a-dropdown class="ant-dropdown-link menu-item about-us">
-            <span class="tab-link">关于我们<a-icon type="down" style="color: #979b9b"/></span>
+            <span class="tab-link">关于我们<a-icon type="down"/></span>
             <a-menu
               slot="overlay"
               theme="dark"
@@ -96,6 +97,9 @@
               width: screenWidth + 'px',
             }"
           >
+            <a-menu-item class="analysis" @click="handleMenuClick">
+              <a target="_blank" href="//play.cloudwiz.cn/offline_analysis" class="offline-analysis">离线分析平台</a>
+            </a-menu-item>
             <a-menu-item @click="handleMenuClick">
               <router-link class="menu-item home" to="/">
                 <span class="tab-link menu-link">首页</span>
@@ -106,7 +110,7 @@
                 header="产品中心"
                 style="
                   background: #001529;
-                  color: #a8adaf;
+                  color: #fff;
                   border:none;
                   borderRadius: none;
                 "
@@ -141,7 +145,7 @@
                 header="关于我们"
                 style="
                   background: #001529;
-                  color: #a8adaf;
+                  color: #fff;
                   border:none;
                   borderRadius: none;
                 "
@@ -163,9 +167,6 @@
                 </a-menu-item>
               </a-collapse-panel>
             </a-collapse>
-            <a-menu-item @click="handleMenuClick">
-              <a target="_blank" href="//play.cloudwiz.cn/offline_analysis" class="menu-link">离线分析平台</a>
-            </a-menu-item>
             <a-menu-item @click="handleMenuClick">
               <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">登录</a>
             </a-menu-item>
@@ -226,10 +227,19 @@ export default {
 <style lang="scss" scoped>
   @media screen and (max-width: 700px) {
     .logo {
-        position: absolute;
-        left: 20%;
-        margin-left: 2rem;
+      position: absolute;
+      left: 20%;
+      margin-left: 2rem;
+    }
+    .analysis {
+      .offline-analysis {
+      color: #0072ff;
+        font-size: 1.25rem;
+        background-color: #14171e;
+        font-style: italic;
+        letter-spacing: 0rem;
       }
+    }
   }
   @media screen and (max-width: 1100px) {
     .header-container {
@@ -239,19 +249,24 @@ export default {
       }
     }
     .ant-dropdown-menu-item {
-      padding-bottom: .6rem;
+      padding: 1.1rem;
     }
     .menu-link {
       font-size: 1.1rem;
     }
     .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
-      text-align: center;
+      text-align: left;
+      padding-left: 1rem;
+    }
+    .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
+      color: #fff;
     }
     .undefined-item {
-      padding: .3rem;
+      padding: .6rem 0;
     }
-    .ant-collapse-content > .ant-collapse-content-box {
+    .ant-collapse-content /deep/ .ant-collapse-content-box {
       padding: 0 0 1rem 0;
+      background-color: #14171e;
     }
   }
   .ant-collapse {
@@ -264,15 +279,19 @@ export default {
       padding-top: 0;
       padding-bottom: 0;
     }
+    a {
+      color: #fff;
+    }
   }
   .ant-collapse /deep/ .ant-collapse-header {
-    color: #a8adaf!important;
-    padding: 3px 12px;
-    text-align: center;
+    color: #ffffff;
+    padding: 1.1rem;
+    text-align: left;
     font-size: 1.1rem;
     .arrow {
-      line-height: 30px;
-      left: calc(50% + 40px);
+      line-height: 3.5rem;
+      font-size: 1.2rem;
+      left: calc(100% - 3rem);
     }
   }
   .header-wrapper {
@@ -340,7 +359,7 @@ export default {
       }
       .mobail {
         position: absolute;
-        right: 4rem;
+        right: 1rem;
         line-height: 4rem;
         font-size: 2rem;
         color: #fff;

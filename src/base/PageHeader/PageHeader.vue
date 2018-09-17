@@ -17,7 +17,7 @@ export default {
   props: {
     height: {
       type: Number,
-      default: 20
+      default: 22
     },
     headerInfo: {
       type: Object,
@@ -34,18 +34,22 @@ export default {
     width: 100%;
     background-size: cover!important;
     display: table;
+    font-family: Avenir-Roman;
     .header-title {
       text-align: center;
       display: table-cell;
       vertical-align: middle;
       .title {
-        height: 1rem;
+        height: 2rem;
         color: #fefefe;
         font-size: 2rem;
       }
       .description {
-        color: #bcb6b4;
         font-size: 1.2rem;
+        font-family: MicrosoftYaHeiUI;
+        letter-spacing: 0rem;
+        color: #fefefe;
+        opacity: 0.6;
       }
     }
   }

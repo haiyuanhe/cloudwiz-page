@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <a-back-top /> -->
+    <a-back-top />
     <keep-alive>
       <router-view/>
     </keep-alive>
@@ -19,7 +19,7 @@ export default {
     margin-top: 4rem;
     overflow-x: hidden;
     overflow-y: scroll;
-    // height: 100vh;
+    height: 100vh;
     .ant-modal-mask {
       background: rgba(0, 0, 0, .1)!important;
     }
@@ -36,6 +36,7 @@ export default {
           .content {
             .not-support {
               color: #d4d4d4;
+              font-weight: 100;
             }
           }
         }
