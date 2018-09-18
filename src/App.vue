@@ -19,9 +19,6 @@ export default {
   }
   #app {
     background: #f7f8fb;
-    margin-top: 4rem;
-    overflow-x: hidden;
-    overflow-y: scroll;
     height: 100vh;
     .cloudwiz-wrapper {
       .cloudwiz-middle {

@@ -327,6 +327,9 @@ export default {
       ]
     }
   },
+  mounted () {
+    window.scrollTo(0, 0)
+  },
   components: {
     CloudHeader,
     CloudFooter
@@ -336,6 +339,13 @@ export default {
 
 <style lang="scss">
 @media screen and (max-width: 768px) {
+  .users-wrapper {
+    .users {
+      .user {
+        height: 4rem;
+      }
+    }
+  }
   .home-top {
     height: 35rem;
     background: linear-gradient(180deg, #111415, #273b49);
