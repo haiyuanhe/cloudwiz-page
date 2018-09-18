@@ -246,7 +246,7 @@ export default {
       margin-left: 1rem;
     }
     .analysis {
-      background-color: #14171e;
+      background-color: #0c111d;
       .offline-analysis {
         color: #0072ff;
         font-size: 1.25rem;
@@ -270,7 +270,7 @@ export default {
       color: #fff;
     }
     .undefined-item {
-      padding: .6rem 0;
+      padding: .8rem 0;
     }
   }
   @media screen and (max-width: 1100px) and (min-width: 768px) {
@@ -283,7 +283,7 @@ export default {
       margin-left: 1rem;
     }
     .analysis {
-      background-color: #14171e;
+      background-color: #0c111d;
       .offline-analysis {
         color: #0072ff;
         font-size: 1.25rem;
@@ -333,9 +333,9 @@ export default {
   }
   .ant-collapse /deep/ .ant-collapse-content {
     border: none;
-    background: #14171e;
+    background: #0c111d;
     .ant-collapse-content-box {
-      padding: 0 0 0 1rem;
+      padding: 0 0 .6rem 1rem;
     }
     a {
       color: #fff;

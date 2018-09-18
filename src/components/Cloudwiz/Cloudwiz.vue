@@ -21,12 +21,17 @@
             <div class="advantage">
               <a-collapse
                 defaultActiveKey="0"
-                accordion>
+                accordion
+                @change="change">
                 <a-collapse-panel
+                  :showArrow="false"
                   v-for="(item, j) in advantage"
                   :key="j"
-                  :header="item.title"
                 >
+                  <template slot="header">
+                    <a-icon :type="item.type ? 'minus-circle' : 'plus-circle'" style="color: #026dcd;"/>
+                    <span>{{item.title}}</span>
+                  </template>
                   <div class="list">
                     <div class="detail">
                       <ul v-for="(point, j) in item.points" :key="j">
@@ -158,6 +163,7 @@ export default {
   name: 'cloudwiz',
   data () {
     return {
+      current: 0,
       showEmail: false,
       headerInfo: {
         Imgurl: require('common/images/products/cloudwiz-background.png'),
@@ -168,6 +174,7 @@ export default {
         {
           icon: require('common/images/products/advantage/1.png'),
           title: '全面的AIOps功能，助力企业运维进入智能化时代',
+          type: true,
           points: [
             '高效、精准的报警，告别“alert fatigue”。',
             '智能异常检测，及时跟踪系统异常。',
@@ -179,6 +186,7 @@ export default {
         {
           icon: require('common/images/products/advantage/2.png'),
           title: '消除运维数据孤岛，实现数据关联，真正实现整合和共享',
+          type: false,
           points: [
             '简单易操作，将数据传输至数据处理和存储器；',
             '多种数据采集方式，灵活多变，快速适应；',
@@ -190,6 +198,7 @@ export default {
         {
           icon: require('common/images/products/advantage/3.png'),
           title: '洞悉业务和IT体系，随心掌握IT系统对业务的影响',
+          type: false,
           points: [
             '业务系统可视化，持续优化助力业务决策；',
             '故障溯源和定位，准确发现系统故障的根因；',
@@ -200,6 +209,7 @@ export default {
         {
           icon: require('common/images/products/advantage/4.png'),
           title: '本地和云知识库有效提高运维和运营效率',
+          type: false,
           points: [
             '降低运维成本，提高运维效率；',
             '快速发现问题，准确定位故障；',
@@ -210,6 +220,7 @@ export default {
         {
           icon: require('common/images/products/advantage/5.png'),
           title: '系统资源规划和运行预测，为业务的发展保驾护航',
+          type: false,
           points: [
             '资源规划和容量管理、预测，消除业务发展瓶颈；',
             '主动支持IT运维，实现真正的智能运维；',
@@ -219,6 +230,7 @@ export default {
         {
           icon: require('common/images/products/advantage/6.png'),
           title: '针对现代多种IT架构的智能监控运维',
+          type: false,
           points: [
             '打通IAAS和PAAS架构，适应多云、混合云等现代IT架构；',
             '基于KUBERINETE的容器运维、监控和资源优化；',
@@ -315,6 +327,18 @@ export default {
     }
   },
   methods: {
+    change (e) {
+      console.log(e)
+      if (!e) {
+        e = this.current
+      }
+      this.current = e
+      this.advantage.map(item => {
+        item.type = false
+        return item
+      })
+      this.advantage[e].type = true
+    },
     contactUs () {
       this.showEmail = true
     }

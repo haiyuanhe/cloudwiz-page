@@ -59,14 +59,19 @@
               >
                 <div
                   class="faq-qa"
-                  v-if="faqs[currentIndex].lists.length > 0"
-                >
-                  <a-collapse defaultActiveKey="0" accordion>
+                  v-if="faqs[currentIndex].lists.length > 0">
+                  <a-collapse
+                    defaultActiveKey="0"
+                    accordion>
                     <a-collapse-panel
+                      :showArrow="false"
                       v-for="(item) in faqs[currentIndex].lists"
-                      :header="item.q"
                       :key="item.q"
                     >
+                      <template slot="header">
+                        <span>{{item.q}}</span>
+                        <a-icon type="question-circle-o" />
+                      </template>
                       <p class="answer" v-html="item.a"></p>
                     </a-collapse-panel>
                   </a-collapse>
@@ -196,9 +201,10 @@ export default {
     border: none;
   }
   .ant-collapse /deep/ .ant-collapse-header {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .faq-wrapper {
+    background: #f7f8fb;
     .faq-container {
       .faq-content {
         .faq-type {

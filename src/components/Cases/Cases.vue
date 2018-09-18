@@ -17,7 +17,7 @@
             <div class="cases-carousel">
               <a-carousel
                 class="carousel"
-                effect="fade"
+                effect="scrollX"
                 autoplay
               >
                 <div
@@ -78,8 +78,8 @@
                   v-for="(item, index) in users"
                   :key="index"
                   :xs="24"
-                  :sm="24"
-                  :md="15"
+                  :sm="12"
+                  :md="12"
                   :lg="8"
                 >
                   <div class="list">
@@ -299,7 +299,6 @@ export default {
   },
   methods: {
     showModal (company) {
-      console.log(company)
       this.showCase = {}
       if (this.casesDetail[company] !== void 0) {
         this.showCase = this.casesDetail[company]
@@ -321,10 +320,41 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media screen and (max-width: 840px) {
+  @media screen and (max-width: 768px) {
+    .cases-lists {
+      .list {
+        .icon {
+          img {
+            height: 4rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 960px) and (min-width: 768px) {
     .case-info {
       .c {
         text-align: center;
+      }
+    }
+    .cases-lists {
+      .list {
+        .icon {
+          img {
+            height: 3rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 960px) {
+    .cases-lists {
+      .list {
+        .icon {
+          img {
+            height: 3rem;
+          }
+        }
       }
     }
   }
@@ -339,7 +369,6 @@ export default {
           height: 5rem;
           display: block;
           float: right;
-          padding-right: 1rem;
         }
       }
       .c {
@@ -441,10 +470,6 @@ export default {
               cursor: pointer;
               &:hover {
                 box-shadow: 1.1rem 1.1rem 1.4rem rgba(2, 8, 22, .1);
-              }
-              img {
-                height: 4rem;
-                // width: 90%;
               }
             }
             .c {

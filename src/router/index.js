@@ -11,7 +11,6 @@ export default new Router({
     }
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        console.log(to, from, savedPosition)
         resolve({ x: 0, y: 0 })
       }, 500)
     })

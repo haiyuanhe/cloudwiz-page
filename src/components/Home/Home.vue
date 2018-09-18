@@ -355,19 +355,20 @@ export default {
       bottom: 0;
       left: 0;
       right: 0;
-      margin: 2rem;
+      margin: 5rem auto;
       text-align: center;
     }
     .back-image {
       .bg {
         margin: 20rem auto;
         width: 90%;
+        // // box-shadow: .1rem .1rem 2.4rem 0rem rgba(2, 8, 22, 0.64)
         img {
           width: auto;
           height: auto;
           max-width: 100%;
           max-height: 100%;
-          border-radius: 1rem;
+          border-radius: .9rem;
         }
       }
     }
@@ -386,7 +387,7 @@ export default {
     font-size: 1rem;
   }
   .home-top {
-    height: 40rem;
+    height: 45rem;
     background: linear-gradient(180deg, #111415, #273b49);
     .top-content {
       position: absolute;
@@ -394,29 +395,30 @@ export default {
       bottom: 0;
       left: 0;
       right: 0;
-      margin: 2rem;
+      margin: 5rem auto;
       text-align: center;
     }
     .back-image {
       .bg {
-        width: 60%;
+        width: 65%;
         margin: 0 auto;
         position: absolute;
-        top: 16rem;
+        top: 20rem;
         left: 0;
         right: 0;
+        // box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64)
         img {
           width: auto;
           height: auto;
           max-width: 100%;
           max-height: 100%;
-          border-radius: 1rem;
+          border-radius: .9rem;
         }
       }
     }
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
   .users-wrapper {
     .users {
       .user {
@@ -425,7 +427,7 @@ export default {
     }
   }
   .home-top {
-    height: 40rem;
+    height: 35rem;
     background-image: linear-gradient(45deg, #111415 0%, #273b49 100%);
     .top-content {
       position: absolute;
@@ -434,17 +436,46 @@ export default {
     }
     .back-image {
       .bg {
-        width: 50%;
+        width: 60%;
         position: absolute;
         right: 5%;
-        margin-top: 3rem;
+        margin-top: 5rem;
         line-height: 20rem;
+        // box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64)
         img {
           width: auto;
           height: auto;
           max-width: 100%;
           max-height: 100%;
-          border-radius: 1rem;
+          border-radius: .9rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1300px) {
+  .home-top {
+    height: 35rem;
+    background-image: linear-gradient(45deg, #111415 0%, #273b49 100%);
+    .top-content {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+    }
+    .back-image {
+      .bg {
+        width: 40%;
+        position: absolute;
+        right: 8%;
+        margin-top: 7rem;
+        line-height: 20rem;
+        // box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64)
+        img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: .9rem;
         }
       }
     }
