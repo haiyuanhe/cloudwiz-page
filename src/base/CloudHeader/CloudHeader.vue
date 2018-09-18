@@ -1,182 +1,193 @@
 <template>
   <div class="header-wrapper">
-    <div class="header-container">
-      <div class="logo">
-        <router-link to="/">
-          <img src="../../common/images/cloudwiz.jpg" alt="Cloudwiz"/>
-        </router-link>
-      </div>
-      <div class="navbar" v-show="this.screenWidth >= 1100">
-        <ul>
-          <router-link class="menu-item home" to="/">
-            <span class="tab-link">首页</span>
+    <a-row
+      type="flex"
+      justify="center">
+      <a-col
+        :xs="20"
+        :sm="24"
+        :md="24"
+        :lg="24"
+      >
+      <div class="header-container">
+        <div class="logo">
+          <router-link to="/">
+            <img src="../../common/images/cloudwiz.jpg" alt="Cloudwiz"/>
           </router-link>
-          <a-dropdown class="menu-item ant-dropdown-link tab-link">
-            <span class="tab-link">产品中心<a-icon type="down" style="color: #979b9b;"/></span>
-            <a-menu
-              slot="overlay"
-              theme="dark"
-              :style="{
-                top: 1 + 'rem',
-                left: -.8 + 'rem',
-                color: '#191d26'
-              }">
-              <a-menu-item>
-                <router-link to="/cloudwiz">
-                  <span>产品介绍</span>
-                </router-link>
-              </a-menu-item>
-              <a-menu-item>
-                <a target="_blank" href="//www.cloudwiz.cn/document">产品使用说明</a>
-              </a-menu-item>
-              <a-menu-item>
-                <router-link to="/FAQ">
-                  <span>常见问题</span>
-                </router-link>
-              </a-menu-item>
-            </a-menu>
-          </a-dropdown>
-          <router-link class="menu-item user-case" to="/cases">
-            <span class="tab-link">客户案例</span>
-          </router-link>
-          <router-link class="menu-item company-news" to="/news">
-            <span class="tab-link">公司动态</span>
-          </router-link>
-          <a-dropdown class="ant-dropdown-link menu-item about-us">
-            <span class="tab-link">关于我们<a-icon type="down"/></span>
-            <a-menu
-              slot="overlay"
-              theme="dark"
-              :style="{
-                top: 1 + 'rem',
-                left: -.8 + 'rem'
-              }">
-              <a-menu-item>
-                <router-link to="/about">
-                  <span>关于公司</span>
-                </router-link>
-              </a-menu-item>
-              <a-menu-item>
-                <router-link to="/contact">
-                  <span>联系我们</span>
-                </router-link>
-              </a-menu-item>
-              <a-menu-item>
-                <router-link to="/recruitment">
-                  <span>招贤纳士</span>
-                </router-link>
-              </a-menu-item>
-            </a-menu>
-          </a-dropdown>
-          <li class="menu-item offline-analysis">
-            <a target="_blank" href="//play.cloudwiz.cn/offline_analysis">离线分析平台</a>
-          </li>
-        </ul>
-      </div>
-      <div class="used" v-show="this.screenWidth >= 1100">
-        <div class="use signin">
-          <a target="_blank" href="//app.cloudwiz.cn">登录</a>
         </div>
-        <div class="use free-used">
-          <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
-        </div>
-      </div>
-      <div class="mobail" v-show="this.screenWidth <= 1100">
-        <a-dropdown :trigger="['click']" @visibleChange="change" class="mobail-menu">
-          <div class="ant-dropdown-link">
-            <a-icon :type="type" @click="open"/>
-          </div>
-          <a-menu
-            slot="overlay"
-            theme="dark"
-            class="menu-lists"
-            v-show="show"
-            :style="{
-              top: -5 + 'px',
-              left: 0,
-              width: screenWidth + 'px',
-            }"
-          >
-            <a-menu-item class="analysis" @click="handleMenuClick">
-              <a target="_blank" href="//play.cloudwiz.cn/offline_analysis" class="offline-analysis">离线分析平台</a>
-            </a-menu-item>
-            <a-menu-item @click="handleMenuClick">
-              <router-link class="menu-item home" to="/">
-                <span class="tab-link menu-link">首页</span>
-              </router-link>
-            </a-menu-item>
-            <a-collapse accordion class="menu-item">
-              <a-collapse-panel
-                header="产品中心"
-                style="
-                  background: #001529;
-                  color: #fff;
-                  border:none;
-                  borderRadius: none;
-                "
-              >
-                <a-menu-item @click="handleMenuClick">
+        <div class="navbar" v-show="this.screenWidth >= 1100">
+          <ul>
+            <router-link class="menu-item home" to="/">
+              <span class="tab-link">首页</span>
+            </router-link>
+            <a-dropdown class="menu-item ant-dropdown-link tab-link">
+              <span class="tab-link">产品中心<a-icon type="down" style="color: #979b9b;"/></span>
+              <a-menu
+                slot="overlay"
+                theme="dark"
+                :style="{
+                  top: 1 + 'rem',
+                  left: -.8 + 'rem',
+                  color: '#191d26'
+                }">
+                <a-menu-item>
                   <router-link to="/cloudwiz">
                     <span>产品介绍</span>
                   </router-link>
                 </a-menu-item>
-                <a-menu-item @click="handleMenuClick">
+                <a-menu-item>
                   <a target="_blank" href="//www.cloudwiz.cn/document">产品使用说明</a>
                 </a-menu-item>
-                <a-menu-item @click="handleMenuClick">
+                <a-menu-item>
                   <router-link to="/FAQ">
                     <span>常见问题</span>
                   </router-link>
                 </a-menu-item>
-              </a-collapse-panel>
-            </a-collapse>
-            <a-menu-item @click="handleMenuClick">
-              <router-link class="menu-item user-case" to="/cases">
-                <span class="tab-link menu-link">客户案例</span>
-              </router-link>
-            </a-menu-item>
-            <a-menu-item @click="handleMenuClick">
-              <router-link class="menu-item company-news" to="/news">
-                <span class="tab-link menu-link">公司动态</span>
-              </router-link>
-            </a-menu-item>
-            <a-collapse accordion class="menu-item">
-              <a-collapse-panel
-                header="关于我们"
-                style="
-                  background: #001529;
-                  color: #fff;
-                  border:none;
-                  borderRadius: none;
-                "
-              >
-                <a-menu-item @click="handleMenuClick">
+              </a-menu>
+            </a-dropdown>
+            <router-link class="menu-item user-case" to="/cases">
+              <span class="tab-link">客户案例</span>
+            </router-link>
+            <router-link class="menu-item company-news" to="/news">
+              <span class="tab-link">公司动态</span>
+            </router-link>
+            <a-dropdown class="ant-dropdown-link menu-item about-us">
+              <span class="tab-link">关于我们<a-icon type="down"/></span>
+              <a-menu
+                slot="overlay"
+                theme="dark"
+                :style="{
+                  top: 1 + 'rem',
+                  left: -.8 + 'rem'
+                }">
+                <a-menu-item>
                   <router-link to="/about">
                     <span>关于公司</span>
                   </router-link>
                 </a-menu-item>
-                <a-menu-item @click="handleMenuClick">
+                <a-menu-item>
                   <router-link to="/contact">
                     <span>联系我们</span>
                   </router-link>
                 </a-menu-item>
-                <a-menu-item @click="handleMenuClick">
+                <a-menu-item>
                   <router-link to="/recruitment">
                     <span>招贤纳士</span>
                   </router-link>
                 </a-menu-item>
-              </a-collapse-panel>
-            </a-collapse>
-            <a-menu-item @click="handleMenuClick">
-              <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">登录</a>
-            </a-menu-item>
-            <a-menu-item @click="handleMenuClick">
-              <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">免费试用</a>
-            </a-menu-item>
-          </a-menu>
-        </a-dropdown>
+              </a-menu>
+            </a-dropdown>
+            <li class="menu-item offline-analysis">
+              <a target="_blank" href="//play.cloudwiz.cn/offline_analysis">离线分析平台</a>
+            </li>
+          </ul>
+        </div>
+        <div class="used" v-show="this.screenWidth >= 1100">
+          <div class="use signin">
+            <a target="_blank" href="//app.cloudwiz.cn">登录</a>
+          </div>
+          <div class="use free-used">
+            <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
+          </div>
+        </div>
+        <div class="mobail" v-show="this.screenWidth <= 1100">
+          <a-dropdown :trigger="['click']" @visibleChange="change" class="mobail-menu">
+            <div class="ant-dropdown-link">
+              <a-icon :type="type" @click="open"/>
+            </div>
+            <a-menu
+              slot="overlay"
+              theme="dark"
+              class="menu-lists"
+              v-show="show"
+              :style="{
+                top: -5 + 'px',
+                left: 0,
+                width: screenWidth + 'px',
+              }"
+            >
+              <a-menu-item class="analysis" @click="handleMenuClick">
+                <a target="_blank" href="//play.cloudwiz.cn/offline_analysis" class="offline-analysis">离线分析平台</a>
+              </a-menu-item>
+              <a-menu-item @click="handleMenuClick">
+                <router-link class="menu-item home" to="/">
+                  <span class="tab-link menu-link">首页</span>
+                </router-link>
+              </a-menu-item>
+              <a-collapse accordion class="menu-item">
+                <a-collapse-panel
+                  header="产品中心"
+                  style="
+                    background: #001529;
+                    color: #fff;
+                    border:none;
+                    borderRadius: none;
+                  "
+                >
+                  <a-menu-item @click="handleMenuClick">
+                    <router-link to="/cloudwiz">
+                      <span>产品介绍</span>
+                    </router-link>
+                  </a-menu-item>
+                  <a-menu-item @click="handleMenuClick">
+                    <a target="_blank" href="//www.cloudwiz.cn/document">产品使用说明</a>
+                  </a-menu-item>
+                  <a-menu-item @click="handleMenuClick">
+                    <router-link to="/FAQ">
+                      <span>常见问题</span>
+                    </router-link>
+                  </a-menu-item>
+                </a-collapse-panel>
+              </a-collapse>
+              <a-menu-item @click="handleMenuClick">
+                <router-link class="menu-item user-case" to="/cases">
+                  <span class="tab-link menu-link">客户案例</span>
+                </router-link>
+              </a-menu-item>
+              <a-menu-item @click="handleMenuClick">
+                <router-link class="menu-item company-news" to="/news">
+                  <span class="tab-link menu-link">公司动态</span>
+                </router-link>
+              </a-menu-item>
+              <a-collapse accordion class="menu-item">
+                <a-collapse-panel
+                  header="关于我们"
+                  style="
+                    background: #001529;
+                    color: #fff;
+                    border:none;
+                    borderRadius: none;
+                  "
+                >
+                  <a-menu-item @click="handleMenuClick">
+                    <router-link to="/about">
+                      <span>关于公司</span>
+                    </router-link>
+                  </a-menu-item>
+                  <a-menu-item @click="handleMenuClick">
+                    <router-link to="/contact">
+                      <span>联系我们</span>
+                    </router-link>
+                  </a-menu-item>
+                  <a-menu-item @click="handleMenuClick">
+                    <router-link to="/recruitment">
+                      <span>招贤纳士</span>
+                    </router-link>
+                  </a-menu-item>
+                </a-collapse-panel>
+              </a-collapse>
+              <a-menu-item @click="handleMenuClick">
+                <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">登录</a>
+              </a-menu-item>
+              <a-menu-item @click="handleMenuClick">
+                <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">免费试用</a>
+              </a-menu-item>
+            </a-menu>
+          </a-dropdown>
+        </div>
       </div>
-    </div>
+      </a-col>
+    </a-row>
   </div>
 </template>
 
@@ -225,11 +236,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 768px) {
+    .mobail {
+      right: 0rem;
+    }
     .logo {
       position: absolute;
-      left: 20%;
-      margin-left: 2rem;
+      left: 0%;
+      margin-left: 1rem;
     }
     .analysis {
       background-color: #14171e;
@@ -240,25 +254,75 @@ export default {
         letter-spacing: 0rem;
       }
     }
+    .ant-dropdown-menu-item {
+      padding: 1.1rem 2rem;
+      font-size: 1.1rem;
+    }
+    // .menu-link {
+    //   a {
+    //     font-size: 1.1rem;
+    //   }
+    // }
+    .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
+      text-align: left;
+    }
+    .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
+      color: #fff;
+    }
+    .undefined-item {
+      padding: .6rem 0;
+    }
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1100px) and (min-width: 768px) {
+    .mobail {
+      right: 3rem;
+    }
+    .logo {
+      position: absolute;
+      left: 0%;
+      margin-left: 1rem;
+    }
+    .analysis {
+      background-color: #14171e;
+      .offline-analysis {
+        color: #0072ff;
+        font-size: 1.25rem;
+        font-style: italic;
+        letter-spacing: 0rem;
+      }
+    }
+    .ant-dropdown-menu-item {
+      padding: 1.1rem 2rem;
+      font-size: 1.1rem;
+    }
+    // .menu-link {
+    //   font-size: 1.1rem;
+    // }
+    .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
+      text-align: left;
+    }
+    .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
+      color: #fff;
+    }
+    .undefined-item {
+      padding: .6rem 0;
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    .mobail {
+      right: 2rem;
+    }
     .header-container {
       .logo {
         position: absolute;
         left: 0;
       }
     }
-    .ant-dropdown-menu-item {
-      padding: 1.1rem 2rem;
-    }
-    .menu-link {
-      font-size: 1.1rem;
-    }
     .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
       text-align: left;
     }
     .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
-      color: #fff;
+      color: #999b9f;
     }
     .undefined-item {
       padding: .6rem 0;
@@ -354,7 +418,6 @@ export default {
       }
       .mobail {
         position: absolute;
-        right: 1rem;
         line-height: 4rem;
         font-size: 2rem;
         color: #fff;

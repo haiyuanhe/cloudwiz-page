@@ -128,16 +128,15 @@
                       class="use-btn"
                       type="primary"
                       @click="contactUs">
-                        <span>{{item.use}}</span>
-                      </a-button>
-                      <a-modal
-                        title="联系我们"
-                        v-model="showEmail"
-                        :footer="null"
-                      >
-                        <p>请致电：17070866703</p>
-                        <p>邮件：service@cloudwiz.cn</p>
-                      </a-modal>
+                      <span>{{item.use}}</span>
+                    </a-button>
+                    <a-modal
+                      title="联系我们"
+                      v-model="showEmail"
+                      :footer="null">
+                      <p class="info">请致电：17070866703</p>
+                      <p class="info">邮件：service@cloudwiz.cn</p>
+                    </a-modal>
                   </div>
                 </div>
               </a-col>

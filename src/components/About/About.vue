@@ -146,7 +146,7 @@
                 :md="24"
                 :lg="10"
                 :xl="8"
-                :xxl="8"
+                :xxl="7"
               >
                 <div class="list">
                   <div class="avatar">

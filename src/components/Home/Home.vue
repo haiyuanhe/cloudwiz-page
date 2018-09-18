@@ -22,7 +22,7 @@
         </div>
         <div class="top-content">
           <p class="ai">用数据让运维智能化</p>
-          <p class="aiops">国内领先的全IT架构AIOps</p>
+          <p class="aiops h">国内领先的全IT架构AIOps</p>
           <p class="aiops">智能运维平台</p>
           <a-button class="free-used" type="primary">
             <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
@@ -89,12 +89,11 @@
               :sm="20"
               :md="20"
               :lg="18"
-              :xl="18"
-            >
+              :xl="16"
+              :xxl="17">
               <a-row
                 type="flex"
-                justify="center"
-              >
+                justify="center">
                 <a-col
                   v-for="(item, index) in users"
                   :key="index"
@@ -337,26 +336,34 @@ export default {
 
 <style lang="scss">
 @media screen and (max-width: 768px) {
-  .back-image {
-    .bg {
-      img {
+  .home-top {
+    height: 35rem;
+    background: linear-gradient(180deg, #111415, #273b49);
+    .top-content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 2rem;
+      text-align: center;
+    }
+    .back-image {
+      .bg {
+        margin: 20rem auto;
         width: 90%;
-        height: 18rem;
-        border-radius: 1rem;
-        position: absolute;
-        top: 20rem;
-        left: 5%;
+        img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 1rem;
+        }
       }
     }
   }
-  .top-content {
-    position: absolute;
-    top: 5%;
-    left: 10%;
-    text-align: center;
-  }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1100px) and (min-width: 768px) {
   .users-wrapper {
     .users {
       .user {
@@ -368,22 +375,35 @@ export default {
     font-family: MicrosoftYaHeiUILight;
     font-size: 1rem;
   }
-  .back-image {
-    .bg {
-      img {
-        width: 90%;
-        height: 18rem;
-        border-radius: 1rem;
+  .home-top {
+    height: 40rem;
+    background: linear-gradient(180deg, #111415, #273b49);
+    .top-content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 2rem;
+      text-align: center;
+    }
+    .back-image {
+      .bg {
+        width: 60%;
+        margin: 0 auto;
         position: absolute;
-        top: 20rem;
-        left: 5%;
+        top: 16rem;
+        left: 0;
+        right: 0;
+        img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 1rem;
+        }
       }
     }
-  }
-  .top-content {
-    position: absolute;
-    top: 5%;
-    left: 25%;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -394,22 +414,30 @@ export default {
       }
     }
   }
-  .back-image {
-    .bg {
+  .home-top {
+    height: 40rem;
+    background-image: linear-gradient(45deg, #111415 0%, #273b49 100%);
+    .top-content {
       position: absolute;
-      left: 50%;
-      top: 10rem;
-      img {
-        width: 80%;
-        height: 25rem;
-        border-radius: 1rem;
+      top: 20%;
+      left: 15%;
+    }
+    .back-image {
+      .bg {
+        width: 50%;
+        position: absolute;
+        right: 5%;
+        margin-top: 3rem;
+        line-height: 20rem;
+        img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 1rem;
+        }
       }
     }
-  }
-  .top-content {
-    position: absolute;
-    top: 25%;
-    left: 22%;
   }
 }
 .home-wrapper {
@@ -417,13 +445,7 @@ export default {
   background: #f7f8fb;
   .home-container {
     .home-top {
-      height: 40rem;
       color: #fff;
-      background-image: linear-gradient(45deg, #111415 0%, #273b49 100%);
-      // background-image: url('../../common/images/home/home_header.png');
-      // background-size: 100% 100%;
-      // background-position: right bottom;
-      // background-repeat: no-repeat;
       position: relative;
       .top-content {
         .ai {
@@ -431,6 +453,11 @@ export default {
           opacity: 0.75;
           padding: .5rem 0;
           letter-spacing: .2rem;
+        }
+        .h {
+          width: 21rem;
+          margin: 0 auto;
+          margin-bottom: 1.5rem;
         }
         .aiops {
           color: #fefefe;

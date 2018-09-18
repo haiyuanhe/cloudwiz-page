@@ -14,15 +14,15 @@ export default {
 </script>
 
 <style lang="scss">
+  .ant-modal-mask {
+    background: rgba(0, 0, 0, .3);
+  }
   #app {
     background: #f7f8fb;
     margin-top: 4rem;
     overflow-x: hidden;
     overflow-y: scroll;
     height: 100vh;
-    .ant-modal-mask {
-      background: rgba(0, 0, 0, .1)!important;
-    }
     .cloudwiz-wrapper {
       .cloudwiz-middle {
         .c {
