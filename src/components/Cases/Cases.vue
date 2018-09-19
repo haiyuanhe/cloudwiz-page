@@ -269,7 +269,7 @@ export default {
               <li>通过根因分析，发现因时间跳变、定时脚本高消耗、 HBASE 配五问题等多因素引起的宕机事故，提升了系统的稳定性。</li>
             </ul>
           `,
-          testimony: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。在PMS系统中，部分门店的房间状态在顾客退房后没有及时进行更新，导致新入住客户无法正常办理入住手续，相关房源状态更新经常在某个'
+          testimony: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。'
         },
         '温德姆酒店': {
           icon: require('common/images/cases/WYNDHAMHotel.png'),
@@ -325,6 +325,16 @@ export default {
 
 <style lang="scss" scoped>
   @media screen and (max-width: 768px) {
+    .case-info {
+      .c {
+        text-align: center;
+      }
+      .testimony {
+        .t {
+          padding: 1rem;
+        }
+      }
+    }
     .cases-lists {
       .list {
         .icon {
@@ -340,6 +350,11 @@ export default {
       .c {
         text-align: center;
       }
+      .testimony {
+        .t {
+          padding: 2rem 3rem;
+        }
+      }
     }
     .cases-lists {
       .list {
@@ -352,6 +367,11 @@ export default {
     }
   }
   @media screen and (min-width: 960px) {
+    .testimony {
+      .t {
+        padding: 2rem 3rem;
+      }
+    }
     .cases-lists {
       .list {
         .icon {
@@ -396,7 +416,6 @@ export default {
       .testimony {
         .t {
           background: #f7f8fb;
-          padding: 2rem 3rem;
           font-size: 1.1rem;
           font-weight: bold;
         }
@@ -489,8 +508,6 @@ export default {
               color: #767778;
             }
           }
-        }
-        .case-detail {
         }
       }
     }

@@ -19,7 +19,6 @@ export default {
   }
   #app {
     background: #f7f8fb;
-    overflow-y: auto;
     .cloudwiz-wrapper {
       .cloudwiz-middle {
         .c {

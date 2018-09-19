@@ -100,10 +100,10 @@
           <a-col
             :xs="22"
             :sm="22"
-            :md="24"
-            :lg="24"
-            :xl="24"
-            :xxl="22"
+            :md="20"
+            :lg="20"
+            :xl="20"
+            :xxl="20"
           >
             <a-row
               type="flex"
@@ -114,8 +114,8 @@
                 v-for="(item, index) in product"
                 :key="index"
                 :xs="20"
-                :sm="12"
-                :md="7"
+                :sm="20"
+                :md="12"
                 :lg="7"
                 :xl="7"
                 :xxl="6"
