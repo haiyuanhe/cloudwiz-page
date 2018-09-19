@@ -103,7 +103,7 @@ export default {
   .contact-wrapper {
     background: #f7f8fb;
     .address-info {
-      margin: 2rem;
+      margin-top: 3rem;
       .address-wrapper {
         display: flex;
         .address-content {

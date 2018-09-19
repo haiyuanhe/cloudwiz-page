@@ -137,13 +137,15 @@ export default {
       padding: 5rem 5rem 2rem 5rem;
       .logo {
         margin-bottom: 2rem;
+        padding-top: 1.2rem;
       }
       .link{
         padding-left: .8rem;
+        padding-top: 1.2rem;
         line-height: 1.2rem;
         .link-header {
           font-size: 1.1rem;
-          color: #cfc9c9;
+          color: #fff;
         }
       }
       .item {

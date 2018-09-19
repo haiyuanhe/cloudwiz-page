@@ -19,11 +19,10 @@
                   type="flex"
                   justify="center">
                   <a-col
-                    :xs="22"
-                    :sm="22"
-                    :md="22"
-                    :lg="10"
-                    style="text-align:center;">
+                    :xs="13"
+                    :sm="13"
+                    :md="13"
+                    :lg="10">
                     <a-row
                       type="flex"
                       justify="center">
@@ -105,7 +104,7 @@
                           >
                             <div class="left">
                               <p class="number">5W+</p>
-                              <p>5万台以上的服务器，覆盖多个数据中心。</p>
+                              <p>的服务器，覆盖多个数据中心。</p>
                             </div>
                           </a-col>
                           <a-col
@@ -116,7 +115,7 @@
                           >
                             <div class="right">
                               <p class="number">10</p>
-                              <p>10年以上的设计、建造和运营大数据系统的经验。</p>
+                              <p>年以上的设计、建造和运营大数据系统的经验。</p>
                             </div>
                           </a-col>
                         </a-row>
@@ -352,25 +351,23 @@ export default {
         background: #fff;
         .middle-content {
           .w12 {
-            padding: .1rem 0;
             img {
               width: 100%;
-              height: 14rem;
+              height: 12rem;
             }
           }
           .w3 {
-            padding: .1rem 0;
             img {
               width: 100%;
-              height: 14rem;
+              height: 12rem;
             }
           }
           .right {
-            padding: .1rem 0;
             .w1 {
               img {
+                padding-left: .3rem;
                 width: 100%;
-                height: 28.3rem;
+                height: 24.1rem;
               }
             }
           }
@@ -392,11 +389,14 @@ export default {
             }
           }
           .services {
+            .left {
+              padding-right: 1.3rem;
+            }
             .number {
               color: #1a7bd2;
               font-size: 3rem;
               height: 0;
-              padding-bottom: 2rem;
+              padding-bottom: 1rem;
             }
           }
         }

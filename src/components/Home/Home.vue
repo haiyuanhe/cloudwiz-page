@@ -552,15 +552,14 @@ export default {
           border: 1px solid #efefef;
           box-shadow: 1rem 1rem 4rem 0rem rgba(2, 8, 22, 0.1);
           .feature {
-            margin: 2.5rem auto;
+            margin: 2.5rem;
             display: flex;
             .left {
               width: 30%;
               text-align: center;
-              padding: .8rem 0;
+              padding: .6rem;
               img {
-                width: 2.5rem;
-                height: 2.5rem;
+                height: 3rem;
               }
             }
             .right {
@@ -568,10 +567,11 @@ export default {
               height: 5rem;
               .feature-title {
                 font-size: 1.2rem;
-                padding: .6rem 0;
+                padding-top: .6rem;
+                padding-bottom: .5rem
               }
               .feature-description {
-                line-height: 1.1rem;
+                line-height: 1.2rem;
                 font-size: .8rem;
                 color: #928f8f;
               }

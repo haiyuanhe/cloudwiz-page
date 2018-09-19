@@ -38,13 +38,15 @@
             <a-col
               :xs="24"
               :sm="24"
-              :md="24"
-              :lg="24"
+              :md="16"
+              :lg="16"
             >
               <el-carousel :interval="3000" type="card" arrow="always">
                 <el-carousel-item v-for="(item, index) in doings" :key="index">
                   <div class="doing">
-                    <img :src="item.image" :alt="item.title">
+                    <div class="activties">
+                      <img :src="item.image" :alt="item.title">
+                    </div>
                     <p style="margin-top: 1rem;">{{item.title}}</p>
                   </div>
                 </el-carousel-item>
@@ -65,7 +67,7 @@
               :xs="20"
               :sm="20"
               :md="10"
-              :lg="8"
+              :lg="6"
             >
               <a-row
                 type="flex"
@@ -96,7 +98,7 @@
               :xs="20"
               :sm="20"
               :md="20"
-              :lg="14"
+              :lg="12"
             >
               <div class="detail">
                 <div class="office-description">
@@ -104,9 +106,10 @@
                     <a-collapse-panel
                       class="name"
                       v-for="(item, j) in offices[currentIndex].position"
-                      :key="j"
-                      :header="item.name"
-                    >
+                      :key="j">
+                      <template slot="header">
+                        <span style="font-size: 1.1rem; font-weight: 400;">{{item.name}}</span>
+                      </template>
                       <div class="time" v-html="item.time"></div>
                       <div class="description" v-html="item.description"></div>
                     </a-collapse-panel>
@@ -491,7 +494,7 @@ export default {
                 background: #fff;
               }
               .time {
-                padding: 2rem;
+                padding: .6rem 2rem;
                 font-weight: bold;
               }
               .description {

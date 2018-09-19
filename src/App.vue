@@ -20,6 +20,7 @@ export default {
   #app {
     background: #f7f8fb;
     height: 100vh;
+    overflow: auto;
     .cloudwiz-wrapper {
       .cloudwiz-middle {
         .c {
@@ -32,7 +33,7 @@ export default {
         .fs {
           .content {
             .not-support {
-              color: #d4d4d4;
+              color: #bcbcbc;
               font-weight: 100;
             }
           }

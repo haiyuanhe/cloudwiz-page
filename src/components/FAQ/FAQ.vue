@@ -12,9 +12,9 @@
             :xs="20"
             :sm="20"
             :md="20"
-            :lg="8"
-            :xl="8"
-            :xxl="8"
+            :lg="9"
+            :xl="5"
+            :xxl="5"
           >
             <a-row
               type="flex"
@@ -60,9 +60,7 @@
                 <div
                   class="faq-qa"
                   v-if="faqs[currentIndex].lists.length > 0">
-                  <a-collapse
-                    defaultActiveKey="0"
-                    accordion>
+                  <a-collapse accordion>
                     <a-collapse-panel
                       :showArrow="false"
                       v-for="(item) in faqs[currentIndex].lists"
@@ -184,6 +182,7 @@ export default {
     .faq-type-active {
       border: 1px solid rgb(186, 186, 189);
       background: #fff;
+      color: #026dcd;
     }
     .faq-wrapper {
       .faq-container {
@@ -209,6 +208,7 @@ export default {
     background: #f7f8fb;
     .faq-container {
       .faq-content {
+        margin-bottom: 3rem;
         .faq-type {
           text-align: center;
           padding: 1rem;

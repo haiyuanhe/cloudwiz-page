@@ -36,8 +36,8 @@
                   </template>
                   <div class="list">
                     <div class="detail">
-                      <ul v-for="(point, j) in item.points" :key="j">
-                        <li>{{point}}</li>
+                      <ul>
+                        <li v-for="(point, j) in item.points" :key="j">{{point}}</li>
                       </ul>
                       <div class="icon">
                         <img :src="item.icon" :alt="item.title">
@@ -339,7 +339,12 @@ export default {
         item.type = false
         return item
       })
-      this.advantage[e].type = true
+      if (!e) {
+        this.advantage[e].type = false
+      } else {
+        this.advantage[e].type = true
+      }
+      console.log(this.advantage)
     },
     contactUs () {
       this.showEmail = true
@@ -412,7 +417,10 @@ export default {
                 padding: 0 0 5rem 2rem;
                 ul {
                   list-style: disc!important;
-                  font-size: 1rem;
+                  font-size: 1.1rem;
+                  li {
+                    line-height: 2.3rem;
+                  }
                 }
               }
             }
@@ -440,10 +448,12 @@ export default {
               font-size: 1.1rem;
               padding-top: .2rem;
               height: 1rem;
+              color: #fff;
             }
             .c {
               font-size: .8rem;
               line-height: .6rem;
+              color: rgba(255, 255,255, .75)
             }
           }
         }
@@ -459,17 +469,21 @@ export default {
           }
           .procuct-list {
             .v {
-              font-size: 1.6rem;
+              font-size: 2rem;
               color: #077fea;
             }
             .ram {
               height: 6rem;
-              font-size: .9rem;
+              font-size: 1.1rem;
               line-height: 1.2rem;
               font-weight: normal;
               padding: 2rem;
+              line-height: 1.5rem;
+              color: #000000;
+              opacity: 0.6;
             }
             .fs {
+              padding-top: 1.5rem;
               .content {
                 font-size: 1.1rem;
                 font-weight: bold;
