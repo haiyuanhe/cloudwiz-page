@@ -2,7 +2,7 @@
  * @Author: Rain120 
  * @Date: 2018-09-08 08:58:43 
  * @Last Modified by: Rain120
- * @Last Modified time: 2018-09-19 11:02:24
+ * @Last Modified time: 2018-09-19 18:25:12
  */
  html, abbr, acronym, address, big, cite, code,
  del, dfn, em, img, ins, kbd, q, s, samp,
@@ -59,8 +59,4 @@ a:active {
 }
 a:hover {
 	color: #fff;
-}
-html, body {
-  height: 100%;
-  width: 100%;
 }
