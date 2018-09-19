@@ -131,12 +131,32 @@ export default {
         }
       }
     }
+    .news-wrapper {
+      .news-lists {
+        .news-list {
+          .top {
+            padding: 1.5rem 2rem .5rem 2rem;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
   }
   @media screen and (min-width: 1100px) {
     .news-images {
       .left {
         img {
           width: 100%;
+        }
+      }
+    }
+    .news-wrapper {
+      .news-lists {
+        .news-list {
+          .top {
+            padding: 2rem;
+            line-height: 2rem;
+          }
         }
       }
     }
@@ -157,7 +177,6 @@ export default {
         }
         .top {
           font-size: 1.5rem;
-          padding: 2rem 2rem;
         }
         .middle {
           font-size: .8rem;

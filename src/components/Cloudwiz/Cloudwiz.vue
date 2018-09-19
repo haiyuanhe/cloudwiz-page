@@ -29,8 +29,10 @@
                   :key="j"
                 >
                   <template slot="header">
-                    <a-icon :type="item.type ? 'minus-circle' : 'plus-circle'" style="color: #026dcd;"/>
-                    <span>{{item.title}}</span>
+                    <p style="padding-right: .8rem;">
+                      <a-icon :type="item.type ? 'minus-circle' : 'plus-circle'" style="color: #026dcd;"/>
+                      <span>{{item.title}}</span>
+                    </p>
                   </template>
                   <div class="list">
                     <div class="detail">
@@ -388,6 +390,8 @@ export default {
     background: #f6f8fb;
     font-family: MicrosoftYaHeiUI;
     .cloudwiz-container {
+      height: 100%;
+      overflow: hidden;
       .title {
         padding: 3rem;
         text-align: center;
@@ -477,6 +481,7 @@ export default {
                 box-shadow: 0 0 1.5rem #e8ecf4;
                 padding: 0 2rem;
                 border-radius: 0;
+                cursor: pointer;
               }
             }
           }

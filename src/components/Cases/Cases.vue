@@ -13,6 +13,8 @@
             :sm="20"
             :md="20"
             :lg="20"
+            :xl="18"
+            :xxl="17"
           >
             <div class="cases-carousel">
               <a-carousel
@@ -68,6 +70,8 @@
               :sm="20"
               :md="20"
               :lg="20"
+              :xl="18"
+              :xxl="17"
             >
               <a-row
                 type="flex"
@@ -402,6 +406,8 @@ export default {
   .cases-wrapper {
     background: #f7f8fb;
     .cases-container {
+      height: 100%;
+      overflow: hidden;
       .cases-content {
         .cases-carousel {
           margin: 3rem 0;

@@ -6,8 +6,10 @@
       <a-col
         :xs="20"
         :sm="24"
-        :md="24"
-        :lg="24"
+        :md="20"
+        :lg="20"
+        :xl="18"
+        :xxl="16"
       >
       <div class="header-container">
         <div class="logo">
@@ -258,11 +260,6 @@ export default {
       padding: 1.1rem 2rem;
       font-size: 1.1rem;
     }
-    // .menu-link {
-    //   a {
-    //     font-size: 1.1rem;
-    //   }
-    // }
     .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
       text-align: left;
     }
@@ -295,9 +292,6 @@ export default {
       padding: 1.1rem 2rem;
       font-size: 1.1rem;
     }
-    // .menu-link {
-    //   font-size: 1.1rem;
-    // }
     .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
       text-align: left;
     }
@@ -315,7 +309,7 @@ export default {
     .header-container {
       .logo {
         position: absolute;
-        left: 0;
+        left: -6rem;
       }
     }
     .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
@@ -353,7 +347,7 @@ export default {
     }
   }
   .header-wrapper {
-    width:100%;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -362,10 +356,10 @@ export default {
     background: #001529;
     color: #999b9f;
     .header-container {
+      width: 100%;
+      margin: 0 auto;
       height: 4rem;
       line-height: 4rem;
-      width: 80%;
-      margin: 0 auto;
       display: flex;
       .logo {
         width: 10%;

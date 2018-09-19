@@ -343,6 +343,9 @@ export default {
     .users {
       .user {
         height: 4rem;
+        img {
+          height: 2rem;
+        }
       }
     }
   }
@@ -362,13 +365,13 @@ export default {
       .bg {
         margin: 20rem auto;
         width: 90%;
-        // // box-shadow: .1rem .1rem 2.4rem 0rem rgba(2, 8, 22, 0.64)
         img {
           width: auto;
           height: auto;
           max-width: 100%;
           max-height: 100%;
           border-radius: .9rem;
+          box-shadow: .1rem .1rem 2.4rem 0rem rgba(2, 8, 22, 0.64);
         }
       }
     }
@@ -379,6 +382,9 @@ export default {
     .users {
       .user {
         height: 4rem;
+        img {
+          height: 2.4rem;
+        }
       }
     }
   }
@@ -406,13 +412,13 @@ export default {
         top: 20rem;
         left: 0;
         right: 0;
-        // box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64)
         img {
           width: auto;
           height: auto;
           max-width: 100%;
           max-height: 100%;
           border-radius: .9rem;
+          box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64);
         }
       }
     }
@@ -423,6 +429,9 @@ export default {
     .users {
       .user {
         height: 5rem;
+        img {
+          height: 2.5rem;
+        }
       }
     }
   }
@@ -441,19 +450,29 @@ export default {
         right: 5%;
         margin-top: 5rem;
         line-height: 20rem;
-        // box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64)
         img {
           width: auto;
           height: auto;
           max-width: 100%;
           max-height: 100%;
           border-radius: .9rem;
+          box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64);
         }
       }
     }
   }
 }
 @media screen and (min-width: 1300px) {
+  .users-wrapper {
+    .users {
+      .user {
+        height: 5rem;
+        img {
+          height: 2.6rem;
+        }
+      }
+    }
+  }
   .home-top {
     height: 35rem;
     background-image: linear-gradient(45deg, #111415 0%, #273b49 100%);
@@ -469,13 +488,13 @@ export default {
         right: 8%;
         margin-top: 7rem;
         line-height: 20rem;
-        // box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64)
         img {
           width: auto;
           height: auto;
           max-width: 100%;
           max-height: 100%;
           border-radius: .9rem;
+          box-shadow: 1.4rem 1.4rem 4.8rem 0 rgba(2, 8, 22, 0.64);
         }
       }
     }
@@ -485,6 +504,8 @@ export default {
   width: 100%;
   background: #f7f8fb;
   .home-container {
+    height: 100%;
+    overflow: hidden;
     .home-top {
       color: #fff;
       position: relative;
@@ -506,9 +527,9 @@ export default {
           padding: 0;
         }
         .free-used {
-          margin-top: .8rem;
           margin-right: 1rem;
           padding: 0 1.5rem;
+          line-height: 2rem;
         }
         .understand {
           border-color: #077fea;
@@ -567,11 +588,6 @@ export default {
           padding: 3rem 1rem;
           color: #fff;
           text-align: left;
-          .user {
-            img {
-              height: 2.5rem;
-            }
-          }
         }
       }
       .user-feedback {

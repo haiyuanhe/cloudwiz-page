@@ -425,7 +425,10 @@ export default {
     }
   }
   .recruitment-wrapper {
+    width: 100%;
     .recruitment-container {
+      height: 100%;
+      overflow: hidden;
       .acquisition-wrapper {
         background: #ffffff;
           .a-title {

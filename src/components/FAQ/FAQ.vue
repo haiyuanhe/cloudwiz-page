@@ -69,8 +69,10 @@
                       :key="item.q"
                     >
                       <template slot="header">
-                        <span>{{item.q}}</span>
-                        <a-icon type="question-circle-o" />
+                        <p style="padding-right: 1rem;">
+                          <a-icon type="question-circle-o" style="color: #077fea;" />
+                          <span>{{item.q}}</span>
+                        </p>
                       </template>
                       <p class="answer" v-html="item.a"></p>
                     </a-collapse-panel>
@@ -217,7 +219,6 @@ export default {
           }
           .faq-qa {
             .answer {
-              padding-left: 1.6rem;
               font-size: .9rem;
             }
           }
