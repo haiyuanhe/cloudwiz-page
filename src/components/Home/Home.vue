@@ -3,36 +3,41 @@
     <CloudHeader />
     <div class="home-container">
       <div class="home-top">
-        <div class="back-image">
-          <a-row
-            type="flex"
-            justify="center"
+        <a-row
+          type="flex"
+          justify="center"
+        >
+          <a-col
+            :xs="24"
+            :sm="24"
+            :md="24"
+            :lg="8"
+            class="home-top-text"
           >
-            <a-col
-              :xs="24"
-              :sm="24"
-              :md="24"
-              :lg="24"
-            >
-              <div class="bg">
-                <img src="../../common/images/bg.png" alt="背景图片">
-              </div>
-            </a-col>
-          </a-row>
-        </div>
-        <div class="top-content">
-          <p class="ai">用数据让运维智能化</p>
-          <p class="aiops h">国内领先的全IT架构AIOps</p>
-          <p class="aiops">智能运维平台</p>
-          <a-button class="free-used" type="primary">
-            <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
-          </a-button>
-          <a-button class="understand" ghost>
-            <router-link to="/cloudwiz">
-              <span>了解产品</span>
-            </router-link>
-          </a-button>
-        </div>
+            <div>
+              <p class="ai">用数据让运维智能化</p>
+              <p class="aiops">国内领先的全IT架构AIOps</p>
+              <p class="aiops">智能运维平台</p>
+              <a-button class="free-used" type="primary">
+                <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
+              </a-button>
+              <a-button class="understand" ghost>
+                <router-link to="/cloudwiz">
+                  <span>了解产品</span>
+                </router-link>
+              </a-button>
+            </div>
+          </a-col>
+          <a-col
+            :xs="24"
+            :sm="24"
+            :md="24"
+            :lg="16"
+            class="home-top-img"
+          >
+            <img src="../../common/images/bg.png" alt="背景图片">
+          </a-col>
+        </a-row>
       </div>
       <div class="home-middle">
         <p class="middle-title">为什么选择云兴？</p>
@@ -42,37 +47,24 @@
             justify="center"
           >
             <a-col
+              v-for="(item, index) in features"
+              :key="index"
               :xs="22"
-              :sm="22"
-              :md="22"
-              :lg="18"
-              :xl="17"
+              :sm="12"
+              :md="12"
+              :lg="8"
             >
-              <a-row
-                type="flex"
-                justify="center"
-              >
-                <a-col
-                  v-for="(item, index) in features"
-                  :key="index"
-                  :xs="22"
-                  :sm="12"
-                  :md="12"
-                  :lg="8"
-                >
-                  <div class="feature-wrapper">
-                    <div class="feature">
-                      <div class="left">
-                        <img :src="item.name" :alt="item.title"/>
-                      </div>
-                      <div class="right">
-                        <div class="feature-title">{{item.title}}</div>
-                        <div class="feature-description">{{item.description}}</div>
-                      </div>
-                    </div>
+              <div class="feature-wrapper">
+                <div class="feature">
+                  <div class="left">
+                    <img :src="item.name" :alt="item.title"/>
                   </div>
-                </a-col>
-              </a-row>
+                  <div class="right">
+                    <div class="feature-title">{{item.title}}</div>
+                    <div class="feature-description">{{item.description}}</div>
+                  </div>
+                </div>
+              </div>
             </a-col>
           </a-row>
         </div>
@@ -82,32 +74,19 @@
           <div class="users">
             <a-row
               type="flex"
-              justify="center"
-            >
-            <a-col
-              :xs="22"
-              :sm="20"
-              :md="20"
-              :lg="18"
-              :xl="16"
-              :xxl="17">
-              <a-row
-                type="flex"
-                justify="center">
-                <a-col
-                  v-for="(item, index) in users"
-                  :key="index"
-                  :xs="12"
-                  :sm="12"
-                  :md="8"
-                  :lg="6"
-                >
-                  <div class="user">
-                      <img :src="item.name" :alt="item.title"/>
-                  </div>
-                </a-col>
-              </a-row>
-            </a-col>
+              justify="center">
+              <a-col
+                v-for="(item, index) in users"
+                :key="index"
+                :xs="12"
+                :sm="12"
+                :md="8"
+                :lg="6"
+              >
+                <div class="user">
+                    <img :src="item.name" :alt="item.title"/>
+                </div>
+              </a-col>
             </a-row>
           </div>
         </div>
@@ -221,6 +200,7 @@ export default {
   name: 'Home',
   data () {
     return {
+      screenHeight: document.body.clientHeight,
       features: [
         {
           name: require('common/images/home/icon/unified_monitoring.png'),
@@ -338,167 +318,55 @@ export default {
 </script>
 
 <style lang="scss">
-@media screen and (max-width: 768px) {
-  .users-wrapper {
-    .users {
-      .user {
-        height: 4rem;
-        img {
-          height: 2rem;
-        }
-      }
-    }
-  }
-  .home-top {
-    height: 35rem;
-    background: linear-gradient(180deg, #111415, #273b49);
-    .top-content {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: 5rem auto;
-      text-align: center;
-    }
-    .back-image {
-      .bg {
-        margin: 20rem auto;
-        width: 90%;
-        img {
-          width: auto;
-          height: auto;
-          max-width: 100%;
-          max-height: 100%;
-          border-radius: .9rem;
-          box-shadow: .1rem .1rem 2.4rem 0rem rgba(2, 8, 22, 0.64);
-        }
+.users-wrapper {
+  background: #292d38;
+  .users {
+    width: 95%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    color: #fff;
+    text-align: left;
+    .user {
+      height: 5rem;
+      padding-left: 4em;
+      img {
+        height: 2.5rem;
       }
     }
   }
 }
-@media screen and (max-width: 1100px) and (min-width: 768px) {
-  .users-wrapper {
-    .users {
-      .user {
-        height: 4rem;
-        img {
-          height: 2.4rem;
-        }
-      }
+.home-top {
+  height: 42rem;
+  background: linear-gradient(180deg, #111415, #273b49);
+  // row
+  > div {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    // 2 col
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .home-top-text > div {
+      padding-left: 2em;
+    }
+    .home-top-img {
+      height: 100%;
+      padding: 4em 0;
     }
   }
-  .ai {
-    font-family: MicrosoftYaHeiUILight;
-    font-size: 1rem;
-  }
-  .home-top {
-    height: 45rem;
-    background: linear-gradient(180deg, #111415, #273b49);
-    .top-content {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: 5rem auto;
-      text-align: center;
-    }
-    .back-image {
-      .bg {
-        width: 65%;
-        margin: 0 auto;
-        position: absolute;
-        top: 20rem;
-        left: 0;
-        right: 0;
-        img {
-          width: auto;
-          height: auto;
-          max-width: 100%;
-          max-height: 100%;
-          border-radius: .9rem;
-          box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64);
-        }
-      }
-    }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: .9rem;
+    box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64);
   }
 }
-@media screen and (min-width: 1100px) and (max-width: 1300px) {
-  .users-wrapper {
-    .users {
-      .user {
-        height: 5rem;
-        img {
-          height: 2.5rem;
-        }
-      }
-    }
-  }
-  .home-top {
-    height: 35rem;
-    background-image: linear-gradient(45deg, #111415 0%, #273b49 100%);
-    .top-content {
-      position: absolute;
-      top: 20%;
-      left: 15%;
-    }
-    .back-image {
-      .bg {
-        width: 60%;
-        position: absolute;
-        right: 5%;
-        margin-top: 5rem;
-        line-height: 20rem;
-        img {
-          width: auto;
-          height: auto;
-          max-width: 100%;
-          max-height: 100%;
-          border-radius: .9rem;
-          box-shadow: 1.4rem 1.4rem 4.8rem 0rem rgba(2, 8, 22, 0.64);
-        }
-      }
-    }
-  }
-}
-@media screen and (min-width: 1300px) {
-  .users-wrapper {
-    .users {
-      .user {
-        height: 5rem;
-        img {
-          height: 2.6rem;
-        }
-      }
-    }
-  }
-  .home-top {
-    height: 35rem;
-    background-image: linear-gradient(45deg, #111415 0%, #273b49 100%);
-    .top-content {
-      position: absolute;
-      top: 20%;
-      left: 20%;
-    }
-    .back-image {
-      .bg {
-        width: 40%;
-        position: absolute;
-        right: 8%;
-        margin-top: 7rem;
-        line-height: 20rem;
-        img {
-          width: auto;
-          height: auto;
-          max-width: 100%;
-          max-height: 100%;
-          border-radius: .9rem;
-          box-shadow: 1.4rem 1.4rem 4.8rem 0 rgba(2, 8, 22, 0.64);
-        }
-      }
-    }
-  }
+.home-middle {
+  width: 90%;
+  margin: 0 auto;
 }
 .home-wrapper {
   width: 100%;
@@ -509,32 +377,25 @@ export default {
     .home-top {
       color: #fff;
       position: relative;
-      .top-content {
-        .ai {
-          color: #fefefe;
-          opacity: 0.75;
-          padding: .5rem 0;
-          letter-spacing: .2rem;
-        }
-        .h {
-          width: 21rem;
-          margin: 0 auto;
-          margin-bottom: 1.5rem;
-        }
-        .aiops {
-          color: #fefefe;
-          font-size: 1.8rem;
-          padding: 0;
-        }
-        .free-used {
-          margin-right: 1rem;
-          padding: 0 1.5rem;
-          line-height: 2rem;
-        }
-        .understand {
-          border-color: #077fea;
-          padding: 0 1.5rem;
-        }
+      .ai {
+        color: #fefefe;
+        opacity: 0.75;
+        padding: .5rem 0;
+        letter-spacing: .2rem;
+        font-size: 1rem;
+      }
+      .aiops {
+        color: #fefefe;
+        font-size: 1.8rem;
+        padding: 0;
+      }
+      .free-used {
+        margin-right: 1rem;
+        padding: 0 1.5rem;
+      }
+      .understand {
+        border-color: #077fea;
+        padding: 0 1.5rem;
       }
     }
     .home-middle {
@@ -582,14 +443,6 @@ export default {
     }
     .home-bottom {
       width: 100%;
-      .users-wrapper {
-        background: #292d38;
-        .users {
-          padding: 3rem 1rem;
-          color: #fff;
-          text-align: left;
-        }
-      }
       .user-feedback {
         background: #f7f8fb;
         .slogan {
@@ -689,6 +542,77 @@ export default {
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .users-wrapper {
+    .users {
+      .user {
+        height: 4rem;
+        padding-left: 1em;
+        img {
+          height: 2rem;
+        }
+      }
+    }
+  }
+  .home-top {
+    height: 35rem;
+    img {
+      box-shadow: .1rem .1rem 2.4rem 0rem rgba(2, 8, 22, 0.64);
+    }
+    > div {
+      text-align: center;
+      .home-top-img {
+        padding: 0;
+        height: auto;
+        width: 90%;
+      }
+      .home-top-text > div {
+        padding-left: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .users-wrapper {
+    .users {
+      .user {
+        height: 4rem;
+        img {
+          height: 2.4rem;
+        }
+      }
+    }
+  }
+  .home-top {
+    img {
+      box-shadow: .1rem .1rem 2.4rem 0rem rgba(2, 8, 22, 0.64);
+    }
+    > div {
+      .home-top-img {
+        padding: 2em;
+        height: auto;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1600px) {
+  .home-top {
+    height: 35rem;
+    background-image: linear-gradient(45deg, #111415 0%, #273b49 100%);
+    > div {
+      width: 70%;
+    }
+  }
+  .home-middle {
+    width: 70%;
+  }
+  .users-wrapper {
+    .users {
+      width: 75%;
     }
   }
 }

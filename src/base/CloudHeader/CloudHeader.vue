@@ -84,11 +84,11 @@
           </ul>
         </div>
         <div class="used" v-show="this.screenWidth >= 1100">
-          <div class="use signin">
-            <a target="_blank" href="//app.cloudwiz.cn">登录</a>
-          </div>
           <div class="use free-used">
             <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
+          </div>
+          <div class="use signin">
+            <a target="_blank" href="//app.cloudwiz.cn">登录</a>
           </div>
         </div>
         <div class="mobail" v-show="this.screenWidth <= 1100">
@@ -378,7 +378,7 @@ export default {
       .cloudwiz-logo {
         width: 10%;
         line-height: 5rem;
-        text-align: right;
+        text-align: left;
         img {
           width: 4rem;
         }
@@ -414,7 +414,7 @@ export default {
           color: #fff;
         }
         .use {
-          float: left;
+          float: right;
           padding: 0 .8rem;
         }
         .free-used {

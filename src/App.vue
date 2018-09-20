@@ -19,6 +19,7 @@ export default {
   }
   #app {
     background: #f7f8fb;
+    margin-top: 64px;
     .cloudwiz-wrapper {
       .cloudwiz-middle {
         .c {
