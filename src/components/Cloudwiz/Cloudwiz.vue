@@ -393,7 +393,6 @@ export default {
   }
   .cloudwiz-wrapper {
     background: #f6f8fb;
-    font-family: MicrosoftYaHeiUI;
     .cloudwiz-container {
       height: 100%;
       overflow: hidden;
