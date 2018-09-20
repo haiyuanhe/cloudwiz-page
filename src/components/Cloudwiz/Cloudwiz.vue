@@ -19,19 +19,16 @@
             :xxl="17"
           >
             <div class="advantage">
-              <a-collapse
-                defaultActiveKey="0"
-                accordion
-                @change="change">
+              <a-collapse accordion>
                 <a-collapse-panel
                   :showArrow="false"
                   v-for="(item, j) in advantage"
                   :key="j"
                 >
                   <template slot="header">
-                    <p style="padding-right: .8rem;">
-                      <a-icon :type="item.type ? 'minus-circle' : 'plus-circle'" style="color: #026dcd;"/>
-                      <span>{{item.title}}</span>
+                    <p style="padding-right: .8rem; padding-top: 1rem;" @click="change(j)">
+                      <a-icon :type="item.type ? 'minus-circle-o' : 'plus-circle-o'" style="color: #026dcd;"/>
+                      <span style="padding-left: .4rem;">{{item.title}}</span>
                     </p>
                   </template>
                   <div class="list">
@@ -51,7 +48,7 @@
         </a-row>
       </div>
       <div class="cloudwiz-middle">
-        <p class="title">全面专业的服务体系</p>
+        <p class="title" style="color: #fff;">全面专业的服务体系</p>
         <a-row
           type="flex"
           justify="center"
@@ -176,7 +173,7 @@ export default {
         {
           icon: require('common/images/products/advantage/1.png'),
           title: '全面的AIOps功能，助力企业运维进入智能化时代',
-          type: true,
+          type: false,
           points: [
             '高效、精准的报警，告别“alert fatigue”。',
             '智能异常检测，及时跟踪系统异常。',
@@ -329,22 +326,17 @@ export default {
     }
   },
   methods: {
-    change (e) {
-      console.log(e)
-      if (!e) {
-        e = this.current
-      }
-      this.current = e
-      this.advantage.map(item => {
-        item.type = false
-        return item
-      })
-      if (!e) {
-        this.advantage[e].type = false
+    change (i) {
+      if (i !== this.current) {
+        this.current = i
+        this.advantage.map((item, index) => {
+          item.type = index === i
+          return item
+        })
       } else {
-        this.advantage[e].type = true
+        this.current = i
+        this.advantage[this.current].type = !this.advantage[this.current].type
       }
-      console.log(this.advantage)
     },
     contactUs () {
       this.showEmail = true
@@ -361,26 +353,32 @@ export default {
 <style lang="scss" scoped>
   @media screen and (max-width: 600px) {
     .list {
-      .icon {
-        position: absolute;
-        right: -3rem;
-        bottom: -3rem;
-        img {
-          width: 8rem;
-          height: 8rem;
+      .detail {
+        padding: 0 0 5rem 2rem;
+        .icon {
+          position: absolute;
+          right: -3rem;
+          bottom: -3rem;
+          img {
+            width: 8rem;
+            height: 8rem;
+          }
         }
       }
     }
   }
   @media screen and (min-width: 600px) {
     .list {
-      .icon {
-        position: absolute;
-        right: -3rem;
-        bottom: -3rem;
-        img {
-          width: 12rem;
-          height: 12rem;
+      .detail {
+        padding: 0 0 0 2rem;
+        .icon {
+          position: absolute;
+          right: -3rem;
+          bottom: -3rem;
+          img {
+            width: 12rem;
+            height: 12rem;
+          }
         }
       }
     }
@@ -413,10 +411,10 @@ export default {
             .list {
               position: relative;
               .detail {
-                padding: 0 0 5rem 2rem;
                 ul {
                   list-style: disc!important;
-                  font-size: 1.1rem;
+                  padding-left: .4rem;
+                  font-size: 1rem;
                   li {
                     line-height: 2.3rem;
                   }

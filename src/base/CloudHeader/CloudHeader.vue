@@ -28,7 +28,7 @@
                 theme="dark"
                 :style="{
                   top: 1 + 'rem',
-                  left: -2 + 'rem',
+                  left: -1.6 + 'rem',
                   color: '#191d26'
                 }">
                 <a-menu-item>
@@ -59,7 +59,7 @@
                 theme="dark"
                 :style="{
                   top: 1 + 'rem',
-                  left: -1.8 + 'rem'
+                  left: -1.6 + 'rem'
                 }">
                 <a-menu-item>
                   <router-link to="/about">
@@ -261,7 +261,7 @@ export default {
     .analysis {
       background-color: #0c111d;
       .offline-analysis {
-        color: #0072ff;
+        color: #026dcd;
         font-size: 1.25rem;
         font-style: italic;
         letter-spacing: 0rem;
@@ -293,7 +293,7 @@ export default {
     .analysis {
       background-color: #0c111d;
       .offline-analysis {
-        color: #0072ff;
+        color: #026dcd;
         font-size: 1.25rem;
         font-style: italic;
         letter-spacing: 0rem;
@@ -402,7 +402,7 @@ export default {
           a {
             line-height: 4rem;
             font-size: 1rem;
-            color: #0072ff;
+            color: #026dcd;
             font-style: italic;
           }
         }

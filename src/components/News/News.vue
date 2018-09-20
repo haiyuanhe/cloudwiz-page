@@ -46,7 +46,7 @@
                   <div class="middle">{{item.description}}</div>
                   <div class="bottom clearfix">
                     <div class="time">{{getNewsTime(item.occur_time, item.type)}}</div>
-                    <a-button type="primary">
+                    <a-button class="read" type="primary" ghost>
                       <a target="_blank" :href="item.url">阅读全文</a>
                     </a-button>
                   </div>
@@ -109,12 +109,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @mixin b-shadow($bs, $bhs) {
-    cursor: pointer;
-    &:hover {
-      box-shadow: 0 0 1.5rem $bhs;
-    }
-  }
   @mixin no-wrap-nums($nums) {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -136,7 +130,6 @@ export default {
         .news-list {
           .top {
             padding: 1.5rem 2rem .5rem 2rem;
-            line-height: 2rem;
           }
         }
       }
@@ -154,8 +147,7 @@ export default {
       .news-lists {
         .news-list {
           .top {
-            padding: 2rem;
-            line-height: 2rem;
+            padding: 1rem 2rem;
           }
         }
       }
@@ -176,7 +168,8 @@ export default {
           height: 15rem;
         }
         .top {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
+          line-height: 2rem;
         }
         .middle {
           font-size: .8rem;
@@ -185,16 +178,18 @@ export default {
           @include no-wrap-nums(3)
         }
         .bottom {
-          padding: 1rem 2rem;
+          padding: 2rem;
           .time {
             float: left;
             line-height: 2.2rem;
           }
-          button {
-            border-radius: 0;
-          }
-          .ant-btn-primary {
+          .read {
             float: right;
+            &:hover {
+              cursor: pointer;
+              background: #3f96ef!important;
+              color: #fff;
+            }
           }
         }
       }

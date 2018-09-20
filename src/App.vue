@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <a-back-top />
+    <a-tooltip placement="left" title="回到顶部">
+      <a-back-top />
+    </a-tooltip>
     <keep-alive>
       <router-view/>
     </keep-alive>

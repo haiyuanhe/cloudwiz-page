@@ -19,7 +19,7 @@
             <div class="cases-carousel">
               <a-carousel
                 class="carousel"
-                effect="scrollX"
+                effect="scrollx"
                 autoplay
               >
                 <div
@@ -51,6 +51,7 @@
                       :lg="18"
                     >
                       <div class="right">
+                        <p class="b"></p>
                         <p class="d">{{item.content}}</p>
                       </div>
                     </a-col>
@@ -63,8 +64,7 @@
         <div class="cases-lists">
           <a-row
             type="flex"
-            justify="center"
-          >
+            justify="center">
             <a-col
               :xs="20"
               :sm="20"
@@ -142,6 +142,7 @@
               </div>
               <div class="testimony" v-if="showCase.testimony">
                 <p class="model-title">客户证言</p>
+                <p class="b"></p>
                 <p class="t" v-html="showCase.testimony"></p>
               </div>
             </div>
@@ -331,7 +332,27 @@ export default {
       }
       .testimony {
         .t {
-          padding: 1rem;
+          padding: 2rem;
+        }
+        .b {
+          position: absolute;
+          left: -.4rem;
+          top: 5.6rem;
+          transform: skew(-15deg);
+          -webkit-transform: skew(-15deg); /* for Chrome||Safari */
+          -ms-transform: skew(-15deg); /* for IE */
+          -moz-transform: skew(-15deg);/* for Firefox */
+          -o-transform: skew(-15deg);/* for Opera */
+          &:before {
+            content: '"';
+            width: 3rem;
+            height: 2rem;
+            font-size: 7rem;
+            line-height: 2rem;
+            letter-spacing: 0rem;
+            color: #000000;
+            opacity: 0.1;
+          }
         }
       }
     }
@@ -354,6 +375,26 @@ export default {
         .t {
           padding: 2rem 3rem;
         }
+        .b {
+          position: absolute;
+          left: .6rem;
+          top: 5.6rem;
+          transform: skew(-15deg);
+          -webkit-transform: skew(-15deg); /* for Chrome||Safari */
+          -ms-transform: skew(-15deg); /* for IE */
+          -moz-transform: skew(-15deg);/* for Firefox */
+          -o-transform: skew(-15deg);/* for Opera */
+          &:before {
+            content: '"';
+            width: 3rem;
+            height: 2rem;
+            font-size: 7rem;
+            line-height: 2rem;
+            letter-spacing: 0rem;
+            color: #000000;
+            opacity: 0.1;
+          }
+        }
       }
     }
     .cases-lists {
@@ -370,6 +411,26 @@ export default {
     .testimony {
       .t {
         padding: 2rem 3rem;
+      }
+      .b {
+        position: absolute;
+        left: .6rem;
+        top: 5.6rem;
+        transform: skew(-15deg);
+        -webkit-transform: skew(-15deg); /* for Chrome||Safari */
+        -ms-transform: skew(-15deg); /* for IE */
+        -moz-transform: skew(-15deg);/* for Firefox */
+        -o-transform: skew(-15deg);/* for Opera */
+        &:before {
+          content: '"';
+          width: 3rem;
+          height: 2rem;
+          font-size: 7rem;
+          line-height: 2rem;
+          letter-spacing: 0rem;
+          color: #000000;
+          opacity: 0.1;
+        }
       }
     }
     .cases-lists {
@@ -414,10 +475,31 @@ export default {
         margin-bottom: 2rem;
       }
       .testimony {
+        position: relative;
         .t {
           background: #f7f8fb;
           font-size: 1.1rem;
           font-weight: bold;
+        }
+        .b {
+          position: absolute;
+          left: .6rem;
+          top: 5.6rem;
+          transform: skew(-15deg);
+          -webkit-transform: skew(-15deg); /* for Chrome||Safari */
+          -ms-transform: skew(-15deg); /* for IE */
+          -moz-transform: skew(-15deg);/* for Firefox */
+          -o-transform: skew(-15deg);/* for Opera */
+          &:before {
+            content: '"';
+            width: 3rem;
+            height: 2rem;
+            font-size: 7rem;
+            line-height: 2rem;
+            letter-spacing: 0rem;
+            color: #000000;
+            opacity: 0.1;
+          }
         }
       }
     }
@@ -451,7 +533,7 @@ export default {
             cursor: pointer;
             .left {
               text-align: center;
-              margin: 2rem;
+              margin: 3rem 2rem;
               .icon {
                 display: flex;
                 justify-content: center;
@@ -473,6 +555,27 @@ export default {
             }
             .right {
               margin: 2.5rem;
+              .b {
+                position: absolute;
+                left: .1rem;
+                top: 3.3rem;
+                transform: skew(-15deg);
+                -webkit-transform: skew(-15deg); /* for Chrome||Safari */
+                -ms-transform: skew(-15deg); /* for IE */
+                -moz-transform: skew(-15deg);/* for Firefox */
+                -o-transform: skew(-15deg);/* for Opera */
+                &:before {
+                  content: '"';
+                  width: 3rem;
+                  height: 2rem;
+                  font-size: 7rem;
+                  // font-style: italic;
+                  line-height: 2rem;
+                  letter-spacing: 0rem;
+                  color: #000000;
+                  opacity: 0.1;
+                }
+              }
               .d {
                 font-size: 1.2rem;
                 font-weight: 400;
@@ -485,8 +588,8 @@ export default {
           .list {
             height: 18rem;
             text-align: center;
+            margin-bottom: 2rem;
             .icon {
-              border: 1px solid #e9ebec;
               background: #fff;
               height: 12rem;
               line-height: 15rem;
@@ -494,7 +597,7 @@ export default {
               text-align: center;
               cursor: pointer;
               &:hover {
-                box-shadow: 1.1rem 1.1rem 1.4rem rgba(2, 8, 22, .1);
+                box-shadow: 1rem 1rem 4rem 0rem rgba(2, 8, 22, 0.1);
               }
             }
             .c {
@@ -506,6 +609,36 @@ export default {
             .d {
               font-size: .8rem;
               color: #767778;
+            }
+          }
+        }
+        .case-detail {
+          .detail {
+            .testimony {
+              position: relative;
+              .t {
+                background: #f7f8fb;
+                font-size: 1.1rem;
+                font-weight: bold;
+              }
+              .b {
+                position: absolute;
+                transform: skew(-15deg);
+                -webkit-transform: skew(-15deg); /* for Chrome||Safari */
+                -ms-transform: skew(-15deg); /* for IE */
+                -moz-transform: skew(-15deg);/* for Firefox */
+                -o-transform: skew(-15deg);/* for Opera */
+                &:before {
+                  content: '"';
+                  width: 3rem;
+                  height: 2rem;
+                  font-size: 7rem;
+                  line-height: 2rem;
+                  letter-spacing: 0rem;
+                  color: #000000;
+                  opacity: 0.1;
+                }
+              }
             }
           }
         }

@@ -104,22 +104,24 @@
                   :xs="24"
                   :sm="24"
                   :md="20"
-                  :lg="12"
+                  :lg="16"
                 >
                   <el-carousel
                     indicator-position="none"
                     :autoplay="false"
                     arrow="always">
                     <el-carousel-item v-for="(item, index) in evaluation" :key="index" :class="item.className">
-                      <div class="evaluation">
-                        <div class="e">
-                          <p class="ct">{{item.content}}</p>
-                          <div>
-                            <div class="icon">
-                              <img :src="item.icon" :alt="item.company">
+                      <div class="e-wrapper">
+                        <div class="evaluation">
+                          <div class="e">
+                            <p class="ct">{{item.content}}</p>
+                            <div>
+                              <div class="icon">
+                                <img :src="item.icon" :alt="item.company">
+                              </div>
+                              <p class="cm">{{item.company}}</p>
+                              <p class="m">{{item.evaluator}}</p>
                             </div>
-                            <p class="cm">{{item.company}}</p>
-                            <p class="m">{{item.evaluator}}</p>
                           </div>
                         </div>
                       </div>
@@ -318,6 +320,48 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (max-width: 768px) {
+  .users-faq-wrapper {
+    height: 16rem;
+  }
+  .e-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .CEPRI, .wenjuanwang, .che-you-yuan {
+    .ct {
+      font-size: .8rem!important;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .users-faq-wrapper {
+    height: 18rem;
+  }
+  .e-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .CEPRI, .wenjuanwang, .che-you-yuan {
+    .ct {
+      font-size: .8rem;
+    }
+  }
+}
+@media screen and (min-width: 1100px) {
+  .users-faq-wrapper {
+    height: 16rem;
+  }
+  .e-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .CEPRI, .wenjuanwang, .che-you-yuan {
+    .ct {
+      font-size: 1rem;
+    }
+  }
+}
 .users-wrapper {
   background: #292d38;
   .users {
@@ -409,9 +453,10 @@ export default {
       }
       .features {
         .feature-wrapper {
+          background: #fff;
           margin: 1rem .4rem;
-          border: 1px solid #efefef;
-          box-shadow: 1rem 1rem 4rem 0rem rgba(2, 8, 22, 0.1);
+          border: 1px solid #fff;
+          box-shadow: 1rem 1rem 6rem 0rem rgba(2, 8, 22, 0.1);
           .feature {
             margin: 2.5rem;
             display: flex;
@@ -456,7 +501,6 @@ export default {
           margin: 0 auto;
           position: relative;
           top: -1.5rem;
-          height: 16rem;
           .faq {
             position: relative;
             top: -8rem;
@@ -464,7 +508,7 @@ export default {
               .el-carousel__container {
                 height: 400px;
                 .el-carousel__arrow {
-                  top: 37%;
+                  top: 38%;
                   width: 3rem;
                   height: 3rem;
                   font-size: 2rem;
@@ -475,10 +519,7 @@ export default {
                   text-align: center;
                   padding: 2rem;
                   border-radius: 4px;
-                  cursor: pointer;
-                  &:hover {
-                    box-shadow: 1.6rem 1.6rem 6.1rem 0rem rgba(0, 0, 0, 0.06);
-                  }
+                  box-shadow: 1.2rem 1.2rem 1rem 0 rgba(0, 0, 0, 0.06);
                   .ct {
                     font-size: 1rem;
                     text-align: left;
@@ -501,11 +542,6 @@ export default {
                     font-size: 0.8rem;
                   }
                 }
-                .CEPRI, .wenjuanwang, .che-you-yuan {
-                  .ct {
-                    font-size: .8rem;
-                  }
-                }
               }
             }
           }
@@ -519,10 +555,9 @@ export default {
             padding: 2rem;
             text-align: center;
             background: #fff;
-            border: 1px solid #efefef;
             cursor: pointer;
             &:hover {
-              box-shadow: 0 0 1.5rem rgb(209, 202, 202);
+              box-shadow: 2rem 2rem 6rem 0rem rgba(0, 0, 0, 0.06);
             }
             .f-title {
               font-size: 1.2rem;

@@ -63,13 +63,14 @@
                   <a-collapse accordion>
                     <a-collapse-panel
                       :showArrow="false"
-                      v-for="(item) in faqs[currentIndex].lists"
+                      v-for="(item, index) in faqs[currentIndex].lists"
                       :key="item.q"
                     >
                       <template slot="header">
-                        <p style="padding-right: 1rem;">
-                          <a-icon type="question-circle-o" style="color: #077fea;" />
+                        <p style="padding-right: 1rem; padding-top: 1rem;" @click="openFAQ(index)">
+                          <a-icon type="question-circle-o" style="color: #026dcd; padding-right: .4rem;" />
                           <span>{{item.q}}</span>
+                          <a-icon :type="item.state ? 'minus' : 'plus'" style="font-size: 1.5rem; margin-right: 1.5rem; color: #026dcd;float: right;"/>
                         </p>
                       </template>
                       <p class="answer" v-html="item.a"></p>
@@ -97,6 +98,7 @@ export default {
   data () {
     return {
       currentIndex: 0,
+      currentFAQ: 0,
       headerInfo: {
         Imgurl: require('common/images/faq/faq-background.png'),
         title: '常见问题',
@@ -107,26 +109,32 @@ export default {
           type: '一般问题',
           lists: [
             {
+              state: false,
               q: '如何采集数据? 如果内网的数据如何收集?',
               a: '通过安装我们定制的采集收集器(探针), 来采集需要的数据, 如果是内网用户,能够将数据发送到外网即可使用, 或者联系 service@cloudwiz.cn 定制更多不同的方案.'
             },
             {
+              state: false,
               q: '如何安装/使用?如何获得服务?',
               a: '请先联系 service@cloudwiz.cn 给出具体的账号才能开始使用, 我们会配合用户给出一份满意和定制化的方案.'
             },
             {
+              state: false,
               q: '你们的数据采集会影响servie 性能吗?',
               a: '我们的探针有比较严格的时间间隔管理, 不会对主服务造成性能上面的影响.'
             },
             {
+              state: false,
               q: '你们的数据是实时采集吗？我能实时看到吗？',
               a: '数据是实时采集的，从传输到展现需要1分钟时间。可在智能面板中创建相应的面板来查看.'
             },
             {
+              state: false,
               q: '你们的产品是免费的还是收费的?',
               a: '可以联系service@cloudwiz.cn 或致电 17070866703 询问详情'
             },
             {
+              state: false,
               q: '如何保证数据的安全性?',
               a: `
                 <p>加密传输：数据传输都是在 https 的 SSL 端口进行传输，防止嗅探。同时，在传输过程中会采取加密和混淆的方式，生成一系列无法被识别的代码和字符串，从而达到安全传输的目的。</p>
@@ -134,6 +142,7 @@ export default {
               `
             },
             {
+              state: false,
               q: '能够支持什么浏览器?',
               a: '目前阶段我们只支持 火狐和chrome 浏览器. 或者有他们内核的浏览器. 并不支持 IE8 或以下的浏览器.'
             }
@@ -147,6 +156,18 @@ export default {
     }
   },
   methods: {
+    openFAQ (i) {
+      if (this.currentFAQ !== i) {
+        this.currentFAQ = i
+        this.faqs[this.currentIndex].lists.map((item, index) => {
+          item.state = index === i
+          return item
+        })
+      } else {
+        this.currentFAQ = i
+        this.faqs[this.currentIndex].lists[this.currentFAQ].state = !this.faqs[this.currentIndex].lists[this.currentFAQ].state
+      }
+    },
     getCurrentIndex (i) {
       console.log(i)
       this.currentIndex = i
@@ -170,7 +191,7 @@ export default {
     .faq-wrapper {
       .faq-container {
         .faq-content {
-          margin: 2rem;
+          margin-top: 2rem;
           .faq-type {
             margin: 0;
           }
@@ -180,7 +201,6 @@ export default {
   }
   @media screen and (min-width: 1100px) {
     .faq-type-active {
-      border: 1px solid rgb(186, 186, 189);
       background: #fff;
       color: #026dcd;
     }
@@ -220,6 +240,7 @@ export default {
           .faq-qa {
             .answer {
               font-size: .9rem;
+              padding-left: 1.3rem;
             }
           }
           .no-qa {
