@@ -130,8 +130,8 @@
                         header="产品中心"
                         style="
                           background: #001529;
-                          color: #fff;
-                          border:none;
+                          color: #fff!important;
+                          border: none!important;
                           borderRadius: none;
                         "
                       >
@@ -165,9 +165,9 @@
                         header="关于我们"
                         style="
                           background: #001529;
-                          color: #fff;
-                          border:none;
-                          borderRadius: none;
+                          color: #fff!important;
+                          border: none;
+                          borderRadius: none!important;
                         "
                       >
                         <a-menu-item @click="handleMenuClick">
