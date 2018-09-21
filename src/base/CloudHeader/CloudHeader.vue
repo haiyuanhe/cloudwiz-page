@@ -5,9 +5,9 @@
       justify="center">
       <a-col
         :xs="20"
-        :sm="24"
+        :sm="20"
         :md="20"
-        :lg="20"
+        :lg="18"
         :xl="18"
         :xxl="16">
       <div class="header-container">
@@ -97,9 +97,9 @@
             justify="center">
             <a-col
               :xs="20"
-              :sm="24"
-              :md="20"
-              :lg="20"
+              :sm="20"
+              :md="19"
+              :lg="19"
               :xl="18"
               :xxl="16">
                 <a-dropdown :trigger="['click']" @visibleChange="change" class="mobail-menu">
@@ -253,7 +253,7 @@ export default {
     .mobail {
       right: 1rem;
     }
-    .logo {
+    .cloudwiz-logo {
       position: absolute;
       left: 0%;
       margin-left: 1rem;
@@ -283,9 +283,9 @@ export default {
   }
   @media screen and (max-width: 1100px) and (min-width: 768px) {
     .mobail {
-      right: 3rem;
+      right: 1rem;
     }
-    .logo {
+    .cloudwiz-logo {
       position: absolute;
       left: 0%;
       margin-left: 1rem;
@@ -318,9 +318,9 @@ export default {
       right: 2rem;
     }
     .header-container {
-      .logo {
+      .cloudwiz-logo {
         position: absolute;
-        left: -6rem;
+        left: -4rem;
       }
     }
     .ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title {

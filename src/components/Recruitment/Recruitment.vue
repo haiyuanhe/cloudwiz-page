@@ -30,30 +30,30 @@
       </div>
       <div class="outside-work-wrapper">
         <p class="o-title">工作之外</p>
-        <div class="w-carousel">
-          <a-row
-            type="flex"
-            justify="center"
-          >
-            <a-col
-              :xs="24"
-              :sm="24"
-              :md="16"
-              :lg="16"
-            >
-              <el-carousel :interval="3000" type="card" arrow="always">
-                <el-carousel-item v-for="(item, index) in doings" :key="index">
-                  <div class="doing">
-                    <div class="activties">
-                      <img :src="item.image" :alt="item.title">
-                    </div>
-                    <p style="margin-top: 1rem;">{{item.title}}</p>
+        <a-row
+          type="flex"
+          justify="center">
+          <a-col
+            :xs="24"
+            :sm="22"
+            :md="22"
+            :lg="16">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"
+                v-for="(item, index) in doings"
+                :key="index">
+                  <div class="i">
+                    <img :src="item.image" :alt="index">
                   </div>
-                </el-carousel-item>
-              </el-carousel>
-            </a-col>
-          </a-row>
-        </div>
+                  <p class="t">{{item.title}}</p>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </a-col>
+        </a-row>
       </div>
       <div class="join-us-wrapper">
         <p class="j-title">加入我们</p>
@@ -130,6 +130,8 @@
 import CloudHeader from 'base/CloudHeader/CloudHeader'
 import CloudFooter from 'base/CloudFooter/CloudFooter'
 import PageHeader from 'base/PageHeader/PageHeader'
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css'
 
 export default {
   name: 'recruitment',
@@ -182,7 +184,7 @@ export default {
       ],
       offices: [
         {
-          type: '全部',
+          type: '所有',
           position: [
             {
               name: '前端开发工程师',
@@ -323,10 +325,41 @@ export default {
       currentIndex: 0
     }
   },
+  created () {
+    this._isPcOrMobail()
+  },
+  mounted () {
+    /* eslint-disable */
+    new Swiper('.swiper-container', {
+      autoplay: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      effect : 'slider',
+      freeMode: true,
+      spaceBetween: 10,
+      loop: true,
+      mousewheel: !this._isPcOrMobail(),
+      slidesPerView: this._isPcOrMobail() ? 1 : 4
+    })
+  },
   methods: {
     getCurrentIndex (i) {
       this.currentIndex = i
-    }
+    },
+    _isPcOrMobail () {
+      let ua = navigator.userAgent;
+      let ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+      isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+      isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+      isMobile = isIphone || isAndroid;
+      if(isMobile) {
+        return true;
+      } else {
+        return false;
+      }
+    } 
   },
   components: {
     CloudHeader,
@@ -337,94 +370,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 768px) {
     .type-active {
       padding-bottom: .5rem;
       span {
         border-bottom: 2px solid #026dcd;
       }
     }
-    .el-carousel /deep/ .el-carousel__container {
-      height: 320px;
-    }
-    .w-carousel {
-      width: 100%;
-      margin: 0 auto;
-      .is-active {
-        .doing {
-          p {
-            display: block;
-            padding: .2rem;
-            font-size: 1rem;
-            text-align: center;
-          }
-        }
-      }
-      .doing {
-        img {
-          width: 100%;
-          height: 17rem;
-        }
-        p {
-          display: none;
-        }
+  }
+  @media screen and (max-width: 960px) and (min-width: 768px) {
+    .type-active {
+      padding-bottom: .5rem;
+      span {
+        border-bottom: 2px solid #026dcd;
       }
     }
   }
   @media screen and (min-width: 960px) {
     .office-content {
-      height: 2rem;
-      line-height: 2rem;
+      height: 3.5rem;
+      line-height: 3.5rem;
     }
     .type-active {
-      border: 1px solid #ccc;
       background: #fff;
-      box-shadow: 0 0 1.5rem #e8ecf4;
       cursor: pointer;
-      &:hover {
-        box-shadow: 0 0 1.5rem #ccc;
-      }
-    }
-    .el-carousel /deep/ .el-carousel__container {
-      height: 330px;
-    }
-    .w-carousel {
-      width: 90%;
-      margin: 0 auto;
-      .doing {
-        img {
-          width: 100%;
-          height: 17rem;
-        }
-        p {
-          padding: .54rem;
-          font-size: 1.3rem;
-          text-align: center;
-        }
-      }
-    }
-  }
-  .el-carousel__item /deep/ .el-carousel__mask {
-    background-color: #e8ecf4;
-  }
-  .w-carousel /deep/ .el-carousel__arrow {
-    position: absolute;
-    top: 9rem;
-    width: 3rem;
-    height: 3rem;
-    background-color: rgba(12, 116, 234, .5);
-    i {
-      font-size: 1.5rem;
-    }
-  }
-  .w-carousel /deep/ .el-carousel__indicators--outside {
-    .is-active button {
-      background: rgba(12, 116, 234, 1);
-    }
-    button {
-      border-radius: 50%;
-      height: .8rem;
-      width: .8rem;
     }
   }
   .recruitment-wrapper {
@@ -433,7 +402,7 @@ export default {
       height: 100%;
       overflow: hidden;
       .acquisition-wrapper {
-        background: #ffffff;
+        background: #f7f8fb;
           .a-title {
             height: 0;
             font-size: 1.3rem;
@@ -468,8 +437,35 @@ export default {
           text-align: center;
           padding: 3rem 0;
         }
+        .swiper-container {
+          width: 100%;
+          margin-bottom: 3rem;
+          .swiper-button-next, .swiper-button-prev {
+            top: 40%;
+          }
+          .swiper-wrapper {
+            .swiper-slide {
+              text-align: center;
+              .i {
+                width: 100%;
+                padding-top: 1rem;
+                img {
+                  width: auto;
+                  height: auto;
+                  max-width: 100%;
+                  max-width: 100%;
+                }
+              }
+              .t {
+                padding-top: 1rem;
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
       }
       .join-us-wrapper {
+        padding-bottom: 1.6rem;
         .j-title {
           height: 0;
           font-size: 1.3rem;
@@ -494,11 +490,11 @@ export default {
                 background: #fff;
               }
               .time {
-                padding: .6rem 2rem;
+                padding: .6rem 1.5rem;
                 font-weight: bold;
               }
               .description {
-                padding-left: 2rem;
+                padding-left: 1.5rem;
               }
               .no-office {
                 padding-left: 1rem;

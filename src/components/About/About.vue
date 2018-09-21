@@ -19,8 +19,8 @@
                   type="flex"
                   justify="center">
                   <a-col
-                    :xs="13"
-                    :sm="13"
+                    :xs="22"
+                    :sm="22"
                     :md="13"
                     :lg="10">
                     <a-row
@@ -75,8 +75,8 @@
                         type="flex"
                         justify="center">
                         <a-col
-                          :xs="24"
-                          :sm="24"
+                          :xs="22"
+                          :sm="22"
                           :md="24"
                           :lg="24">
                           <div class="company-description">
@@ -140,9 +140,9 @@
               <a-col
                 v-for="(item, index) in team_mates"
                 :key="index"
-                :xs="24"
-                :sm="24"
-                :md="24"
+                :xs="20"
+                :sm="20"
+                :md="12"
                 :lg="10"
                 :xl="8"
                 :xxl="7"
@@ -318,8 +318,19 @@ export default {
 
 <style lang="scss" scoped>
   @media screen and (max-width: 1100px) {
+    .our-description {
+      margin-bottom: 0;
+    }
+    .number {
+      text-align: center;
+    }
     .middle-content {
       padding-top: 0;
+      .services {
+        .left {
+          padding-right: 0;
+        }
+      }
     }
     .company-description {
       margin: 1rem 0rem;
@@ -334,8 +345,16 @@ export default {
     }
   }
   @media screen and (min-width: 1100px) {
+    .our-description {
+      margin-bottom: 3rem;
+    }
     .middle-content {
       padding-top: 3rem;
+      .services {
+        .left {
+          padding-right: 1.3rem;
+        }
+      }
     }
     .company-description {
       margin: 1rem 5rem;
@@ -385,13 +404,9 @@ export default {
             }
             .our-description {
               line-height: 2rem;
-              margin-bottom: 3.5rem;
             }
           }
           .services {
-            .left {
-              padding-right: 1.3rem;
-            }
             .number {
               color: #1a7bd2;
               font-size: 3rem;
@@ -409,7 +424,7 @@ export default {
           .top {
             width: 85%;
             margin: 1rem auto;
-            padding-bottom: 2rem;
+            padding-bottom: 1rem;
             .title {
               text-align: center;
               padding: 2rem;

@@ -443,6 +443,7 @@ export default {
       }
     }
     .home-middle {
+      margin-top: 2rem;
       padding-bottom: 3rem;
       color: #000;
       background: #f7f8fb;

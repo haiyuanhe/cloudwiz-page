@@ -11,12 +11,10 @@
           :md="24"
           :lg="20"
           :xl="20"
-          :xxl="20"
-        >
+          :xxl="20" >
           <a-row
             type="flex"
-            justify="center"
-          >
+            justify="center">
             <a-col
               class="logo"
               :xs="24"
@@ -24,8 +22,7 @@
               :md="24"
               :lg="6"
               :xl="6"
-              :xxl="6"
-            >
+              :xxl="6">
               <router-link to="/">
                 <img src="../../common/images/cloudwiz.jpg" alt="Cloudwiz"/>
               </router-link>
@@ -36,25 +33,22 @@
               :md="24"
               :lg="18"
               :xl="18"
-              :xxl="18"
-            >
+              :xxl="18">
               <a-row
                 type="flex"
-                justify="center"
-              >
+                justify="center">
                 <a-col
                   :xs="24"
                   :sm="24"
                   :md="8"
                   :lg="12"
                   :xl="12"
-                  :xxl="12"
-                >
+                  :xxl="12">
                   <div class="link contact">
                     <p class="link-header">联系方式</p>
                     <p class="item">电话：010-6295 8816</p>
                     <p class="item">邮箱：<a href="mailto:service@cloudwiz.cn">service@cloudwiz.cn</a></p>
-                    <p class="item">地址：<a href="//f.amap.com/64cXQ_0942kf5" target="_blank">北京市海淀区清河永泰园甲1号建金中心</a></p>
+                    <p class="item">地址：<a href="https://www.amap.com/search?query=%E5%8C%97%E4%BA%AC%E5%B8%82%E6%B5%B7%E6%B7%80%E5%8C%BA%E6%B8%85%E6%B2%B3%E6%B0%B8%E6%B3%B0%E5%9B%AD%E7%94%B21%E5%8F%B7%E5%BB%BA%E9%87%91%E4%B8%AD%E5%BF%83&city=110000&geoobj=116.221264%7C39.790989%7C116.699169%7C40.024058&zoom=12" target="blank">北京市海淀区清河永泰园甲1号建金中心</a></p>
                   </div>
                 </a-col>
                 <a-col
@@ -63,8 +57,7 @@
                   :md="8"
                   :lg="6"
                   :xl="6"
-                  :xxl="6"
-                >
+                  :xxl="6">
                   <div class="link contact">
                     <p class="link-header">快捷入口</p>
                     <p class="item">
@@ -88,8 +81,7 @@
                   :md="8"
                   :lg="6"
                   :xl="6"
-                  :xxl="6"
-                >
+                  :xxl="6">
                   <div class="link product-instructions">
                   <p class="link-header">产品使用说明</p>
                   <p class="item"><a target="_blank" href="//www.cloudwiz.cn/document">快速开始</a></p>
@@ -104,21 +96,19 @@
       </a-row>
     </div>
     <a-row
-        type="flex"
-        justify="center"
-      >
-        <a-col
-          :xs="20"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="20"
-          :xxl="20"
-        >
-          <p class="copyright">
-            Copyright &copy; {{(new Date()).getFullYear()}} 云兴维智（北京）科技有限公司 | 京ICP备17008193号
-          </p>
-        </a-col>
+      type="flex"
+      justify="center">
+      <a-col
+        :xs="20"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="20"
+        :xxl="20">
+        <p class="copyright">
+          Copyright &copy; {{(new Date()).getFullYear()}} 云兴维智（北京）科技有限公司 | 京ICP备17008193号
+        </p>
+      </a-col>
     </a-row>
   </div>
 </template>
