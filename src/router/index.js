@@ -23,11 +23,6 @@ export default new Router({
       component: () => import('components/Cloudwiz/Cloudwiz')
     },
     {
-      path: '/documents',
-      name: 'Documents',
-      component: () => import('components/Documents/Documents')
-    },
-    {
       path: '/faq',
       name: 'FAQ',
       component: () => import('components/FAQ/FAQ')
