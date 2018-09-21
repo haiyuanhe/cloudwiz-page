@@ -49,9 +49,9 @@
                   <p class="t">{{item.title}}</p>
                 </div>
               </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </a-col>
         </a-row>
       </div>
@@ -338,7 +338,7 @@ export default {
       },
       effect : 'slider',
       freeMode: true,
-      spaceBetween: 10,
+      spaceBetween: 15,
       loop: true,
       mousewheel: !this._isPcOrMobail(),
       slidesPerView: this._isPcOrMobail() ? 1 : 4
@@ -370,31 +370,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media screen and (max-width: 768px) {
-    .type-active {
-      padding-bottom: .5rem;
-      span {
-        border-bottom: 2px solid #026dcd;
-      }
-    }
+  .swiper-button-prev {
+    left: -40px;
   }
-  @media screen and (max-width: 960px) and (min-width: 768px) {
-    .type-active {
-      padding-bottom: .5rem;
-      span {
-        border-bottom: 2px solid #026dcd;
-      }
-    }
-  }
-  @media screen and (min-width: 960px) {
-    .office-content {
-      height: 3.5rem;
-      line-height: 3.5rem;
-    }
-    .type-active {
-      background: #fff;
-      cursor: pointer;
-    }
+  .swiper-button-next {
+    right: -40px;
   }
   .recruitment-wrapper {
     width: 100%;
@@ -437,12 +417,12 @@ export default {
           text-align: center;
           padding: 3rem 0;
         }
+        .swiper-button-next, .swiper-button-prev {
+          top: 40%;
+        }
         .swiper-container {
           width: 100%;
           margin-bottom: 3rem;
-          .swiper-button-next, .swiper-button-prev {
-            top: 40%;
-          }
           .swiper-wrapper {
             .swiper-slide {
               text-align: center;
@@ -458,7 +438,7 @@ export default {
               }
               .t {
                 padding-top: 1rem;
-                font-size: 1.2rem;
+                font-size: 1rem;
               }
             }
           }
@@ -503,6 +483,38 @@ export default {
           }
         }
       }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .type-active {
+      padding-bottom: .5rem;
+      span {
+        border-bottom: 2px solid #026dcd;
+      }
+    }
+    .swiper-button-prev {
+      left: 2px;
+    }
+    .swiper-button-next {
+      right: 2px;
+    }
+  }
+  @media screen and (max-width: 960px) and (min-width: 768px) {
+    .type-active {
+      padding-bottom: .5rem;
+      span {
+        border-bottom: 2px solid #026dcd;
+      }
+    }
+  }
+  @media screen and (min-width: 960px) {
+    .office-content {
+      height: 3.5rem;
+      line-height: 3.5rem;
+    }
+    .type-active {
+      background: #fff;
+      cursor: pointer;
     }
   }
 </style>

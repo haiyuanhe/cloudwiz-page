@@ -272,7 +272,7 @@ export default {
           version: '试用版',
           ram: '日志100M/天，数据储存7天',
           use: '免费试用',
-          link: '//app.cloudwiz.cn',
+          link: '//app.cloudwiz.cn/signup',
           functions: `
             <p>5 个节点</p>
             <p>硬件、系统、网络指标</p>
@@ -290,7 +290,7 @@ export default {
           version: '企业版',
           ram: '日志200M/天，存储14天，指标存储30天',
           use: '开始注册',
-          link: '//app.cloudwiz.cn',
+          link: '//app.cloudwiz.cn/signup',
           functions: `
             <p>1000 个节点</p>
             <p>硬件、系统、网络指标</p>

@@ -317,52 +317,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media screen and (max-width: 1100px) {
-    .our-description {
-      margin-bottom: 0;
-    }
-    .number {
-      text-align: center;
-    }
-    .middle-content {
-      padding-top: 0;
-      .services {
-        .left {
-          padding-right: 0;
-        }
-      }
-    }
-    .company-description {
-      margin: 1rem 0rem;
-      padding: 0 .5rem;
-      .name {
-        text-align: center;
-      }
-    }
-    .services {
-      margin: 1rem 0rem;
-      text-align: center;
-    }
-  }
-  @media screen and (min-width: 1100px) {
-    .our-description {
-      margin-bottom: 3rem;
-    }
-    .middle-content {
-      padding-top: 3rem;
-      .services {
-        .left {
-          padding-right: 1.3rem;
-        }
-      }
-    }
-    .company-description {
-      margin: 1rem 5rem;
-    }
-    .services {
-      margin: 1rem 5rem;
-    }
-  }
   .about-wrapper {
     background: #e8ecf4;
     .about-container {
@@ -393,12 +347,12 @@ export default {
           .company-description {
             .company {
               .name {
-                font-size: 2rem;
+                font-size: 1.5rem;
                 padding: 1rem 0;
                 margin-bottom: .6rem;
               }
               .description {
-                font-size: 1rem;
+                font-size: .9rem;
                 line-height: 1.4rem;
               }
             }
@@ -488,6 +442,53 @@ export default {
           }
         }
       }
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    .our-description {
+      margin-bottom: 0;
+    }
+    .number {
+      text-align: center;
+    }
+    .middle-content {
+      padding-top: 0;
+      .services {
+        .left {
+          padding-right: 0;
+        }
+      }
+    }
+    .company-description {
+      margin: 1rem 0rem;
+      padding: 0 .5rem;
+      text-align: center;
+      .name {
+        text-align: center;
+      }
+    }
+    .services {
+      margin: 1rem 0rem;
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    .our-description {
+      margin-bottom: 3rem;
+    }
+    .middle-content {
+      padding-top: 3rem;
+      .services {
+        .left {
+          padding-right: 1.3rem;
+        }
+      }
+    }
+    .company-description {
+      margin: 1rem 5rem;
+    }
+    .services {
+      margin: 1rem 5rem;
     }
   }
 </style>

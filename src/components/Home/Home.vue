@@ -5,21 +5,19 @@
       <div class="home-top">
         <a-row
           type="flex"
-          justify="center"
-        >
+          justify="center">
           <a-col
             :xs="24"
             :sm="24"
             :md="24"
             :lg="8"
-            class="home-top-text"
-          >
+            class="home-top-text">
             <div>
               <p class="ai">用数据让运维智能化</p>
               <p class="aiops">国内领先的全IT架构AIOps</p>
               <p class="aiops">智能运维平台</p>
               <a-button class="free-used" type="primary">
-                <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
+                <a target="_blank" href="//app.cloudwiz.cn/signup">免费试用</a>
               </a-button>
               <a-button class="understand" ghost>
                 <router-link to="/cloudwiz">
@@ -44,16 +42,14 @@
         <div class="features">
           <a-row
             type="flex"
-            justify="center"
-          >
+            justify="center">
             <a-col
               v-for="(item, index) in features"
               :key="index"
               :xs="22"
               :sm="12"
               :md="12"
-              :lg="8"
-            >
+              :lg="8">
               <div class="feature-wrapper">
                 <div class="feature">
                   <div class="left">
@@ -81,8 +77,7 @@
                 :xs="12"
                 :sm="12"
                 :md="8"
-                :lg="6"
-              >
+                :lg="6">
                 <div class="user">
                     <img :src="item.name" :alt="item.title"/>
                 </div>
@@ -98,14 +93,12 @@
             <div class="faq">
               <a-row
                 type="flex"
-                justify="center"
-              >
+                justify="center">
                 <a-col
                   :xs="24"
                   :sm="24"
                   :md="20"
-                  :lg="16"
-                >
+                  :lg="16">
                   <el-carousel
                     indicator-position="none"
                     :autoplay="false"
@@ -137,25 +130,21 @@
             <div class="f-lists">
               <a-row
                 type="flex"
-                justify="center"
-              >
+                justify="center">
                 <a-col
                   :xs="22"
                   :sm="20"
                   :md="20"
                   :lg="19"
-                  :xl="18"
-                >
+                  :xl="18">
                   <a-row
                     type="flex"
-                    justify="center"
-                  >
+                    justify="center">
                     <a-col
                       :xs="22"
                       :sm="22"
                       :md="11"
-                      :lg="11"
-                    >
+                      :lg="11">
                       <div class="f">
                         <div class="f-title">离线分析平台</div>
                         <p>无需安装探针，直接导入数据</p>
@@ -170,15 +159,14 @@
                       :xs="22"
                       :sm="22"
                       :md="11"
-                      :lg="11"
-                    >
+                      :lg="11">
                       <div class="f">
                         <div class="f-title">在线试用</div>
                         <p>在线探针安装，实时响应</p>
                         <p>使用真实数据，直观查看</p>
                         <p>所见即所得的完整效果呈现</p>
                         <a-button class="f-used">
-                          <a target="_blank" href="//app.cloudwiz.cn">立即试用</a>
+                          <a target="_blank" href="//app.cloudwiz.cn/signup">立即试用</a>
                         </a-button>
                       </div>
                     </a-col>

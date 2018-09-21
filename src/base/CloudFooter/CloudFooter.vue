@@ -61,7 +61,7 @@
                   <div class="link contact">
                     <p class="link-header">快捷入口</p>
                     <p class="item">
-                      <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
+                      <a target="_blank" href="//app.cloudwiz.cn/signup">免费试用</a>
                     </p>
                     <p class="item">
                       <router-link to="/cloudwiz">

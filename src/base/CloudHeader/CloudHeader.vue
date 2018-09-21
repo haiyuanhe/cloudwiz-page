@@ -85,10 +85,10 @@
         </div>
         <div class="used" v-show="this.screenWidth >= 1100">
           <div class="use free-used">
-            <a target="_blank" href="//app.cloudwiz.cn">免费试用</a>
+            <a target="_blank" href="//app.cloudwiz.cn/signup">免费试用</a>
           </div>
           <div class="use signin">
-            <a target="_blank" href="//app.cloudwiz.cn">登录</a>
+            <a target="_blank" href="//app.cloudwiz.cn/login">登录</a>
           </div>
         </div>
         <div class="mobail" v-show="this.screenWidth <= 1100">
@@ -188,10 +188,10 @@
                       </a-collapse-panel>
                     </a-collapse>
                     <a-menu-item @click="handleMenuClick">
-                      <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">登录</a>
+                      <a target="_blank" href="//app.cloudwiz.cn/login" class="menu-link">登录</a>
                     </a-menu-item>
                     <a-menu-item @click="handleMenuClick">
-                      <a target="_blank" href="//app.cloudwiz.cn" class="menu-link">免费试用</a>
+                      <a target="_blank" href="//app.cloudwiz.cn/signup" class="menu-link">免费试用</a>
                     </a-menu-item>
                   </a-menu>
                 </a-dropdown>

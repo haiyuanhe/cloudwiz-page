@@ -6,16 +6,14 @@
       <div class="cases-content">
         <a-row
           type="flex"
-          justify="center"
-        >
+          justify="center">
           <a-col
             :xs="20"
             :sm="20"
             :md="20"
             :lg="20"
             :xl="18"
-            :xxl="17"
-          >
+            :xxl="17">
             <div class="cases-carousel">
               <a-carousel
                 class="carousel"
@@ -71,21 +69,18 @@
               :md="20"
               :lg="20"
               :xl="18"
-              :xxl="17"
-            >
+              :xxl="17">
               <a-row
                 type="flex"
                 justify="center"
-                :gutter="16"
-              >
+                :gutter="16">
                 <a-col
                   v-for="(item, index) in users"
                   :key="index"
                   :xs="24"
                   :sm="12"
                   :md="12"
-                  :lg="8"
-                >
+                  :lg="8">
                   <div class="list">
                     <div class="icon" @click="showModal(item.company)">
                       <img :src="item.icon" :alt="item.company">
@@ -103,25 +98,21 @@
           width="80%"
           :footer="null"
           v-model="show"
-          class="case-detail"
-        >
+          class="case-detail">
           <div class="case-info" v-if="!noCase">
             <div class="m-header">
               <a-row
                 type="flex"
-                justify="center"
-              >
+                justify="center">
                 <a-col
-                  :lg="10"
-                >
+                  :lg="10">
                   <div class="icon">
                     <img :src="showCase.icon" :alt="showCase.company">
                   </div>
                 </a-col>
                 <a-col
                   style="padding-left: 1rem;"
-                  :lg="14"
-                >
+                  :lg="14">
                   <p class="c">{{showCase.company}}</p>
                   <p class="s">{{showCase.short}}</p>
                 </a-col>
