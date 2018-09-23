@@ -130,9 +130,8 @@
                         header="产品中心"
                         style="
                           background: #001529;
-                          color: #fff!important;
                           border: none!important;
-                          borderRadius: none;
+                          borderRadius: 0;
                         "
                       >
                         <a-menu-item @click="handleMenuClick">
@@ -165,9 +164,8 @@
                         header="关于我们"
                         style="
                           background: #001529;
-                          color: #fff!important;
                           border: none;
-                          borderRadius: none!important;
+                          borderRadius: 0;
                         "
                       >
                         <a-menu-item @click="handleMenuClick">
@@ -249,93 +247,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @media screen and (max-width: 768px) {
-    .mobail {
-      right: 1rem;
-    }
-    .cloudwiz-logo {
-      position: absolute;
-      left: 0%;
-      margin-left: 1rem;
-    }
-    .analysis {
-      background-color: #0c111d;
-      .offline-analysis {
-        color: #026dcd;
-        font-size: 1.25rem;
-        font-style: italic;
-        letter-spacing: 0rem;
-      }
-    }
-    .ant-dropdown-menu-item {
-      padding: 1.1rem 2rem;
-      font-size: 1.1rem;
-    }
-    .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
-      text-align: left;
-    }
-    .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
-      color: #fff;
-    }
-    .undefined-item {
-      padding: .8rem 0;
-    }
-  }
-  @media screen and (max-width: 1100px) and (min-width: 768px) {
-    .mobail {
-      right: 1rem;
-    }
-    .cloudwiz-logo {
-      position: absolute;
-      left: 0%;
-      margin-left: 1rem;
-    }
-    .analysis {
-      background-color: #0c111d;
-      .offline-analysis {
-        color: #026dcd;
-        font-size: 1.25rem;
-        font-style: italic;
-        letter-spacing: 0rem;
-      }
-    }
-    .ant-dropdown-menu-item {
-      padding: 1.1rem 2rem;
-      font-size: 1.1rem;
-    }
-    .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
-      text-align: left;
-    }
-    .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
-      color: #fff;
-    }
-    .undefined-item {
-      padding: .6rem 0;
-    }
-  }
-  @media screen and (min-width: 1100px) {
-    .mobail {
-      right: 2rem;
-    }
-    .header-container {
-      .cloudwiz-logo {
-        position: absolute;
-        left: -4rem;
-      }
-    }
-    .ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title {
-      padding: 5px 1.4rem;
-    }
-    .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
-      text-align: left;
-    }
-    .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
-      color: #999b9f;
-    }
-    .undefined-item {
-      padding: .6rem 0;
-    }
-  }
   .ant-collapse {
     border: none;
   }
@@ -347,17 +258,6 @@ export default {
     }
     a {
       color: #fff;
-    }
-  }
-  .ant-collapse /deep/ .ant-collapse-header {
-    color: #ffffff;
-    padding: 1.1rem 2rem;
-    text-align: left;
-    font-size: 1.1rem;
-    .arrow {
-      line-height: 3.5rem;
-      font-size: 1.2rem;
-      left: calc(100% - 3rem);
     }
   }
   .header-wrapper {
@@ -431,6 +331,115 @@ export default {
         font-size: 2rem;
         color: #fff;
       }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .mobail {
+      right: 1rem;
+    }
+    .cloudwiz-logo {
+      position: absolute;
+      left: 0%;
+      margin-left: 1rem;
+    }
+    .analysis {
+      background-color: #0c111d;
+      .offline-analysis {
+        color: #026dcd;
+        font-size: 1.25rem;
+        font-style: italic;
+        letter-spacing: 0rem;
+      }
+    }
+    .ant-dropdown-menu-item {
+      padding: 1.1rem 2rem;
+      font-size: 1.1rem;
+    }
+    .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
+      text-align: left;
+    }
+    .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
+      color: #fff;
+    }
+    .undefined-item {
+      padding: .8rem 1rem;
+    }
+    .ant-collapse /deep/ .ant-collapse-header {
+      color: #ffffff!important;
+      padding: 1.1rem 2rem!important;
+      text-align: left;
+      font-size: 1.1rem;
+      .arrow {
+        line-height: 3.5rem;
+        font-size: 1.2rem;
+        left: calc(100% - 5rem)!important;
+      }
+    }
+  }
+  @media screen and (max-width: 1100px) and (min-width: 768px) {
+    .mobail {
+      right: 1rem;
+    }
+    .cloudwiz-logo {
+      position: absolute;
+      left: 0%;
+      margin-left: 1rem;
+    }
+    .analysis {
+      background-color: #0c111d;
+      .offline-analysis {
+        color: #026dcd;
+        font-size: 1.25rem;
+        font-style: italic;
+        letter-spacing: 0rem;
+      }
+    }
+    .ant-dropdown-menu-item {
+      padding: 1.1rem 2rem;
+      font-size: 1.1rem;
+    }
+    .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
+      text-align: left;
+    }
+    .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
+      color: #fff;
+    }
+    .undefined-item {
+      padding: .6rem 1rem;
+    }
+    .ant-collapse /deep/ .ant-collapse-header {
+      color: #ffffff!important;
+      padding: 1.1rem 2rem!important;
+      text-align: left;
+      font-size: 1.1rem;
+      .arrow {
+        line-height: 3.5rem;
+        font-size: 1.2rem;
+        left: calc(100% - 5rem)!important;
+      }
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    .mobail {
+      right: 2rem;
+    }
+    .header-container {
+      .cloudwiz-logo {
+        position: absolute;
+        left: -4rem;
+      }
+    }
+    .ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title {
+      padding: 5px 1.4rem;
+    }
+    .ant-dropdown-menu-dark, .ant-dropdown-menu-dark .ant-dropdown-menu {
+      text-align: left;
+    }
+    .ant-dropdown-menu-dark .ant-dropdown-menu-item .menu-link {
+      color: #999b9f;
+    }
+    .undefined-item {
+      padding: .6rem 0;
     }
   }
 </style>
