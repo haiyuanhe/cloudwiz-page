@@ -46,7 +46,6 @@ export default {
       }
       .description {
         font-size: 1.2rem;
-        font-family: MicrosoftYaHeiUI;
         letter-spacing: 0rem;
         color: #fefefe;
         opacity: 0.6;
