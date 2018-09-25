@@ -583,7 +583,7 @@ export default {
             .icon {
               background: #fff;
               height: 12rem;
-              line-height: 15rem;
+              line-height: 12rem;
               margin: auto;
               text-align: center;
               cursor: pointer;
