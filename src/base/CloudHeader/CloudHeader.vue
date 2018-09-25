@@ -423,12 +423,6 @@ export default {
     .mobail {
       right: 2rem;
     }
-    .header-container {
-      .cloudwiz-logo {
-        position: absolute;
-        left: -4rem;
-      }
-    }
     .ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title {
       padding: 5px 1.4rem;
     }
