@@ -587,6 +587,7 @@ export default {
               margin: auto;
               text-align: center;
               cursor: pointer;
+              transition: box-shadow .3s;
               &:hover {
                 box-shadow: 1rem 1rem 4rem 0rem rgba(2, 8, 22, 0.1);
               }

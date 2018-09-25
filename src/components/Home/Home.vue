@@ -424,6 +424,7 @@ export default {
       .free-used {
         margin-right: 1rem;
         padding: 0 1.5rem;
+        border-radius: 2px;
       }
       .understand {
         border-color: #077fea;
@@ -636,7 +637,7 @@ export default {
   }
   .users-wrapper {
     .users {
-      width: 75%;
+      width: 70%;
     }
   }
 }

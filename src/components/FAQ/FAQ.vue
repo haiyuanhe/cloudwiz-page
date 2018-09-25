@@ -14,7 +14,6 @@
             :md="20"
             :lg="9"
             :xl="5"
-            :xxl="5"
           >
             <a-row
               type="flex"
@@ -25,7 +24,6 @@
                 :md="12"
                 :lg="8"
                 :xl="16"
-                :xxl="8"
                 v-for="(faq, index) in faqs"
                 :key="index"
               >
@@ -46,7 +44,6 @@
             :md="20"
             :lg="20"
             :xl="16"
-            :xxl="8"
           >
             <a-row
               type="flex"
@@ -169,7 +166,6 @@ export default {
       }
     },
     getCurrentIndex (i) {
-      console.log(i)
       this.currentIndex = i
     }
   },
