@@ -137,6 +137,7 @@ export default {
       .logo {
         margin-bottom: 2rem;
         padding-top: 1.2rem;
+        text-align: center;
       }
       .link{
         padding-left: .8rem;
