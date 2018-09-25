@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Antd from 'ant-design-vue'
-import 'ant-design-vue/dist/antd.css'
 import 'common/style/reset.css'
 import 'common/style/mixin.scss'
-import ElementUI from 'element-ui'
+import './use-antd-components'
+import {
+  Carousel,
+  CarouselItem
+} from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-Vue.use(ElementUI)
-Vue.use(Antd)
-
+Vue.use(Carousel)
+Vue.use(CarouselItem)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

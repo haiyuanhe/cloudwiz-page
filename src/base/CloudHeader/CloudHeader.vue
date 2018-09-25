@@ -277,7 +277,7 @@ export default {
       display: flex;
       .cloudwiz-logo {
         width: 10%;
-        line-height: 5rem;
+        line-height: 4rem;
         text-align: left;
         img {
           width: 4rem;

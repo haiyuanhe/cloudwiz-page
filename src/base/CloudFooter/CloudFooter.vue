@@ -123,6 +123,15 @@ export default {
   .footer-wrapper {
     background: #191d26;
     color: #999b9f;
+    a {
+      color: #999b9f;
+    }
+    a:link {
+      text-decoration: none;
+    }
+    a:visited {
+      text-decoration: none;
+    }
     .footer-container {
       padding: 5rem 5rem 2rem 5rem;
       .logo {
