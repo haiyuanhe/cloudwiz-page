@@ -151,7 +151,7 @@
                         <p>多种算法选择，完整功能试用</p>
                         <p>轻松享受Cloudwiz极致便捷体验</p>
                         <a-button type="primary">
-                          <a target="_blank" href="//play.cloudwiz.cn/offline_analysis">立即试用</a>
+                          <a target="_blank" href="//211.159.171.12/offline_analysis">立即试用</a>
                         </a-button>
                       </div>
                     </a-col>
