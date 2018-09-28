@@ -117,7 +117,7 @@ export default {
             },
             {
               state: false,
-              q: '你们的数据采集会影响servie 性能吗?',
+              q: '你们的数据采集会影响service 性能吗?',
               a: '我们的探针有比较严格的时间间隔管理, 不会对主服务造成性能上面的影响.'
             },
             {
@@ -146,7 +146,7 @@ export default {
           ]
         },
         {
-          type: '常规问题',
+          type: '其它问题',
           lists: []
         }
       ]
