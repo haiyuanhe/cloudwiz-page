@@ -16,7 +16,7 @@
             <img src="../../common/images/cloudwiz.jpg" alt="Cloudwiz"/>
           </router-link>
         </div>
-        <div class="navbar" v-show="this.screenWidth >= 1100">
+        <div class="navbar" v-show="this.screenWidth >= 1150">
           <ul>
             <router-link class="menu-item home" to="/">
               <span class="tab-link">首页</span>
@@ -83,7 +83,7 @@
             </li>
           </ul>
         </div>
-        <div class="used" v-show="this.screenWidth >= 1100">
+        <div class="used" v-show="this.screenWidth >= 1150">
           <div class="use free-used">
             <a target="_blank" href="//app.cloudwiz.cn/signup">免费试用</a>
           </div>
@@ -91,7 +91,7 @@
             <a target="_blank" href="//app.cloudwiz.cn/login">登录</a>
           </div>
         </div>
-        <div class="mobail" v-show="this.screenWidth <= 1100">
+        <div class="mobail" v-show="this.screenWidth <= 1150">
           <a-row
             type="flex"
             justify="center">
