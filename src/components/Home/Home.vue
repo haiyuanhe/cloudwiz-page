@@ -230,7 +230,7 @@ export default {
         {
           name: require('common/images/home/icon/strategic_consulting.png'),
           title: '上云战略咨询',
-          description: '进行环境、需求分析，提佛那个专业的咨询服务。'
+          description: '进行环境、需求分析，提供专业的咨询服务。'
         },
         {
           name: require('common/images/home/icon/technical_skills.png'),
