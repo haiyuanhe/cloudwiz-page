@@ -230,7 +230,7 @@ export default {
         {
           name: require('common/images/home/icon/strategic_consulting.png'),
           title: '上云战略咨询',
-          description: '进行环境、需求分析，提佛那个专业的咨询服务。'
+          description: '进行环境、需求分析，提供专业的咨询服务。'
         },
         {
           name: require('common/images/home/icon/technical_skills.png'),
@@ -277,14 +277,14 @@ export default {
           company: '中国电力科学院',
           icon: require('common/images/cases/CEPRI.png'),
           evaluator: '人工智能应用研究所平台技术室',
-          content: '由于我院的集群已达到相当规模，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可以帮助我们快速发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。',
+          content: '由于我院的集群规模已经达到上百个节点，人工运维成本及压力非常大，利用Cloudwiz大数据智能运维系统产品，可 以帮助我们快速的发现问题，并定位问题，并根据系统推荐的解决方案来及时修复问题。',
           className: 'CEPRI'
         },
         {
           company: '问卷网',
           icon: require('common/images/cases/wenjuanwang.png'),
           evaluator: '问卷网CTO梁群',
-          content: '部署Cloudwiz产品之后，统一了我们的运维管理工具，优化了管理流程，运维质量和效率都得到了极大的提升，每周提供的专家巡检报告，让我们对系统的关键服务、刷票情况有了直观了解，大量节省了人力和时间成本，是非常实用的运维解决方案。',
+          content: '部署Cloudwiz产品之后，统一了我们的运维管理工具，优化了管理流程，运维质量和效率都得到了极大的提升。每周提供的专家巡检报告，让我们对系统的关键服务、刷票情况有了直观了解，大量节省了人力和时间成本，是非常实用的运维解决方案。',
           className: 'wenjuanwang'
         },
         {
