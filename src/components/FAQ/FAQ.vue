@@ -74,7 +74,7 @@
                     </a-collapse-panel>
                   </a-collapse>
                 </div>
-                <div class="no-qa" v-else>暂无问题列表</div>
+                <!-- <div class="no-qa" v-else>暂无问题列表</div> -->
               </a-col>
             </a-row>
           </a-col>
@@ -144,11 +144,11 @@ export default {
               a: '目前阶段我们只支持火狐和Chrome浏览器. 或者有他们内核的浏览器. 支持IE8以上的浏览器。'
             }
           ]
-        },
-        {
-          type: '其它问题',
-          lists: []
         }
+        // {
+        //   type: '其它问题',
+        //   lists: []
+        // }
       ]
     }
   },
