@@ -116,8 +116,7 @@ export default {
     -webkit-line-clamp: $nums;
     -webkit-box-orient: vertical;
   }
-
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 767px) {
     .news-images {
       .left {
         img {
@@ -130,6 +129,31 @@ export default {
         .news-list {
           .top {
             padding: 1.5rem 2rem .5rem 2rem;
+          }
+          .bottom {
+            padding: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1100px) and (min-width: 768px) {
+    .news-images {
+      .left {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .news-wrapper {
+      .news-lists {
+        .news-list {
+          .top {
+            padding: 1.5rem 2rem .5rem 2rem;
+          }
+          .bottom {
+            padding: 2rem 2rem 0 2rem;
           }
         }
       }
@@ -148,6 +172,9 @@ export default {
         .news-list {
           .top {
             padding: 1rem 2rem;
+          }
+          .bottom {
+            padding: 3rem 2rem 0 2rem;
           }
         }
       }
@@ -178,10 +205,9 @@ export default {
           @include no-wrap-nums(3)
         }
         .bottom {
-          padding: 2rem;
           .time {
             float: left;
-            line-height: 2.2rem;
+            line-height: 2rem;
           }
           .read {
             float: right;
