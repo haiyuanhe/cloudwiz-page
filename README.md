@@ -1,7 +1,5 @@
 # cloudwiz-website
 
-> cloudwiz website
-
 ## Build Setup
 
 ``` bash
