@@ -135,7 +135,7 @@
               团队由数位长期在美国硅谷一线互联网高科技公司工作的海归专家，以及在中国跨国高科技企业从事市场营销的高管合作创立。<br />团队的核心成员来自微软总部、Twitter总部、亚马逊总部、阿里巴巴等一线互联网公司。
             </p>
           </div>
-          <div class="worker-lists">
+          <div class="lists">
             <a-row type="flex" justify="center">
               <a-col
                 v-for="(item, index) in team_mates"
@@ -172,6 +172,36 @@
                       </div>
                     </a-col>
                   </a-row>
+                </div>
+              </a-col>
+            </a-row>
+          </div>
+        </div>
+      </div>
+       <div class="honors">
+        <div class="content">
+          <div class="top">
+            <p class="title">公司荣誉</p>
+          </div>
+          <div class="lists">
+            <a-row type="flex" justify="center">
+              <a-col
+                v-for="(item, index) in honors"
+                :key="index"
+                :xs="20"
+                :sm="20"
+                :md="12"
+                :lg="10"
+                :xl="8"
+                :xxl="7"
+              >
+                <div class="list">
+                  <div class="avatar">
+                    <img :src="item.imgUrl" :alt="item.title">
+                  </div>
+                  <div class="mate">
+                    <p class="title">{{item.title}}</p>
+                  </div>
                 </div>
               </a-col>
             </a-row>
@@ -300,6 +330,32 @@ export default {
             }
           ]
         }
+      ],
+      honors: [
+        {
+          imgUrl: require('common/images/about/honor-1-1.png'),
+          title: '中关村金种子企业'
+        },
+        {
+          imgUrl: require('common/images/about/honor-1-2.png'),
+          title: '中关村高新技术企业'
+        },
+        {
+          imgUrl: require('common/images/about/honor-1-3.png'),
+          title: 'AIOps标准工作组成员单位证书'
+        },
+        {
+          imgUrl: require('common/images/about/honor-2-1.png'),
+          title: '梦想中国2016智汇嘉善全球创新创业大赛一等奖'
+        },
+        {
+          imgUrl: require('common/images/about/honor-2-2.png'),
+          title: '北京市海淀区胚芽企业'
+        },
+        {
+          imgUrl: require('common/images/about/honor-2-3.png'),
+          title: '多个AIOps软件著作权登记证书'
+        }
       ]
     }
   },
@@ -370,8 +426,7 @@ export default {
           }
         }
       }
-      .about-bottom {
-        background: #e8ecf4;
+      .about-bottom, .honors {
         width: 100%;
         .content {
           margin: 3rem auto;
@@ -391,21 +446,30 @@ export default {
               line-height: 1.5rem;
             }
           }
-          .worker-lists {
+          .lists {
             width: 90%;
             margin: 0 auto;
             .list {
               height: 25rem;
               margin: .6rem;
               text-align: center;
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        }
+      }
+      .about-bottom {
+        background: #e8ecf4;
+        .content {
+          .lists {
+            .list {
               background: #fff;
               border: solid 0rem #e7e7e7;
               cursor: pointer;
               &:hover {
                 box-shadow: 0 0 2.5rem #b6c1d3;
               }
-              display: flex;
-              flex-direction: column;
               .avatar {
                 height: 40%;
                 text-align: center;
@@ -436,6 +500,33 @@ export default {
                 img {
                   background-size: cover;
                   height: 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .honors {
+        background: #ffffff;
+        .content {
+          margin-bottom: 0;
+          .lists {
+            .list {
+              .avatar {
+                text-align: center;
+                padding: 0 0 2rem 0;
+                background-size: cover;
+                img {
+                  height: 16rem;
+                }
+              }
+              .mate {
+                .title {
+                  line-height: 1.5rem;
+                  font-weight: bolder;
+                  width: 85%;
+                  margin: 0 auto;
+                  text-align: center;
                 }
               }
             }
