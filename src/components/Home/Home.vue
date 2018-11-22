@@ -79,7 +79,7 @@
                 :md="8"
                 :lg="6">
                 <div class="user">
-                    <img :src="item.name" :alt="item.title"/>
+                  <img :src="item.name" :alt="item.title"/>
                 </div>
               </a-col>
             </a-row>
@@ -240,8 +240,8 @@ export default {
       ],
       users: [
         {
-          name: require('common/images/home/users/wenjuan.png'),
-          title: '问卷网'
+          name: require('common/images/home/users/china_unionpay.png'),
+          title: '中国银联'
         },
         {
           name: require('common/images/home/users/CCBank.png'),
@@ -252,16 +252,12 @@ export default {
           title: '光大证券'
         },
         {
-          name: require('common/images/home/users/WYNDHAMHotel.png'),
-          title: '温德姆酒店'
-        },
-        {
           name: require('common/images/home/users/SPDBank.png'),
           title: '浦发银行'
         },
         {
-          name: require('common/images/home/users/benz.png'),
-          title: '奔驰'
+          name: require('common/images/home/users/yunnan_power.png'),
+          title: '云南电网'
         },
         {
           name: require('common/images/home/users/CCSG.png'),
@@ -270,6 +266,26 @@ export default {
         {
           name: require('common/images/home/users/huizhou.png'),
           title: '惠州水务'
+        },
+        {
+          name: require('common/images/home/users/BMW.png'),
+          title: '宝马'
+        },
+        {
+          name: require('common/images/home/users/benz.png'),
+          title: '奔驰'
+        },
+        {
+          name: require('common/images/home/users/wenjuan.png'),
+          title: '问卷网'
+        },
+        {
+          name: require('common/images/home/users/com_lan.png'),
+          title: '昆联'
+        },
+        {
+          name: require('common/images/home/users/cheyouyuan.png'),
+          title: '车友缘'
         }
       ],
       evaluation: [
@@ -362,6 +378,7 @@ export default {
       height: 5rem;
       padding-left: 4em;
       img {
+        max-width: 13rem;
         height: 2.5rem;
       }
     }
@@ -578,7 +595,10 @@ export default {
         height: 4rem;
         padding-left: 1em;
         img {
-          height: 2rem;
+          min-width: 3rem;
+          max-width: 11rem;
+          height: 1.9rem;
+          min-height: 2rem;
         }
       }
     }
