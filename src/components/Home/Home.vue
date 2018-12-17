@@ -595,8 +595,6 @@ export default {
         height: 4rem;
         padding-left: 1em;
         img {
-          min-width: 3rem;
-          max-width: 11rem;
           height: 1.9rem;
           min-height: 2rem;
         }
