@@ -280,8 +280,8 @@ export default {
           title: '问卷网'
         },
         {
-          name: require('common/images/home/users/com_lan.png'),
-          title: '昆联'
+          name: require('common/images/home/users/yanfeng.png'),
+          title: '延锋安道拓'
         },
         {
           name: require('common/images/home/users/cheyouyuan.png'),
