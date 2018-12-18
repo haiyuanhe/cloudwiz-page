@@ -78,6 +78,14 @@ export default {
       news: [
         {
           type: '新闻',
+          url: '//mp.weixin.qq.com/s/ZtznjV-nDGD49PqU_n-dgQ',
+          newsImg: require('common/images/news/news-7.jpeg'),
+          title: '云兴维智作为主讲嘉宾参加全球运维技术大会',
+          description: '受会议主办方InfoQ的邀请，2018年11月15日-16日，云兴维智参加了全球运维技术大会（CNUTCon）。会议期间，云兴维智CEO王亚雷作为主讲嘉宾发表精彩演讲。公司CEO王亚雷在会议期间，做了题为《智能故障处理中的系统工程》的演讲，重点介绍了云兴维智在AIOps领域的探索和成果。',
+          occur_time: '2018/11/21'
+        },
+        {
+          type: '新闻',
           url: '//mp.weixin.qq.com/s/20bYGUdFMRFUg-kQtYEDeQ',
           newsImg: require('common/images/news/news-6.png'),
           title: '云兴维智亮相AWS Transformation Day',
