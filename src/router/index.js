@@ -51,6 +51,11 @@ export default new Router({
       path: '/recruitment',
       name: 'Recruitment',
       component: () => import('components/Recruitment/Recruitment')
+    },
+    {
+      path: '/add-news',
+      name: 'AddNews',
+      component: () => import('components/AddNews/AddNews')
     }
   ]
 })

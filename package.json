@@ -6,15 +6,20 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "start": "npm run dev & node server/app.js",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
     "analysis": "npm run build --report"
   },
   "dependencies": {
     "ant-design-vue": "^1.1.2",
+    "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3",
     "element-ui": "^2.4.6",
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "mysql": "^2.16.0",
     "swiper": "^4.4.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
