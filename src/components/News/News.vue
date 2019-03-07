@@ -111,7 +111,8 @@ export default {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: $nums;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: block-axis;
+    max-height: 4.5rem;
   }
   @media screen and (max-width: 767px) {
     .news-images {

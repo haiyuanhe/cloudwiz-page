@@ -17,7 +17,8 @@ import {
   Select,
   DatePicker,
   Divider,
-  Popconfirm
+  Popconfirm,
+  Upload
 } from 'ant-design-vue'
 
 Vue.component(BackTop.name, BackTop)
@@ -43,3 +44,5 @@ Vue.component(Select.Option.name, Select.Option)
 Vue.component(DatePicker.name, DatePicker)
 Vue.component(Divider.name, Divider)
 Vue.component(Popconfirm.name, Popconfirm)
+Vue.component(Popconfirm.name, Popconfirm)
+Vue.component(Upload.name, Upload)

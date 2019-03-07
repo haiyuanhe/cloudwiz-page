@@ -32,34 +32,41 @@ import NewsModal from './NewsModal'
 const columns = [
   {
     title: 'Type',
-    dataIndex: 'type'
+    dataIndex: 'type',
+    width: '5%'
   },
   {
     title: 'Title',
-    dataIndex: 'title'
+    dataIndex: 'title',
+    width: '10%'
   },
   {
     title: 'Description',
-    dataIndex: 'description'
+    dataIndex: 'description',
+    width: '35%'
   },
   {
     title: 'Occurs Time',
-    dataIndex: 'occur_time'
+    dataIndex: 'occur_time',
+    width: '10%'
   },
   {
     title: 'Url',
-    dataIndex: 'url'
+    dataIndex: 'url',
+    width: '10%'
   },
   {
-    title: 'Images',
-    dataIndex: 'newsImg'
+    title: 'Images Url',
+    dataIndex: 'newsImg',
+    width: '15%'
   },
   {
     title: 'Operation',
     dataIndex: 'operation',
-    scopedSlots: { customRender: 'operation' }
+    scopedSlots: { customRender: 'operation' },
+    width: '15%'
   }
-]
+];
 
 export const SCC_CODE = 200
 
@@ -106,12 +113,18 @@ export default {
       this.visible = true
     },
     add (data) {
+      let newsImg = data.values.upload ? (`/news-images/${data.values.upload[0].name}`) : this.record.newsImg
+      delete data.values.upload
+      let values = {
+        ...data.values,
+        newsImg
+      }
       if (this.op === 'add') {
-        this._addNews(data.values)
+        this._addNews(values)
       } else {
         this._updateNews({
           id: data.record.id,
-          ...data.values
+          ...values
         })
         this.record = {}
       }
@@ -143,6 +156,6 @@ export default {
   .add-news {
     width: 90%;
     min-height: 800px;
-    margin: 50px auto;
+    margin: 64px auto;
   }
 </style>

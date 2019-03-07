@@ -82,8 +82,8 @@
         />
       </a-form-item>
 
-      <a-form-item v-bind="formItemLayout" label="Image Url" hasFeedback>
-        <a-input
+      <a-form-item v-bind="formItemLayout" label="Image Url">
+        <!-- <a-input
           v-decorator="[
             'newsImg',
             {
@@ -97,7 +97,20 @@
             }
           ]"
           placeholder="Please input the image url"
-        />
+        /> -->
+        <a-upload
+          v-decorator="['upload', {
+            valuePropName: 'fileList',
+            getValueFromEvent: normFile,
+          }]"
+          action="/api/news/upload"
+          list-type="picture"
+          :multiple="false"
+        >
+          <a-button>
+            <a-icon type="upload" /> Click to upload
+          </a-button>
+        </a-upload>
       </a-form-item>
 
       <a-form-item v-bind="formItemLayout" label="OccursTime">
@@ -167,6 +180,12 @@ export default {
         }
         this.$emit('add', { values, record: this.record })
       })
+    },
+    normFile  (e) {
+      if (Array.isArray(e)) {
+        return e
+      }
+      return e && e.fileList
     }
   }
 }

@@ -22,4 +22,8 @@ router.delete('/api/news/deleteNews', (req, res, next) => {
   news.deleteNews(req, res, next)
 })
 
+router.post('/api/news/upload', (req, res, next) => {
+  news.uploadImg(req, res, next)
+})
+
 module.exports = router
