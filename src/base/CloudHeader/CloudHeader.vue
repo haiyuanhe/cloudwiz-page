@@ -118,7 +118,7 @@
                     }"
                   >
                     <a-menu-item class="analysis" @click="handleMenuClick">
-                      <a target="_blank" href="http://211.159.171.12/offline_analysis" class="offline-analysis">离线分析平台</a>
+                      <a target="_blank" href="http://52.82.64.17/offline_analysis" class="offline-analysis">离线分析平台</a>
                     </a-menu-item>
                     <a-menu-item @click="handleMenuClick">
                       <router-link class="menu-item home" to="/">
