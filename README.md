@@ -2,6 +2,8 @@
 
 > cloudwiz website
 
+## **Jenkins Build please modify the version in [package.json](package.json)**
+
 ## Build Setup
 
 ``` bash
@@ -21,10 +23,18 @@ npm run build
 npm run build --report
 ```
 
-`Mysql`
-  * 详见`news.sql`
+## Mysql
+  * 配置见 [db.js](server/db/db.js)
+  * 详见 [news.sql](server/db/newsSql.js)
 
-单独启动 `Node Server` 
+
+## [Node Server](server/app.js)
+
+#### 启动 
 ```javascript
   node server/app.js
+  or
+  nohup node server/app.js &
 ```
+
+#### [Router](server/routers/router.js)
