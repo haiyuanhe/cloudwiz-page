@@ -79,7 +79,7 @@
               </a-menu>
             </a-dropdown>
             <li class="menu-item offline-analysis">
-              <a target="_blank" href="http://211.159.171.12/offline_analysis">离线分析平台</a>
+              <a target="_blank" href="http://52.82.64.17/offline_analysis">离线分析平台</a>
             </li>
           </ul>
         </div>

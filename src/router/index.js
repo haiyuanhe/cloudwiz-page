@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import * as Cookies from '../common/utils/utils'
+import { message } from 'ant-design-vue'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
@@ -55,7 +57,23 @@ export default new Router({
     {
       path: '/add-news',
       name: 'AddNews',
-      component: () => import('components/AddNews/AddNews')
+      component: () => import('components/AddNews/AddNews'),
+      meta: {
+        requireAuth: true
+      }
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requireAuth) {
+    if (!Cookies.hasCookie('grafana_sess')) {
+      message.info('Cookie is expire, Please Login')
+    }
+    next()
+  } else {
+    next()
+  }
+})
+
+export default router
