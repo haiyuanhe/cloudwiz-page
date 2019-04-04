@@ -68,9 +68,11 @@ let router = new Router({
 router.beforeEach((to, from, next) => {
   if (to.meta.requireAuth) {
     if (!Cookies.hasCookie('grafana_sess')) {
-      message.info('Cookie is expire, Please Login')
+      message.info('Cookie is expired, Please Login')
+    } else {
+      message.info('Cookie is existed')
+      next()
     }
-    next()
   } else {
     next()
   }

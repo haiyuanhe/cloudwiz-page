@@ -199,7 +199,7 @@ export default {
           height: 25px;
           position: absolute;
           right: 0;
-          padding: 0px 10px;
+          padding: 5px 10px;
         }
         .top {
           font-size: 1.2rem;
@@ -209,7 +209,12 @@ export default {
           font-size: .8rem;
           line-height: 1.5rem;
           padding: 0 2rem;
-          @include no-wrap-nums(3)
+          text-overflow: ellipsis;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: block-axis;
+          max-height: 4.5rem;
         }
         .bottom {
           .time {

@@ -8,19 +8,49 @@
       @add="add"
       @cancel="cancel"
     />
-    <a-table rowKey="id" :dataSource="data" :columns="columns">
-      <template slot="operation" slot-scope="text, record">
-        <a href="javascript:;" @click="onEdit(record)">Edit</a>
-        <a-divider type="vertical" />
-        <a-popconfirm
-          v-if="data.length"
-          title="Sure to delete?"
-          @confirm="() => onDelete(record.id)"
-        >
-          <a href="javascript:;">Delete</a>
-        </a-popconfirm>
-      </template>
-    </a-table>
+    <el-table
+      :data="data"
+      :stripe="true"
+      style="width: 100%">
+      <el-table-column
+        label="Type"
+        prop="type">
+      </el-table-column>
+      <el-table-column
+        label="Title"
+        prop="title">
+      </el-table-column>
+      <el-table-column
+        label="Description"
+        prop="description"
+        width="500px">
+      </el-table-column>
+      <el-table-column
+        label="Occurs Time"
+        prop="occur_time">
+      </el-table-column>
+      <el-table-column
+        label="Url"
+        prop="url">
+      </el-table-column>
+      <el-table-column
+        label="Images Url"
+        prop="newsImg">
+      </el-table-column>
+      <el-table-column
+        label="Operation"
+        align="right">
+        <template slot-scope="scope">
+          <el-button
+            size="mini"
+            @click="onEdit(scope.row)">Edit</el-button>
+          <el-button
+            size="mini"
+            type="danger"
+            @click="onDelete(scope.row.id)">Delete</el-button>
+        </template>
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 
@@ -28,45 +58,7 @@
 import moment from 'moment'
 import axios from 'axios'
 import NewsModal from './NewsModal'
-
-const columns = [
-  {
-    title: 'Type',
-    dataIndex: 'type',
-    width: '5%'
-  },
-  {
-    title: 'Title',
-    dataIndex: 'title',
-    width: '10%'
-  },
-  {
-    title: 'Description',
-    dataIndex: 'description',
-    width: '35%'
-  },
-  {
-    title: 'Occurs Time',
-    dataIndex: 'occur_time',
-    width: '10%'
-  },
-  {
-    title: 'Url',
-    dataIndex: 'url',
-    width: '10%'
-  },
-  {
-    title: 'Images Url',
-    dataIndex: 'newsImg',
-    width: '15%'
-  },
-  {
-    title: 'Operation',
-    dataIndex: 'operation',
-    scopedSlots: { customRender: 'operation' },
-    width: '15%'
-  }
-];
+import { message } from 'ant-design-vue'
 
 export const SCC_CODE = 200
 
@@ -80,8 +72,7 @@ export default {
       visible: false,
       op: 'add',
       record: {},
-      data: [],
-      columns
+      data: []
     }
   },
   methods: {
@@ -95,11 +86,13 @@ export default {
     _addNews (data) {
       axios.post('/api/news/add', data).then(() => {
         this._getAllNews()
+        message.info('Add Success');
       })
     },
     _updateNews (data) {
       axios.post('/api/news/update', data).then(() => {
         this._getAllNews()
+        message.info('Update Success');
       })
     },
     _deleteNews (id) {
@@ -107,6 +100,7 @@ export default {
         params: {id}
       }).then(() => {
         this._getAllNews()
+        message.info('Delete Success');
       })
     },
     showModal () {

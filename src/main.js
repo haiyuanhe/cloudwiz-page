@@ -5,12 +5,18 @@ import 'common/style/reset.css'
 import 'common/style/mixin.scss'
 import './use-antd-components'
 import {
+  Button,
   Carousel,
-  CarouselItem
+  CarouselItem,
+  Table,
+  TableColumn
 } from 'element-ui'
 
+Vue.use(Button)
 Vue.use(Carousel)
 Vue.use(CarouselItem)
+Vue.use(Table)
+Vue.use(TableColumn)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
