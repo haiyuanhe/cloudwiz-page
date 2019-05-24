@@ -280,12 +280,12 @@ export default {
           title: '问卷网'
         },
         {
-          name: require('common/images/home/users/yanfeng.png'),
-          title: '延锋安道拓'
+          name: require('common/images/home/users/feihe_gray.png'),
+          title: '飞鹤乳业'
         },
         {
-          name: require('common/images/home/users/cheyouyuan.png'),
-          title: '车友缘'
+          name: require('common/images/home/users/aoleqi_gray.png'),
+          title: '奥乐齐'
         }
       ],
       evaluation: [

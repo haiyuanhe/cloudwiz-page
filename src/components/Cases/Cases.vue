@@ -247,6 +247,20 @@ export default {
           effect: `
             <p>案例详情，敬请期待</p>
           `
+        },
+        {
+          company: '飞鹤乳业',
+          icon: require('common/images/cases/feihe.png'),
+          effect: `
+            <p>案例详情，敬请期待</p>
+          `
+        },
+        {
+          company: '奥乐齐',
+          icon: require('common/images/cases/aoleqi.png'),
+          effect: `
+            <p>案例详情，敬请期待</p>
+          `
         }
       ],
       casesDetail: {
