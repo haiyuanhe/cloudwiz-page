@@ -235,13 +235,6 @@ export default {
           `
         },
         {
-          company: '延峰汽车',
-          icon: require('common/images/cases/yanfeng.png'),
-          effect: `
-            <p>案例详情，敬请期待</p>
-          `
-        },
-        {
           company: '云南电网',
           icon: require('common/images/cases/yunnanPGC.png'),
           effect: `
