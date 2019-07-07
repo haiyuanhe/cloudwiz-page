@@ -10,7 +10,15 @@ import {
   Icon,
   Menu,
   Modal,
-  Tooltip
+  Tooltip,
+  Form,
+  Table,
+  Input,
+  Select,
+  DatePicker,
+  Divider,
+  Popconfirm,
+  Upload
 } from 'ant-design-vue'
 
 Vue.component(BackTop.name, BackTop)
@@ -26,3 +34,15 @@ Vue.component(Menu.name, Menu)
 Vue.component(Menu.Item.name, Menu.Item)
 Vue.component(Modal.name, Modal)
 Vue.component(Tooltip.name, Tooltip)
+Vue.component(Form.name, Form)
+Vue.component(Form.Item.name, Form.Item)
+Vue.component(Table.name, Table)
+Vue.component(Input.name, Input)
+Vue.component(Input.TextArea.name, Input.TextArea)
+Vue.component(Select.name, Select)
+Vue.component(Select.Option.name, Select.Option)
+Vue.component(DatePicker.name, DatePicker)
+Vue.component(Divider.name, Divider)
+Vue.component(Popconfirm.name, Popconfirm)
+Vue.component(Popconfirm.name, Popconfirm)
+Vue.component(Upload.name, Upload)
