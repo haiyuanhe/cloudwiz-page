@@ -78,6 +78,14 @@ export default {
       news: [
         {
           type: '新闻',
+          url: '//mp.weixin.qq.com/s/rpy4DOyoYpFg0pgIprNP1w',
+          newsImg: require('common/images/news/news-8.png'),
+          title: '云兴维智入选初创企业的 AI 明日之星',
+          description: '在世界人工智能大会（WAIC）前夕，AWS举办了一场别开生面的AWS人工智能“聚•变”盛典（AWS AI Fusion Award，简称AAFA）。由AAFA历时4个多月，吸引了300余家公司报名参赛，通过技术筛选的30多家企业经过2轮的产品打磨会，由20多位500强/上市公司资深行业高管严格把关和筛选、一对一进行辅导评判；最终，10家初创企业脱颖而出，云兴维智（北京）科技有限公司成为了此次大赛企业服务赛道的AI明日之星。',
+          occur_time: '2019/10/09'
+        },
+        {
+          type: '新闻',
           url: '//mp.weixin.qq.com/s/ZtznjV-nDGD49PqU_n-dgQ',
           newsImg: require('common/images/news/news-7.jpeg'),
           title: '云兴维智作为主讲嘉宾参加全球运维技术大会',
