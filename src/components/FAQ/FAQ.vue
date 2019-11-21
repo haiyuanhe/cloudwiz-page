@@ -97,7 +97,7 @@ export default {
       currentIndex: 0,
       currentFAQ: 0,
       headerInfo: {
-        Imgurl: require('common/images/FAQ/faq-background.png'),
+        Imgurl: require('common/images/FAQ/faq-background.jpg'),
         title: '常见问题',
         description: '您想知道的，都能在这里找到'
       },

@@ -33,7 +33,7 @@
             :lg="16"
             class="home-top-img"
           >
-            <img src="../../common/images/bg.png" alt="背景图片">
+            <img src="../../common/images/bg.jpg" alt="背景图片">
           </a-col>
         </a-row>
       </div>

@@ -165,7 +165,7 @@ export default {
       current: 0,
       showEmail: false,
       headerInfo: {
-        Imgurl: require('common/images/products/cloudwiz-background.png'),
+        Imgurl: require('common/images/products/cloudwiz-background.jpg'),
         title: 'Cloudwiz',
         description: '完善的工具化AIOps智能运维平台'
       },

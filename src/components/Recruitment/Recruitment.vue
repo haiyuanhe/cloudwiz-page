@@ -138,7 +138,7 @@ export default {
   data () {
     return {
       headerInfo: {
-        Imgurl: require('common/images/recruitment/recruitment-background.png'),
+        Imgurl: require('common/images/recruitment/recruitment-background.jpg'),
         title: '在云兴工作',
         description: '和优秀的人一起，获得不一样的成长'
       },
@@ -166,19 +166,19 @@ export default {
       ],
       doings: [
         {
-          image: require('common/images/recruitment/group1.png'),
+          image: require('common/images/recruitment/group1.jpg'),
           title: '“新的征程”团建活动'
         },
         {
-          image: require('common/images/recruitment/group2.png'),
+          image: require('common/images/recruitment/group2.jpg'),
           title: '“新的征程”团建活动'
         },
         {
-          image: require('common/images/recruitment/exhibition1.png'),
+          image: require('common/images/recruitment/exhibition1.jpg'),
           title: '中国国际金融展'
         },
         {
-          image: require('common/images/recruitment/exhibition2.png'),
+          image: require('common/images/recruitment/exhibition2.jpg'),
           title: '中国国际金融展'
         }
       ],

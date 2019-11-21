@@ -38,7 +38,7 @@
                             <div class="w12">
                               <img
                                 class="work2"
-                                src="../../common/images/about/2.png"
+                                src="../../common/images/about/2.jpg"
                                 alt="work2">
                             </div>
                           </a-col>
@@ -48,7 +48,7 @@
                           justify="center">
                           <a-col>
                             <div class="w3">
-                              <img class="work3" src="../../common/images/about/3.png" alt="work3">
+                              <img class="work3" src="../../common/images/about/3.jpg" alt="work3">
                             </div>
                           </a-col>
                         </a-row>
@@ -61,7 +61,7 @@
                         :lg="11"
                         >
                         <div class="w1">
-                          <img class="work1" src="../../common/images/about/1.png" alt="work1">
+                          <img class="work1" src="../../common/images/about/1.jpg" alt="work1">
                         </div>
                       </a-col>
                     </a-row>
@@ -223,7 +223,7 @@ export default {
   data () {
     return {
       headerInfo: {
-        Imgurl: require('common/images/about/about-background.png'),
+        Imgurl: require('common/images/about/about-background.jpg'),
         title: '关于公司',
         description: '数据发声，让运维智能化'
       },
@@ -333,27 +333,27 @@ export default {
       ],
       honors: [
         {
-          imgUrl: require('common/images/about/honor-1-1.png'),
+          imgUrl: require('common/images/about/honor-1-1.jpg'),
           title: '中关村金种子企业'
         },
         {
-          imgUrl: require('common/images/about/honor-1-2.png'),
+          imgUrl: require('common/images/about/honor-1-2.jpg'),
           title: '中关村高新技术企业'
         },
         {
-          imgUrl: require('common/images/about/honor-1-3.png'),
+          imgUrl: require('common/images/about/honor-1-3.jpg'),
           title: 'AIOps标准工作组成员单位证书'
         },
         {
-          imgUrl: require('common/images/about/honor-2-1.png'),
+          imgUrl: require('common/images/about/honor-2-1.jpg'),
           title: '梦想中国2016智汇嘉善全球创新创业大赛一等奖'
         },
         {
-          imgUrl: require('common/images/about/honor-2-2.png'),
+          imgUrl: require('common/images/about/honor-2-2.jpg'),
           title: '北京市海淀区胚芽企业'
         },
         {
-          imgUrl: require('common/images/about/honor-2-3.png'),
+          imgUrl: require('common/images/about/honor-2-3.jpg'),
           title: '多个AIOps软件著作权登记证书'
         }
       ]

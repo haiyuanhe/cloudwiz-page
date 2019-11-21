@@ -157,7 +157,7 @@ export default {
     return {
       show: false,
       headerInfo: {
-        Imgurl: require('common/images/cases/cases-background.png'),
+        Imgurl: require('common/images/cases/cases-background.jpg'),
         title: '客户案例',
         description: '国内外头部企业的共同选择'
       },
