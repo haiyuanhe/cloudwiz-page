@@ -106,7 +106,7 @@
         :xl="20"
         :xxl="20">
         <p class="copyright">
-          Copyright &copy; {{(new Date()).getFullYear()}} 云兴维智（北京）科技有限公司 | 京ICP备17008193号
+          Copyright &copy; {{(new Date()).getFullYear()}} 云兴维智（北京）科技有限公司 | <a target="_blank" href="http://beian.miit.gov.cn/">京ICP备17008193号</a>
         </p>
       </a-col>
     </a-row>
